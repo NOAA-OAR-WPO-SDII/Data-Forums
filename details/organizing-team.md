@@ -1,4 +1,4 @@
-# Speakers
+# Organizing Team
 
 ## Kyle Metta
 
