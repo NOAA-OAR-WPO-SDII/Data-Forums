@@ -1,0 +1,58 @@
+# JUPYTER BOOK CONFIG --------------------------------------------
+title: "SSP Data Forums"
+author: "NOAA Weather Program Office"
+copyright: "© NOAA WPO"
+logo: _static/logo.png
+
+# Build & execution
+execute:
+  execute_notebooks: auto    # options: auto, force, cache, off
+  timeout: 120
+
+# HTML / Theme
+html:
+  favicon: _static/favicon.ico
+  use_issues_button: false
+  use_repository_button: true
+  use_edit_page_button: true
+  baseurl: ""                # leave blank for GitHub Pages under user org
+  extra_navbar: ""           # add footer text or remove
+  extra_footer: ""           # add footer text or remove
+  google_analytics_id: ""    # e.g., G-XXXXXXXX if you have one
+
+  # Theme options (sphinx-book-theme)
+  theme:
+    name: sphinx_book_theme
+    options:
+      repository_url: "https://github.com/jmote-noaa/SSP-Data-Forums"
+      repository_branch: master
+      path_to_docs: ""       # keep empty if your book is at repo root
+      home_page_in_navbar: true
+      use_repository_button: true
+      use_edit_page_button: true
+      use_download_button: true
+      show_navbar_depth: 1
+
+# Launch buttons (Binder)
+launch_buttons:
+  binderhub_url: "https://mybinder.org"
+  notebook_interface: "jupyterlab"
+  thebe: false               # set true if you want in-browser code execution
+
+# Parse & content settings
+only_build_toc_files: true
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - dollarmath
+    - linkify
+    - substitution
+
+# Sphinx extensions (optional, safe defaults)
+sphinx:
+  extra_extensions:
+    - sphinx_copybutton
+  config:
+    html_show_copyright: false
+    myst_heading_anchors: 3
