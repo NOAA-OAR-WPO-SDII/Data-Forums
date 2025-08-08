@@ -1,0 +1,23 @@
+name: data-forums
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - numpy
+  - pandas
+  - requests
+  - tqdm
+  - matplotlib
+  - seaborn
+  # --- Geo stack (for GeoPandas / shapely) ---
+  - geopandas
+  - shapely
+  - pyproj
+  - rtree
+  - fiona
+  # (rtree depends on libspatialindex; conda-forge will pull it in)
+  - pip
+  - pip:
+      # keep empty unless you need pip-only libs
+      - 
