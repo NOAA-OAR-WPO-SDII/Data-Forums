@@ -20,3 +20,7 @@ The Data Forums will be hosted on Vimeo.  Please register at [Link Forthcoming](
 
 Forum 1 - Metada
 Forum 2 - Data Fusion
+
+## Site Navigation
+
+Look at the table of contents on the left
