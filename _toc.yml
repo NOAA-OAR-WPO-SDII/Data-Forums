@@ -4,8 +4,8 @@ root: index
 parts:
   - caption: Details
     chapters:
+      - file: details/ssp-overview
       - file: details/organizing-team
-      - file: details/partners-and-sponsors      # optional; delete if not needed
       - file: details/contact                     # optional
 
   - caption: Preparation & Technical Details
