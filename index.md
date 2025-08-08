@@ -23,4 +23,4 @@ Forum 2 - Data Fusion
 
 ## Site Navigation
 
-Look at the table of contents on the left
+Look at the table of contents on the left please.
