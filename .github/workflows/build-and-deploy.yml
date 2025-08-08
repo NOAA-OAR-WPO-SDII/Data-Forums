@@ -1,0 +1,57 @@
+name: Build and Deploy Jupyter Book
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          if [ -f environment.yml ]; then
+            pip install mamba || pip install conda
+            # use micromamba for speed if available; fallback to conda
+          fi
+
+      - name: Build with Conda (if environment.yml exists)
+        if: ${{ hashFiles('environment.yml') != '' }}
+        run: |
+          wget -qO- https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
+          ./bin/micromamba shell init -s bash -p ~/micromamba
+          source ~/.bashrc
+          micromamba create -y -f environment.yml
+          micromamba activate data-forums
+          python -m pip install --upgrade pip
+          jupyter-book build .
+
+      - name: Build with pip (if requirements.txt exists)
+        if: ${{ hashFiles('environment.yml') == '' && hashFiles('requirements.txt') != '' }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          jupyter-book build .
+
+      - name: Build with bare jupyter-book (fallback)
+        if: ${{ hashFiles('environment.yml') == '' && hashFiles('requirements.txt') == '' }}
+        run: |
+          pip install --upgrade pip
+          pip install jupyter-book
+          jupyter-book build .
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _build/html
