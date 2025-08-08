@@ -25,7 +25,7 @@ html:
     name: sphinx_book_theme
     options:
       repository_url: "https://github.com/jmote-noaa/SSP-Data-Forums"
-      repository_branch: master
+      repository_branch: main
       path_to_docs: ""       # keep empty if your book is at repo root
       home_page_in_navbar: true
       use_repository_button: true
