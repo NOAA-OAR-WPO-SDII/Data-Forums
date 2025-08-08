@@ -1,0 +1,1283 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hello Data, Meet Weather &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/dataverse_weather_merge';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    SSP Data Forums
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/dataverse_weather_merge.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Hello Data, Meet Weather</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-this">Why do this?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import">Import</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-search-for-datasets">Step 1: Search for Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-search-for-10-results">Simple search for 10 results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-with-more-than-10-results">Search with more than 10 results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subsetting-your-results">Subsetting Your Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-get-dataset-metadata-and-files">Step 2: Get Dataset Metadata and Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-metadata-for-a-single-dataset">Getting metadata for a single dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-metadata-for-multiple-datasets">Getting metadata for multiple datasets</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-download-a-file">Step 3: Download a File</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examine-the-dataset">Examine the dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-names">Variable names</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#unfortunately-nws-region-only-has-four-regions-nonetheless-it-might-be-useful-at-some-point">Unfortunately, “nws_region” only has four regions.  Nonetheless, it might be useful at some point.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-merge-with-weather-data">Step 4: Merge with Weather Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iowa-mesonet">Iowa Mesonet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-visualizations">Quick Visualizations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-wwwas-by-survey-reponses">Visualizing WWWAs by Survey Reponses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#going-further">Going further</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="hello-data-meet-weather">
+<h1>Hello Data, Meet Weather<a class="headerlink" href="#hello-data-meet-weather" title="Link to this heading">#</a></h1>
+<p>This notebook is designed for social scientists who want to explore how their own data might begin to interface with weather and hazard datasets.</p>
+<section id="goals">
+<h2>Goals:<a class="headerlink" href="#goals" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Load and explore a sample of the Extreme Weather and Society Survey data</p></li>
+<li><p>Bring in a sample weather dataset (e.g., watches/warnings/advisories from NWS)</p></li>
+<li><p>Perform a simple merge</p></li>
+<li><p>Visualize a relationship between survey responses and weather</p></li>
+</ol>
+<p>Note: Ensure that the datasets are open access, or you have an API key for restricted access.  For this example, the datasets in this notebook do not require an API key.</p>
+</section>
+<section id="why-do-this">
+<h2>Why do this?<a class="headerlink" href="#why-do-this" title="Link to this heading">#</a></h2>
+<p>In general, the integration of weather and hazard data allows for a deeper understanding of how people perceive, interpret, and respond to weather and climate risks in relation to the actual meteorological conditions they experience.  A range of potential researchs can be posed:</p>
+<ol class="arabic simple">
+<li><p>How accurately do people perceive the frequency or severity of extreme weather events in their area?</p></li>
+<li><p>Are there socioeconomic or demographic predictors of inaccurate weather risk perception?</p></li>
+<li><p>Do people who recall receiving more weather warnings perceive greater weather risk?</p></li>
+<li><p>Is there a mismatch between how meteorologists frame risk and how the public interprets it?</p></li>
+<li><p>Are individuals who have experienced extreme weather more likely to change their behavior or beliefs?</p></li>
+</ol>
+</section>
+<section id="import">
+<h2>Import<a class="headerlink" href="#import" title="Link to this heading">#</a></h2>
+<p>In Python, we import libraries to add extra tools that help us do things like make graphs, work with data, or do more complext calculations, like regression.  It’s good practice to have all libraries imported at the beginning.  You can always add (even install) libraries as you go along, you just have to rerun the cells (or restart the kernel if a new install).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import libraries</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">timedelta</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">Point</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">Point</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#import libraries</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-1-search-for-datasets">
+<h2>Step 1: Search for Datasets<a class="headerlink" href="#step-1-search-for-datasets" title="Link to this heading">#</a></h2>
+<p>By default, the Harvard Dataverse only returns 10 results per search request.  The first cell shows a search and retrieving only 10 results.  If you know there are more datasets available, the second cell shows to extend the search to retrieve all of the results.</p>
+<section id="simple-search-for-10-results">
+<h3>Simple search for 10 results<a class="headerlink" href="#simple-search-for-10-results" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># requires requests and pandas</span>
+
+<span class="c1"># Define search query</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;climate change&quot;</span>
+<span class="n">search_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/search?q=</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&amp;type=dataset&quot;</span>
+
+<span class="c1"># Perform search</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search_url</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># Convert items to DataFrame</span>
+<span class="n">items</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">]</span>
+<span class="n">df_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+
+<span class="c1"># Show key columns</span>
+<span class="c1">#df_results[[&#39;name&#39;, &#39;global_id&#39;, &#39;published_at&#39;, &#39;citation&#39;]]</span>
+<span class="n">df_results</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type</th>
+      <th>url</th>
+      <th>global_id</th>
+      <th>description</th>
+      <th>published_at</th>
+      <th>publisher</th>
+      <th>citationHtml</th>
+      <th>identifier_of_dataverse</th>
+      <th>name_of_dataverse</th>
+      <th>...</th>
+      <th>minorVersion</th>
+      <th>createdAt</th>
+      <th>updatedAt</th>
+      <th>contacts</th>
+      <th>authors</th>
+      <th>publications</th>
+      <th>image_url</th>
+      <th>keywords</th>
+      <th>producers</th>
+      <th>relatedMaterial</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Climate Change Helplessness, Pilot Study</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/HAEP2K</td>
+      <td>doi:10.7910/DVN/HAEP2K</td>
+      <td>Replication data for Pilot Study for Climate C...</td>
+      <td>2015-12-12T21:20:58Z</td>
+      <td>Climate Change Helplessness Dataverse</td>
+      <td>Salomon, Erika, 2015, "Climate Change Helpless...</td>
+      <td>cch</td>
+      <td>Climate Change Helplessness Dataverse</td>
+      <td>...</td>
+      <td>0</td>
+      <td>2015-12-12T21:20:24Z</td>
+      <td>2015-12-12T21:20:58Z</td>
+      <td>[{'name': 'Salomon, Erika', 'affiliation': 'Un...</td>
+      <td>[Salomon, Erika]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Climate Change Helplessness, Study 1</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/OVZLG5</td>
+      <td>doi:10.7910/DVN/OVZLG5</td>
+      <td>Replication data for Study 1 of Climate Change...</td>
+      <td>2015-10-10T22:12:30Z</td>
+      <td>Climate Change Helplessness Dataverse</td>
+      <td>Salomon, Erika, 2015, "Climate Change Helpless...</td>
+      <td>cch</td>
+      <td>Climate Change Helplessness Dataverse</td>
+      <td>...</td>
+      <td>0</td>
+      <td>2015-06-26T20:32:33Z</td>
+      <td>2015-10-10T22:12:30Z</td>
+      <td>[{'name': 'Salomon, Erika', 'affiliation': 'Un...</td>
+      <td>[Salomon, Erika]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Climate Change Helplessness, Study 2</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/8Z7M4G</td>
+      <td>doi:10.7910/DVN/8Z7M4G</td>
+      <td>Replication data for Study 2 of Climate Change...</td>
+      <td>2015-10-10T22:13:10Z</td>
+      <td>Climate Change Helplessness Dataverse</td>
+      <td>Salomon, Erika, 2015, "Climate Change Helpless...</td>
+      <td>cch</td>
+      <td>Climate Change Helplessness Dataverse</td>
+      <td>...</td>
+      <td>0</td>
+      <td>2015-06-26T20:34:45Z</td>
+      <td>2015-10-10T22:13:10Z</td>
+      <td>[{'name': 'Salomon, Erika', 'affiliation': 'Un...</td>
+      <td>[Salomon, Erika]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Climate Change Helplessness, Study 3</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/KXW0LE</td>
+      <td>doi:10.7910/DVN/KXW0LE</td>
+      <td>Replication data for Study 2 of Climate Change...</td>
+      <td>2015-10-10T22:13:58Z</td>
+      <td>Climate Change Helplessness Dataverse</td>
+      <td>Salomon, Erika, 2015, "Climate Change Helpless...</td>
+      <td>cch</td>
+      <td>Climate Change Helplessness Dataverse</td>
+      <td>...</td>
+      <td>0</td>
+      <td>2015-06-26T20:42:33Z</td>
+      <td>2015-10-10T22:13:58Z</td>
+      <td>[{'name': 'Salomon, Erika', 'affiliation': 'Un...</td>
+      <td>[Salomon, Erika]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3_QGIS file with island and climate change ris...</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/O6G3AI</td>
+      <td>doi:10.7910/DVN/O6G3AI</td>
+      <td>QGIS file to visualise and analyse climate cha...</td>
+      <td>2022-10-28T10:09:02Z</td>
+      <td>I Climate Change Risk Assessment</td>
+      <td>Lammers, Katrin; Gerbatsch, Karoline, 2022, "3...</td>
+      <td>ClimRisk</td>
+      <td>I Climate Change Risk Assessment</td>
+      <td>...</td>
+      <td>0</td>
+      <td>2022-10-24T14:38:34Z</td>
+      <td>2022-10-28T10:09:02Z</td>
+      <td>[{'name': 'Lammers, Katrin', 'affiliation': 'R...</td>
+      <td>[Lammers, Katrin, Gerbatsch, Karoline]</td>
+      <td>[{}]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 28 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="search-with-more-than-10-results">
+<h3>Search with more than 10 results<a class="headerlink" href="#search-with-more-than-10-results" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;ripberger&quot;</span>
+<span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">per_page</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Max per page is 100</span>
+<span class="n">all_items</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">search_url</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/search?&quot;</span>
+        <span class="sa">f</span><span class="s2">&quot;q=</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&amp;type=dataset&amp;start=</span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2">&amp;per_page=</span><span class="si">{</span><span class="n">per_page</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+    
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search_url</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    
+    <span class="n">items</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">]</span>
+    <span class="n">all_items</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+    
+    <span class="c1"># Break if fewer than per_page results are returned (i.e., last page)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">per_page</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">start</span> <span class="o">+=</span> <span class="n">per_page</span>
+
+<span class="c1"># Convert to DataFrame</span>
+<span class="n">df_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_items</span><span class="p">)</span>
+<span class="n">df_results</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;global_id&#39;</span><span class="p">,</span> <span class="s1">&#39;published_at&#39;</span><span class="p">,</span> <span class="s1">&#39;citation&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>global_id</th>
+      <th>published_at</th>
+      <th>citation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A comprehensive inventory and review of color ...</td>
+      <td>doi:10.7910/DVN/IFBAZ4</td>
+      <td>2025-04-22T13:26:32Z</td>
+      <td>Ripberger, Joseph; Bitterman, Abby; Rosen, Zoe...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>WX18</td>
+      <td>doi:10.7910/DVN/RHT4ON</td>
+      <td>2020-02-03T22:11:23Z</td>
+      <td>Ripberger, Joseph; Silva, Carol; Jenkins-Smith...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>WX19</td>
+      <td>doi:10.7910/DVN/MLCJEW</td>
+      <td>2020-02-03T22:10:59Z</td>
+      <td>Ripberger, Joseph; Silva, Carol; Jenkins-Smith...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>WX17</td>
+      <td>doi:10.7910/DVN/GSTYK4</td>
+      <td>2020-02-03T22:10:34Z</td>
+      <td>Ripberger, Joseph; Silva, Carol; Jenkins-Smith...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>WX20</td>
+      <td>doi:10.7910/DVN/EWOCUA</td>
+      <td>2020-09-01T14:03:39Z</td>
+      <td>Ripberger, Joseph; Krocak, Makenzie; Silva, Ca...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#How many datasets?</span>
+<span class="n">df_results</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10, 28)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="subsetting-your-results">
+<h3>Subsetting Your Results<a class="headerlink" href="#subsetting-your-results" title="Link to this heading">#</a></h3>
+<p>Let’s say you don’t want all of these, but only a subset of related surveys.  For this exercise and the remainder of notebook, we will focus on the yearly waves of the Extreme Weather and Society Survey (WXYY). So let’s subset them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the dataset names you want to filter on</span>
+<span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;WX17&quot;</span><span class="p">,</span> <span class="s2">&quot;WX18&quot;</span><span class="p">,</span> <span class="s2">&quot;WX19&quot;</span><span class="p">,</span> <span class="s2">&quot;WX20&quot;</span><span class="p">,</span> <span class="s2">&quot;WX21&quot;</span><span class="p">,</span> <span class="s2">&quot;WX22&quot;</span><span class="p">,</span> <span class="s2">&quot;WX23&quot;</span><span class="p">,</span> <span class="s2">&quot;WX24&quot;</span><span class="p">]</span>
+
+<span class="c1"># Subset the dataframe</span>
+<span class="n">df_subset</span> <span class="o">=</span> <span class="n">df_results</span><span class="p">[</span><span class="n">df_results</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">target_names</span><span class="p">)]</span>
+
+<span class="c1"># Display the result</span>
+<span class="n">df_subset</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="step-2-get-dataset-metadata-and-files">
+<h2>Step 2: Get Dataset Metadata and Files<a class="headerlink" href="#step-2-get-dataset-metadata-and-files" title="Link to this heading">#</a></h2>
+<section id="getting-metadata-for-a-single-dataset">
+<h3>Getting metadata for a single dataset<a class="headerlink" href="#getting-metadata-for-a-single-dataset" title="Link to this heading">#</a></h3>
+<p>Let’s examine the metadata for one of the datasets in the subset, WX18.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract persistent ID (DOI) from the first row [0] by position</span>
+<span class="n">persistent_id</span> <span class="o">=</span> <span class="n">df_subset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;global_id&#39;</span><span class="p">]</span>
+
+<span class="c1"># Get dataset metadata</span>
+<span class="n">metadata_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=</span><span class="si">{</span><span class="n">persistent_id</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">metadata_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">metadata_url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># Display list of files</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">metadata_response</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;latestVersion&#39;</span><span class="p">][</span><span class="s1">&#39;files&#39;</span><span class="p">]</span>
+<span class="n">files</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="getting-metadata-for-multiple-datasets">
+<h3>Getting metadata for multiple datasets<a class="headerlink" href="#getting-metadata-for-multiple-datasets" title="Link to this heading">#</a></h3>
+<p>Let’s say we want the metadata for all waves.  This cell is set up as a “loop”, that is, it will loop through all of the files and pick up the metadata information we want.  This time, we will limit the items we want to see (as seen in the “for f in files” loop below) and have the results formatted into a dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an empty list to hold all file metadata</span>
+<span class="n">all_files</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Loop through persistent IDs</span>
+<span class="k">for</span> <span class="n">pid</span> <span class="ow">in</span> <span class="n">df_subset</span><span class="p">[</span><span class="s1">&#39;global_id&#39;</span><span class="p">]:</span>
+    <span class="n">metadata_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=</span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">metadata_url</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;latestVersion&#39;</span><span class="p">][</span><span class="s1">&#39;files&#39;</span><span class="p">]</span>
+        
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">file_info</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;dataset_title&#39;</span><span class="p">:</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;latestVersion&#39;</span><span class="p">][</span><span class="s1">&#39;metadataBlocks&#39;</span><span class="p">][</span><span class="s1">&#39;citation&#39;</span><span class="p">][</span><span class="s1">&#39;fields&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;file_id&#39;</span><span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;dataFile&#39;</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;file_label&#39;</span><span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;file_size&#39;</span><span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;dataFile&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;filesize&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+                <span class="s1">&#39;file_description&#39;</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;persistent_id&#39;</span><span class="p">:</span> <span class="n">pid</span>
+            <span class="p">}</span>
+            <span class="n">all_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_info</span><span class="p">)</span>
+    
+    <span class="c1"># Be respectful of API limits</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Convert to DataFrame</span>
+<span class="n">df_files</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_files</span><span class="p">)</span>
+<span class="n">df_files</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="step-3-download-a-file">
+<h2>Step 3: Download a File<a class="headerlink" href="#step-3-download-a-file" title="Link to this heading">#</a></h2>
+<p>Above, we see that each dataset file (.tab) is accompanied by PDFs of the instrument and a reference report.</p>
+<p>Let’s download the first year of the survey, WX18, which has a file_id of “3657710”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># File ID for WxEM_Wave1.tab</span>
+<span class="n">file_id</span> <span class="o">=</span> <span class="mi">3657710</span>
+
+<span class="c1"># Download directly to memory</span>
+<span class="n">file_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/access/datafile/</span><span class="si">{</span><span class="n">file_id</span><span class="si">}</span><span class="s2">?format=original&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">file_url</span><span class="p">)</span>
+
+<span class="c1"># Load into pandas directly from memory, assuming comma-delimited content</span>
+<span class="n">df_18</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">on_bad_lines</span><span class="o">=</span><span class="s1">&#39;skip&#39;</span><span class="p">)</span>
+<span class="n">df_18</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="examine-the-dataset">
+<h3>Examine the dataset<a class="headerlink" href="#examine-the-dataset" title="Link to this heading">#</a></h3>
+<p>Pandas has a number of attributes that can be used to examine characteristics of the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># See basic shape of the data (rows, columns)</span>
+<span class="n">df_18</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># List all column names</span>
+<span class="n">df_18</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="variable-names">
+<h4>Variable names<a class="headerlink" href="#variable-names" title="Link to this heading">#</a></h4>
+<p>Listing the columns shows all the variable names contained in the data.  To integrate with weather data, we are most interested in locating possible ways to join the data.  Typically, geographic variables are a good start.  In this survey, some good possible variables are state, zip, lat/lon.  These are pretty straightforward, but what about “nws_region”?  Does it contain WFOs?  Let’s examine.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Is nws_region usefl at all?</span>
+<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;nws_region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="unfortunately-nws-region-only-has-four-regions-nonetheless-it-might-be-useful-at-some-point">
+<h5>Unfortunately, “nws_region” only has four regions.  Nonetheless, it might be useful at some point.<a class="headerlink" href="#unfortunately-nws-region-only-has-four-regions-nonetheless-it-might-be-useful-at-some-point" title="Link to this heading">#</a></h5>
+</section>
+</section>
+</section>
+</section>
+<section id="step-4-merge-with-weather-data">
+<h2>Step 4: Merge with Weather Data<a class="headerlink" href="#step-4-merge-with-weather-data" title="Link to this heading">#</a></h2>
+<p>In this example, we will extract warnings/watches/advisories from the Iowa Mesonet for each respondent three days prior to the start of the survey.  I know, that’s pretty arbitrary but perhaps we’re interested in the impact of the weather on responses to a weather survey.</p>
+<p>For each respondent, we will use their:</p>
+<ol class="arabic simple">
+<li><p>lat, lon, and begin_date</p></li>
+<li><p>Query the IEM for any warnings/watches/advisories issued within 3 days prior to begin_date</p></li>
+<li><p>Store or summarize those results (e.g., number of WWAs, types, text, etc.)</p></li>
+</ol>
+<p>Please note the API Endpoint (Rest-like) and the structure of the request for those variables:</p>
+<p><a class="reference external" href="https://mesonet.agron.iastate.edu/vtec/json.php?lon=%7Blon%7D&amp;amp;lat=%7Blat%7D&amp;amp;sdate=%7Bstart%7D&amp;amp;edate=%7Bend%7D">https://mesonet.agron.iastate.edu/vtec/json.php?lon={lon}&amp;lat={lat}&amp;sdate={start}&amp;edate={end}</a></p>
+<p>We will use this API call to loop through all 3,000 respondents and gather their information.</p>
+<section id="iowa-mesonet">
+<h3>Iowa Mesonet<a class="headerlink" href="#iowa-mesonet" title="Link to this heading">#</a></h3>
+<p>So I’m just going to use lat/lon and the date to directly get watches/warnings/advisories.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure begin_date is in datetime format</span>
+<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;begin_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;begin_date&#39;</span><span class="p">])</span>
+
+<span class="c1"># New column to store list of WWA names</span>
+<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># Loop through each respondent</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">df_18</span><span class="o">.</span><span class="n">iterrows</span><span class="p">(),</span> <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_18</span><span class="p">)):</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+    <span class="n">end_date</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;begin_date&#39;</span><span class="p">]</span>
+    <span class="n">start_date</span> <span class="o">=</span> <span class="n">end_date</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="c1"># Build API URL</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;https://mesonet.agron.iastate.edu/json/vtec_events_bypoint.py&quot;</span>
+        <span class="sa">f</span><span class="s2">&quot;?lat=</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">&amp;lon=</span><span class="si">{</span><span class="n">lon</span><span class="si">}</span><span class="s2">&amp;sdate=</span><span class="si">{</span><span class="n">start_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&amp;edate=</span><span class="si">{</span><span class="n">end_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;events&#39;</span><span class="p">,</span> <span class="p">[])]</span>
+            <span class="n">df_18</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">df_18</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed for idx=</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">, lat=</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">, lon=</span><span class="si">{</span><span class="n">lon</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">df_18</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#let&#39;s examine what we just collected.  We use the attribute &quot;dropna&quot; to make sure that there are no rows that empty (i.e., we didn&#39;t screw something up).</span>
+<span class="n">df_18</span><span class="p">[[</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="s1">&#39;begin_date&#39;</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#let&#39;s make sure we have the same number of row that we started with</span>
+<span class="n">df_18</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#how many respondents experienced watches/warnings/advisories?</span>
+<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#who received a tornado warning?</span>
+<span class="n">df_18</span><span class="p">[</span><span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;Tornado Warning&#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="kc">False</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#who received more than two?</span>
+<span class="n">df_18</span><span class="p">[</span>
+    <span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">][[</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="s1">&#39;begin_date&#39;</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="quick-visualizations">
+<h3>Quick Visualizations<a class="headerlink" href="#quick-visualizations" title="Link to this heading">#</a></h3>
+<p>These are quick descriptive visualizations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: Ensure lat/lon are float (just in case)</span>
+<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Create geometry from lat/lon</span>
+<span class="n">geometry</span> <span class="o">=</span> <span class="p">[</span><span class="n">Point</span><span class="p">(</span><span class="n">xy</span><span class="p">)</span> <span class="k">for</span> <span class="n">xy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">])]</span>
+<span class="n">gdf_18</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df_18</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">geometry</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 3: Count WWAs</span>
+<span class="n">gdf_18</span><span class="p">[</span><span class="s1">&#39;wwa_count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_18</span><span class="p">[</span><span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">gdf_18</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;wwa_count&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;OrRd&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Survey Respondents by Number of WWAs (3 Days Prior)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Flatten and count</span>
+<span class="n">all_names</span> <span class="o">=</span> <span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">explode</span><span class="p">()</span>
+<span class="n">top_names</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">all_names</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Plot</span>
+<span class="n">names</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">top_names</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">names</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">counts</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Top 10 Most Frequent WWAs&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Number of Respondents Exposed&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count WWAs per date</span>
+<span class="n">timeline</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_18</span><span class="p">[[</span><span class="s1">&#39;begin_date&#39;</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]]</span>
+    <span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">wwa_count</span><span class="o">=</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">len</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;begin_date&#39;</span><span class="p">)[</span><span class="s1">&#39;wwa_count&#39;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="c1"># Plot</span>
+<span class="n">timeline</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total WWAs by Survey Date&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Warnings/Watch Events&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Survey Date&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualizing-wwwas-by-survey-reponses">
+<h3>Visualizing WWWAs by Survey Reponses<a class="headerlink" href="#visualizing-wwwas-by-survey-reponses" title="Link to this heading">#</a></h3>
+<p>For a next step, we might do some quick analyses/visualizations of WWAs by survey response.  Perhaps even make an interactive version with a dropdown of survey responses that a user can play with?</p>
+<p>Let’s say we want to examine how the presence of recent NWS advisories (3 days prior to taking the survey) correlates with survey respondents’ perceived risk of that hazard.  How can we do that?</p>
+<p>Step 1.  Create two groups of respondents, those experienced a WWA prior to the survey and those who did not.
+Step 2.  Extract risk perception scores for a hazard (For risk_flood: 1-No risk, 2-Low Risk…..5-Extreme risk)
+Step 3.  Create a comparative visualization</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define relevant flood WWA keywords</span>
+<span class="n">flood_wwa_keywords</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Flood Advisory&#39;</span><span class="p">,</span> <span class="s1">&#39;Flood Warning&#39;</span><span class="p">,</span> <span class="s1">&#39;Flash Flood Warning&#39;</span><span class="p">,</span> <span class="s1">&#39;Flash Flood Watch&#39;</span><span class="p">,</span> <span class="s1">&#39;Flood Watch&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create binary exposure column</span>
+<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;flood_wwa_exposure&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">wwas</span><span class="p">:</span> <span class="nb">any</span><span class="p">(</span><span class="n">flood_type</span> <span class="ow">in</span> <span class="n">wwas</span> <span class="k">for</span> <span class="n">flood_type</span> <span class="ow">in</span> <span class="n">flood_wwa_keywords</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define correct order for risk perception labels</span>
+<span class="n">ordered_risk_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;No risk&#39;</span><span class="p">,</span> <span class="s1">&#39;Low risk&#39;</span><span class="p">,</span> <span class="s1">&#39;Moderate risk&#39;</span><span class="p">,</span> <span class="s1">&#39;High risk&#39;</span><span class="p">,</span> <span class="s1">&#39;Extreme risk&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_18</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;risk_flood_label&#39;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;flood_wwa_exposure&#39;</span><span class="p">,</span>
+    <span class="n">order</span><span class="o">=</span><span class="n">ordered_risk_labels</span>
+<span class="p">)</span>
+
+<span class="c1"># Calculate total count per category to get percentages</span>
+<span class="n">total_counts</span> <span class="o">=</span> <span class="n">df_18</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;risk_flood_label&#39;</span><span class="p">,</span> <span class="s1">&#39;flood_wwa_exposure&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+<span class="n">category_totals</span> <span class="o">=</span> <span class="n">df_18</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;risk_flood_label&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+<span class="c1"># Add percentage labels on each bar</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">patches</span><span class="p">:</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">height</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>  <span class="c1"># skip zero-height bars</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">hue_val</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_facecolor</span><span class="p">()</span>  <span class="c1"># used just for clarity, not necessary</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_label</span><span class="p">()</span>
+    <span class="n">category</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">risk_label</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
+    
+    <span class="c1"># Get the category label (x-axis tick) associated with this bar</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">category</span> <span class="o">=</span> <span class="n">ordered_risk_labels</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+    
+    <span class="c1"># Get percent value</span>
+    <span class="n">bar_label</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">category_totals</span><span class="p">[</span><span class="n">bar_label</span><span class="p">]</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">height</span> <span class="o">/</span> <span class="n">total</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">height</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="c1"># Final plot touches</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Perceived Flood Risk&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Respondents&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Perceived Flood Risk by Exposure to Flood-Related WWAs&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;WWA Exposure&quot;</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="s2">&quot;Yes&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Save to PNG.  It will be saved in the directory with this notebook.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;perceived_flood_risk_by_wwa.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate percentages</span>
+<span class="n">crosstab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;flood_wwa_exposure&#39;</span><span class="p">],</span> <span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;risk_flood_label&#39;</span><span class="p">],</span> <span class="n">normalize</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot</span>
+<span class="n">crosstab</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]]</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">ordered_risk_labels</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Flood Risk Perception by WWA Exposure (Proportions)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Perceived Flood Risk&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Proportion of Respondents&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Exposed to Flood WWA&#39;</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yes&#39;</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Save to PNG.  It will be saved in the directory with this notebook.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;perceived_flood_risk_by_wwa.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># I don&#39;t personally like violin plots, but let&#39;s take a look</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_18</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;flood_wwa_exposure&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;risk_flood&#39;</span><span class="p">,</span> <span class="n">inner</span><span class="o">=</span><span class="s1">&#39;quartile&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;No WWA Exposure&#39;</span><span class="p">,</span> <span class="s1">&#39;WWA Exposure&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Exposure to Flood WWA&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Perceived Flood Risk (1-5)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of Flood Risk Perception by WWA Exposure&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="going-further">
+<h2>Going further<a class="headerlink" href="#going-further" title="Link to this heading">#</a></h2>
+<p>We’re not limited to visualizations, we could explore regressions, structural equation modeling, etc.  But perhaps it is enough that we’ve shown how to enrich a dataset that could be saved and used in whatever statistics package they like: R, SAS, SPSS, Stata, etc.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-this">Why do this?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import">Import</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-search-for-datasets">Step 1: Search for Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-search-for-10-results">Simple search for 10 results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#search-with-more-than-10-results">Search with more than 10 results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subsetting-your-results">Subsetting Your Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-get-dataset-metadata-and-files">Step 2: Get Dataset Metadata and Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-metadata-for-a-single-dataset">Getting metadata for a single dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-metadata-for-multiple-datasets">Getting metadata for multiple datasets</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-download-a-file">Step 3: Download a File</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examine-the-dataset">Examine the dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-names">Variable names</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#unfortunately-nws-region-only-has-four-regions-nonetheless-it-might-be-useful-at-some-point">Unfortunately, “nws_region” only has four regions.  Nonetheless, it might be useful at some point.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-merge-with-weather-data">Step 4: Merge with Weather Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iowa-mesonet">Iowa Mesonet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-visualizations">Quick Visualizations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-wwwas-by-survey-reponses">Visualizing WWWAs by Survey Reponses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#going-further">Going further</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
