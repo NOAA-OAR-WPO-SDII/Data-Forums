@@ -1,5 +1,22 @@
 format: jb-book
 root: index
-chapters:
-  - file: notebooks/forum-intro
-  - file: notebooks/forum-analysis
+
+parts:
+  - caption: Details
+    chapters:
+      - file: details/organizing-team
+      - file: details/partners-and-sponsors      # optional; delete if not needed
+      - file: details/contact                     # optional
+
+  - caption: Preparation & Technical Details
+    chapters:
+      - file: prep/what-to-expect
+      - file: prep/checklist
+      - file: prep/technical-notes               # optional (e.g., Binder tips, accounts)
+
+  - caption: Tutorials
+    chapters:
+      - file: tutorials/forum1-overview
+      - file: notebooks/forum1                    # ← notebook (Forum 1)
+      - file: tutorials/forum2-overview
+      - file: notebooks/forum2                    # ← notebook (Forum 2)
