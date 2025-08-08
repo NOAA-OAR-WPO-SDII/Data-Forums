@@ -1,4 +1,4 @@
-![SSP Data Forums](img/coverslide.png)
+![SSP Data Forums](images/coverslide.png)
 
 # SSP Data Forums
 
