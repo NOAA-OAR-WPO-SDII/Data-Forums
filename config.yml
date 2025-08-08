@@ -37,7 +37,7 @@ html:
 launch_buttons:
   binderhub_url: "https://mybinder.org"
   notebook_interface: "jupyterlab"
-  thebe: false               # set true if you want in-browser code execution
+  thebe: true               # set true if you want in-browser code execution
 
 # Parse & content settings
 only_build_toc_files: true
