@@ -4,20 +4,16 @@ channels:
 dependencies:
   - python=3.10
   - jupyterlab
+  - jupyter-book
   - numpy
   - pandas
   - requests
   - tqdm
   - matplotlib
   - seaborn
-  # --- Geo stack (for GeoPandas / shapely) ---
+  # --- Geo stack (for GeoPandas / Shapely) ---
   - geopandas
   - shapely
   - pyproj
   - rtree
   - fiona
-  # (rtree depends on libspatialindex; conda-forge will pull it in)
-  - pip
-  - pip:
-      # keep empty unless you need pip-only libs
-      - 
