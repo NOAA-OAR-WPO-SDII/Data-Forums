@@ -1,4 +1,4 @@
-# Organizing Team
+# 🧑‍🤝‍🧑 Organizing Team
 
 ## Alison Krepp
 
