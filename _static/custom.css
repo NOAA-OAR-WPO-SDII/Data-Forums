@@ -1,4 +1,12 @@
+/* Resize and center the logo */
 .navbar-brand img {
-    max-height: 60px; /* adjust as needed */
-    width: auto;
+  max-height: 60px;  /* adjust as needed */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Hide the book title text next to the logo */
+.navbar-brand p.title {
+  display: none;
 }
