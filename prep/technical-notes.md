@@ -1,4 +1,4 @@
-# ⚙️ Technical Note
+# ⚙️ Technical Notes
 
 This page provides the **logistics and technical setup** you need to participate fully in the **SSP Data Forums**.
 
