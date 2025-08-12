@@ -11,7 +11,7 @@ parts:
   - caption: Preparation & Technical Details
     chapters:
       - file: prep/what-to-expect
-      - file: prep/checklist
+      - file: prep/what-to-bring
       - file: prep/technical-notes               # optional (e.g., Binder tips, accounts)
 
   - caption: Tutorials
