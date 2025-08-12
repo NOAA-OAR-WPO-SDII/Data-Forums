@@ -43,7 +43,7 @@ Come ready to share your **Data Story** and ideas for integration!
   Pose a question that could be answered by combining it with additional data sources.
 
 💡 We’ll use these reflections to kick off Forum 1 and spark collaboration across the community.  
-[**Read the full details →**](what-to-expect.md)
+[**Read the full details →**](what-to-bring.md)
 
 ---
 
