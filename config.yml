@@ -2,7 +2,7 @@
 title: "SSP Data Forums"
 author: "NOAA Weather Program Office"
 copyright: "© NOAA WPO"
-logo: "images/Lockup-Horizontal.png"
+logo: "_static/Lockup-Horizontal.png"
 
 # Build & execution
 execute:
