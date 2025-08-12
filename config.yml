@@ -19,6 +19,8 @@ html:
   extra_navbar: ""           # add footer text or remove
   extra_footer: ""           # add footer text or remove
   google_analytics_id: ""    # e.g., G-XXXXXXXX if you have one
+  extra_css:
+    - "_static/custom.css"
 
   # Theme options (sphinx-book-theme)
   theme:
