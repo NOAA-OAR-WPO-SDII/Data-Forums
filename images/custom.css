@@ -1,0 +1,7 @@
+/* Resize and center the sidebar logo */
+.bd-sidebar .navbar-brand img {
+    max-height: 80px;   /* adjust height as needed */
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
