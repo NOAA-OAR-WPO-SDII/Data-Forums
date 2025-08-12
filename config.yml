@@ -2,33 +2,33 @@
 title: "SSP Data Forums"
 author: "NOAA Weather Program Office"
 copyright: "© NOAA WPO"
-logo: "_static/Lockup-Horizontal.png"
+logo: "_static/Lockup-Horizontal.png"   # logo shown in the sidebar brand
 
 # Build & execution
 execute:
-  execute_notebooks: auto    # options: auto, force, cache, off
+  execute_notebooks: auto   # options: auto, force, cache, off
   timeout: 120
 
 # HTML / Theme
 html:
-  favicon: _static/favicon.ico
+  favicon: "_static/favicon.ico"        # ensure this file exists or remove this line
   use_issues_button: false
   use_repository_button: true
   use_edit_page_button: true
-  baseurl: ""                # leave blank for GitHub Pages under user org
-  extra_navbar: ""           # add footer text or remove
-  extra_footer: ""           # add footer text or remove
-  google_analytics_id: ""    # e.g., G-XXXXXXXX if you have one
+  baseurl: ""                           # leave blank for GitHub Pages under user/org
+  extra_navbar: ""
+  extra_footer: ""
+  google_analytics_id: ""
   extra_css:
-    - "images/custom.css"
+    - "_static/custom.css"              # your custom CSS in _static/
 
   # Theme options (sphinx-book-theme)
   theme:
     name: sphinx_book_theme
     options:
       repository_url: "https://github.com/jmote-noaa/SSP-Data-Forums"
-      repository_branch: main
-      path_to_docs: ""       # keep empty if your book is at repo root
+      repository_branch: "main"
+      path_to_docs: ""                  # keep empty if your book is at repo root
       home_page_in_navbar: true
       use_repository_button: true
       use_edit_page_button: true
@@ -39,7 +39,7 @@ html:
 launch_buttons:
   binderhub_url: "https://mybinder.org"
   notebook_interface: "jupyterlab"
-  thebe: true               # set true if you want in-browser code execution
+  thebe: true                           # in-browser code execution
 
 # Parse & content settings
 only_build_toc_files: true
@@ -51,7 +51,7 @@ parse:
     - linkify
     - substitution
 
-# Sphinx extensions (optional, safe defaults)
+# Sphinx extensions (optional)
 sphinx:
   extra_extensions:
     - sphinx_copybutton
