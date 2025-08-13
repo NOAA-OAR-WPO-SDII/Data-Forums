@@ -1,47 +1,55 @@
-# JUPYTER BOOK CONFIG --------------------------------------------
+# ------------------ JUPYTER BOOK CONFIG ------------------
 title: "SSP Data Forums"
 author: "NOAA Weather Program Office"
 copyright: "© NOAA WPO"
-logo: "_static/Lockup-Horizontal.png"   # logo shown in the sidebar brand
+logo: "_static/Lockup-Horizontal.png"
 
 # Build & execution
 execute:
-  execute_notebooks: auto   # options: auto, force, cache, off
+  execute_notebooks: auto   # auto | force | cache | off
   timeout: 120
+
+# Repository metadata (enables Binder/Edit buttons)
+repository:
+  url: https://github.com/jmote-noaa/SSP-Data-Forums  # <-- update if different
+  branch: main
+  path_to_book: ""   # repo root; set to subfolder if your book lives elsewhere
+
+# Launch buttons (Binder + Thebe)
+launch_buttons:
+  binderhub_url: https://mybinder.org
+  notebook_interface: jupyterlab  # or "classic"
+  thebe: true
+
+# Optional explicit Thebe config (usually inferred from 'repository' above)
+thebe_config:
+  repository_url: https://github.com/jmote-noaa/SSP-Data-Forums
+  repository_branch: main
 
 # HTML / Theme
 html:
-  favicon: "_static/favicon.ico"        # ensure this file exists or remove this line
+  favicon: "_static/favicon.ico"
   use_issues_button: false
   use_repository_button: true
   use_edit_page_button: true
-  baseurl: ""                           # leave blank for GitHub Pages under user/org
+  baseurl: ""  # leave blank for GitHub Pages at user/org root
   extra_navbar: ""
   extra_footer: ""
-  google_analytics_id: ""
   extra_css:
-    - "_static/custom.css"              # your custom CSS in _static/
-
-  # Theme options (sphinx-book-theme)
+    - "_static/custom.css"
   theme:
     name: sphinx_book_theme
     options:
-      repository_url: "https://github.com/jmote-noaa/SSP-Data-Forums"
-      repository_branch: "main"
-      path_to_docs: ""                  # keep empty if your book is at repo root
+      repository_url: https://github.com/jmote-noaa/SSP-Data-Forums
+      repository_branch: main
+      path_to_docs: ""     # keep empty if book is at repo root
       home_page_in_navbar: true
       use_repository_button: true
       use_edit_page_button: true
       use_download_button: true
       show_navbar_depth: 1
 
-# Launch buttons (Binder)
-launch_buttons:
-  binderhub_url: "https://mybinder.org"
-  notebook_interface: "jupyterlab"
-  thebe: true                           # in-browser code execution
-
-# Parse & content settings
+# Parsing & content
 only_build_toc_files: true
 parse:
   myst_enable_extensions:
@@ -51,7 +59,7 @@ parse:
     - linkify
     - substitution
 
-# Sphinx extensions (optional)
+# Sphinx extras
 sphinx:
   extra_extensions:
     - sphinx_copybutton
