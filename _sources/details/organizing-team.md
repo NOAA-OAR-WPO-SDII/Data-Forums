@@ -8,7 +8,7 @@ Alison is the Social Science Program Manager. She leads the program’s strategi
 
 ## Kyle Metta
 
-Kyle Metta is a social scientist serving as the SBES Data Policy and Partnership Analyst in the Societal Data Insights Initiative (SDII) at the NOAA Weather Program Office. In this capacity, he focuses on the management of SBES data, fostering partnerships, and developing open data policies. The aim is to leverage SBES data in conjunction with weather data to advance NOAA’s research, particularly in areas like flood impact assessment.
+Kyle Metta is a computational social scientist serving as the SBES Data Integration and Partnership Analyst in the Societal Data Insights Initiative (SDII) at the NOAA Weather Program Office. In this capacity, he focuses on the management of SBES data, fostering partnerships, and developing open data policies. The aim is to leverage SBES data in conjunction with weather data to advance NOAA’s research, particularly in areas like flood impact assessment.
 
 - WPO website: [WPO Bio](https://wpo.noaa.gov/team/kyle-metta/)
 - Google Scholar: [Scholar - KMetta](https://scholar.google.com/scholar?hl=en&as_sdt=400007&q=kyle+metta&btnG=)
