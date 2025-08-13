@@ -11,7 +11,7 @@ execute:
 
 # Repository metadata (enables Binder/Edit buttons)
 repository:
-  url: https://github.com/jmote-noaa/SSP-Data-Forums  # <-- update if different
+  url: https://github.com/jmote-noaa/Data-Forums  # <-- update if different
   branch: main
   path_to_book: ""   # repo root; set to subfolder if your book lives elsewhere
 
@@ -23,7 +23,7 @@ launch_buttons:
 
 # Optional explicit Thebe config (usually inferred from 'repository' above)
 thebe_config:
-  repository_url: https://github.com/jmote-noaa/SSP-Data-Forums
+  repository_url: https://github.com/jmote-noaa/Data-Forums
   repository_branch: main
 
 # HTML / Theme
@@ -40,7 +40,7 @@ html:
   theme:
     name: sphinx_book_theme
     options:
-      repository_url: https://github.com/jmote-noaa/SSP-Data-Forums
+      repository_url: https://github.com/jmote-noaa/Data-Forums
       repository_branch: main
       path_to_docs: ""     # keep empty if book is at repo root
       home_page_in_navbar: true
