@@ -6,7 +6,7 @@ Feel free to launch the notebook while we review it.  This is suggested only if 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/forum2.ipynb)
 
-## Forum 2 Note (Markdown Only)
+## Forum 2 Notebook (Markdown Only)
 
 add notebook as markdown
 
