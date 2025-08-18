@@ -6,7 +6,7 @@
 
 ## 📢 About the Forums
 
-Welcome to the **first annual SSP Data Forums**!  
+Welcome to the **first annual SSP Data Forums**, an effort of the Social Science Program at **NOAA's Weather Program Office (WPO)**!  
 These virtual sessions are the starting point for building a more connected, collaborative, and data-capable **Social, Behavioral, and Economic Sciences (SBES)** community within NOAA and across our partners.  
 
 🗓 **When:** September 24 & 25, 2025  
