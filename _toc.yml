@@ -13,7 +13,8 @@ parts:
       - file: prep/who-should-attend
       - file: prep/what-to-expect
       - file: prep/what-to-bring
-      - file: prep/technical-notes               # optional (e.g., Binder tips, accounts)
+      - file: prep/technical-notes
+      - file: prep/additional-resources
 
   - caption: Tutorials
     chapters:
