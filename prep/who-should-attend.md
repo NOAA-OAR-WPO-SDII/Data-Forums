@@ -1,4 +1,4 @@
-# Who Should Attend
+# 🙋 Who Should Attend
 
 The Data Forums are designed to be **accessible and inclusive**. No technical background is required—our goal is to make concepts like metadata and data integration approachable for all participants.  
 
