@@ -11,9 +11,14 @@ dependencies:
   - tqdm
   - matplotlib
   - seaborn
+  
   # --- Geo stack (for GeoPandas / Shapely) ---
   - geopandas
   - shapely
   - pyproj
   - rtree
   - fiona
+  
+  # --- Stats / modeling ---
+  - scipy
+  - statsmodels
