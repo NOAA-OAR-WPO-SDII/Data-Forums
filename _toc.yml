@@ -21,4 +21,4 @@ parts:
       - file: tutorials/forum1-overview
       - file: notebooks/forum1                    # ← notebook (Forum 1)
       - file: tutorials/forum2-overview
-      - file: notebooks/forum2                    # ← notebook (Forum 2)
+      - file: notebooks/Forum2                    # ← notebook (Forum 2)
