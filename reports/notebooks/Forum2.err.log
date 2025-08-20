@@ -26,8 +26,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['# Make sure begin_date is in datetime format', "df_18['begin_date'] = pd.to_datetime(df_18['begin_date'])", '', '# New column to store list of WWA names', "df_18['wwa_names'] = None"]
+['query = "ripberger"', 'start = 0', 'per_page = 20  # Max per page is 100', 'all_items = []', '']
 ...
-['        else:', "            df_18.at[idx, 'wwa_names'] = []", '    except Exception as e:', '        print(f"Failed for idx={idx}, lat={lat}, lon={lon}: {e}")', "        df_18.at[idx, 'wwa_names'] = []"]
+['    start += per_page', '', '# Convert to DataFrame', 'df_results = pd.DataFrame(all_items)', "df_results[['name', 'global_id', 'published_at', 'citation']].head(5)"]
 -------------------
 
