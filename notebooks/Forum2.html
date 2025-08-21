@@ -61,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Forum2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Forum 2 Overview" href="../tutorials/forum2-overview.html" />
+    <link rel="prev" title="Forum 2 Overview - From Metadata to Insights" href="../tutorials/forum2-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -189,7 +189,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/forum1-overview.html">Forum 1 Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/forum2-overview.html">Forum 2 Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/forum2-overview.html">Forum 2 Overview - From Metadata to Insights</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Forum 2 - Hello Data, Meet Weather</a></li>
 </ul>
 
@@ -707,17 +707,1941 @@ September 2025</p>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>global_id</th>
+      <th>published_at</th>
+      <th>citation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A comprehensive inventory and review of color ...</td>
+      <td>doi:10.7910/DVN/IFBAZ4</td>
+      <td>2025-04-22T13:26:32Z</td>
+      <td>Ripberger, Joseph; Bitterman, Abby; Rosen, Zoe...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>WX18</td>
+      <td>doi:10.7910/DVN/RHT4ON</td>
+      <td>2020-02-03T22:11:23Z</td>
+      <td>Ripberger, Joseph; Silva, Carol; Jenkins-Smith...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>WX19</td>
+      <td>doi:10.7910/DVN/MLCJEW</td>
+      <td>2020-02-03T22:10:59Z</td>
+      <td>Ripberger, Joseph; Silva, Carol; Jenkins-Smith...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>WX17</td>
+      <td>doi:10.7910/DVN/GSTYK4</td>
+      <td>2020-02-03T22:10:34Z</td>
+      <td>Ripberger, Joseph; Silva, Carol; Jenkins-Smith...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>WX20</td>
+      <td>doi:10.7910/DVN/EWOCUA</td>
+      <td>2020-09-01T14:03:39Z</td>
+      <td>Ripberger, Joseph; Krocak, Makenzie; Silva, Ca...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#How many datasets?  Each row (first number) represents a dataset.</span>
+<span class="n">df_results</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(37, 26)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="subsetting-our-results">
+<h3>Subsetting Our Results<a class="headerlink" href="#subsetting-our-results" title="Link to this heading">#</a></h3>
+<p>Let’s say we don’t want all of these, but only a subset of related surveys.  For this step, and the remainder of notebook, we will focus on the yearly waves of the Extreme Weather and Society Survey (WXYY). So let’s subset them the dataframe from the earlier API call.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the dataset names you want to filter on</span>
+<span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;WX17&quot;</span><span class="p">,</span> <span class="s2">&quot;WX18&quot;</span><span class="p">,</span> <span class="s2">&quot;WX19&quot;</span><span class="p">,</span> <span class="s2">&quot;WX20&quot;</span><span class="p">,</span> <span class="s2">&quot;WX21&quot;</span><span class="p">,</span> <span class="s2">&quot;WX22&quot;</span><span class="p">,</span> <span class="s2">&quot;WX23&quot;</span><span class="p">,</span> <span class="s2">&quot;WX24&quot;</span><span class="p">]</span>
+
+<span class="c1"># Subset the dataframe</span>
+<span class="n">df_subset</span> <span class="o">=</span> <span class="n">df_results</span><span class="p">[</span><span class="n">df_results</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">target_names</span><span class="p">)]</span>
+
+<span class="c1"># Display the result</span>
+<span class="n">df_subset</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>type</th>
+      <th>url</th>
+      <th>global_id</th>
+      <th>description</th>
+      <th>published_at</th>
+      <th>publisher</th>
+      <th>citationHtml</th>
+      <th>identifier_of_dataverse</th>
+      <th>name_of_dataverse</th>
+      <th>...</th>
+      <th>versionState</th>
+      <th>majorVersion</th>
+      <th>minorVersion</th>
+      <th>createdAt</th>
+      <th>updatedAt</th>
+      <th>contacts</th>
+      <th>publications</th>
+      <th>authors</th>
+      <th>image_url</th>
+      <th>keywords</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>WX18</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/RHT4ON</td>
+      <td>doi:10.7910/DVN/RHT4ON</td>
+      <td>The Severe Weather and Society Survey (WX) was...</td>
+      <td>2020-02-03T22:11:23Z</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>Ripberger, Joseph; Silva, Carol; Jenkins-Smith...</td>
+      <td>wxsurvey</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>...</td>
+      <td>RELEASED</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2020-01-13T14:26:39Z</td>
+      <td>2020-09-01T14:43:00Z</td>
+      <td>[{'name': 'Ripberger, Joseph', 'affiliation': ...</td>
+      <td>[{}]</td>
+      <td>[Ripberger, Joseph, Silva, Carol, Jenkins-Smit...</td>
+      <td>https://dataverse.harvard.edu/api/datasets/365...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>WX19</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/MLCJEW</td>
+      <td>doi:10.7910/DVN/MLCJEW</td>
+      <td>The Severe Weather and Society Survey (WX) was...</td>
+      <td>2020-02-03T22:10:59Z</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>Ripberger, Joseph; Silva, Carol; Jenkins-Smith...</td>
+      <td>wxsurvey</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>...</td>
+      <td>RELEASED</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2020-01-13T14:28:14Z</td>
+      <td>2020-09-01T14:43:57Z</td>
+      <td>[{'name': 'Ripberger, Joseph', 'affiliation': ...</td>
+      <td>[{}]</td>
+      <td>[Ripberger, Joseph, Silva, Carol, Jenkins-Smit...</td>
+      <td>https://dataverse.harvard.edu/api/datasets/365...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>WX17</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/GSTYK4</td>
+      <td>doi:10.7910/DVN/GSTYK4</td>
+      <td>The Severe Weather and Society Survey (WX17) w...</td>
+      <td>2020-02-03T22:10:34Z</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>Ripberger, Joseph; Silva, Carol; Jenkins-Smith...</td>
+      <td>wxsurvey</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>...</td>
+      <td>RELEASED</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2020-01-28T20:00:17Z</td>
+      <td>2020-09-01T14:41:58Z</td>
+      <td>[{'name': 'Ripberger, Joseph', 'affiliation': ...</td>
+      <td>[{}]</td>
+      <td>[Ripberger, Joseph, Silva, Carol, Jenkins-Smit...</td>
+      <td>https://dataverse.harvard.edu/api/datasets/367...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>WX20</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/EWOCUA</td>
+      <td>doi:10.7910/DVN/EWOCUA</td>
+      <td>The Severe Weather and Society Survey (WX) was...</td>
+      <td>2020-09-01T14:03:39Z</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>Ripberger, Joseph; Krocak, Makenzie; Silva, Ca...</td>
+      <td>wxsurvey</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>...</td>
+      <td>RELEASED</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2020-08-05T13:29:07Z</td>
+      <td>2020-09-01T14:46:05Z</td>
+      <td>[{'name': 'Ripberger, Joseph', 'affiliation': ...</td>
+      <td>[{}]</td>
+      <td>[Ripberger, Joseph, Krocak, Makenzie, Silva, C...</td>
+      <td>https://dataverse.harvard.edu/api/datasets/400...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>WX21</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/QYZLSO</td>
+      <td>doi:10.7910/DVN/QYZLSO</td>
+      <td>The Severe Weather and Society Survey (WX) was...</td>
+      <td>2022-08-22T20:37:58Z</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>Ripberger, Joseph; Krocak, Makenzie; Silva, Ca...</td>
+      <td>wxsurvey</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>...</td>
+      <td>RELEASED</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>2021-07-08T16:26:55Z</td>
+      <td>2022-08-22T20:37:58Z</td>
+      <td>[{'name': 'Krocak, Makenzie', 'affiliation': '...</td>
+      <td>NaN</td>
+      <td>[Ripberger, Joseph, Krocak, Makenzie, Silva, C...</td>
+      <td>https://dataverse.harvard.edu/api/datasets/488...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>WX22</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/TD5DGD</td>
+      <td>doi:10.7910/DVN/TD5DGD</td>
+      <td>This report describes the results of an annual...</td>
+      <td>2022-08-30T16:57:50Z</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>Bitterman, Abby; Krocak, Makenzie; Ripberger, ...</td>
+      <td>wxsurvey</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>...</td>
+      <td>RELEASED</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2022-08-30T16:55:49Z</td>
+      <td>2022-08-30T16:57:50Z</td>
+      <td>[{'name': 'Krocak, Makenzie', 'affiliation': '...</td>
+      <td>NaN</td>
+      <td>[Bitterman, Abby, Krocak, Makenzie, Ripberger,...</td>
+      <td>https://dataverse.harvard.edu/api/datasets/643...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>WX23</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/PPXI8H</td>
+      <td>doi:10.7910/DVN/PPXI8H</td>
+      <td>This report describes the results of an annual...</td>
+      <td>2024-04-29T18:59:56Z</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>Bitterman, Abby; Krocak, Makenzie; Ripberger, ...</td>
+      <td>wxsurvey</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>...</td>
+      <td>RELEASED</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>2023-09-13T16:07:51Z</td>
+      <td>2024-04-29T18:59:56Z</td>
+      <td>[{'name': 'Krocak, Makenzie', 'affiliation': '...</td>
+      <td>NaN</td>
+      <td>[Bitterman, Abby, Krocak, Makenzie, Ripberger,...</td>
+      <td>https://dataverse.harvard.edu/api/datasets/736...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>WX24</td>
+      <td>dataset</td>
+      <td>https://doi.org/10.7910/DVN/QMEKYJ</td>
+      <td>doi:10.7910/DVN/QMEKYJ</td>
+      <td>This report describes the results of an annual...</td>
+      <td>2025-03-10T16:47:09Z</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>Bitterman, Abby; Krocak, Makenzie; Ripberger, ...</td>
+      <td>wxsurvey</td>
+      <td>Extreme Weather and Society Survey</td>
+      <td>...</td>
+      <td>RELEASED</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2025-03-10T16:45:19Z</td>
+      <td>2025-03-10T16:47:09Z</td>
+      <td>[{'name': 'Krocak, Makenzie', 'affiliation': '...</td>
+      <td>NaN</td>
+      <td>[Bitterman, Abby, Krocak, Makenzie, Ripberger,...</td>
+      <td>https://dataverse.harvard.edu/api/datasets/109...</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>8 rows × 26 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="step-2-get-dataset-metadata-and-files">
+<h2>Step 2: Get Dataset Metadata and Files<a class="headerlink" href="#step-2-get-dataset-metadata-and-files" title="Link to this heading">#</a></h2>
+<section id="getting-metadata-for-a-single-dataset">
+<h3>Getting metadata for a single dataset<a class="headerlink" href="#getting-metadata-for-a-single-dataset" title="Link to this heading">#</a></h3>
+<p>Let’s examine the metadata for one of the datasets in the subset, WX18.  The Dataverse uses it’s own API file metadata.  First, we will look at file-level metadata.  Next, we will pull the full dataset metadata.  Since the results will be in JSON, we will convert that to a flat file.</p>
+</section>
+<section id="file-level-metadata">
+<h3>File level metadata<a class="headerlink" href="#file-level-metadata" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract persistent ID (DOI) from the first row [0] by position</span>
+<span class="n">persistent_id</span> <span class="o">=</span> <span class="n">df_subset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;global_id&#39;</span><span class="p">]</span>
+
+<span class="c1"># Get dataset metadata</span>
+<span class="n">metadata_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=</span><span class="si">{</span><span class="n">persistent_id</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">metadata_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">metadata_url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># Display list of files</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">metadata_response</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;latestVersion&#39;</span><span class="p">][</span><span class="s1">&#39;files&#39;</span><span class="p">]</span>
+<span class="n">files</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;label&#39;: &#39;WX18_data_wtd.tab&#39;,
+  &#39;restricted&#39;: False,
+  &#39;version&#39;: 1,
+  &#39;datasetVersionId&#39;: 210551,
+  &#39;dataFile&#39;: {&#39;id&#39;: 3657710,
+   &#39;persistentId&#39;: &#39;doi:10.7910/DVN/RHT4ON/7TRD5D&#39;,
+   &#39;pidURL&#39;: &#39;https://doi.org/10.7910/DVN/RHT4ON/7TRD5D&#39;,
+   &#39;filename&#39;: &#39;WX18_data_wtd.tab&#39;,
+   &#39;contentType&#39;: &#39;text/tab-separated-values&#39;,
+   &#39;friendlyType&#39;: &#39;Tab-Delimited&#39;,
+   &#39;filesize&#39;: 2602546,
+   &#39;storageIdentifier&#39;: &#39;s3://dvn-cloud:16f9f4bba61-8bbfafa227e7&#39;,
+   &#39;originalFileFormat&#39;: &#39;text/csv&#39;,
+   &#39;originalFormatLabel&#39;: &#39;Comma Separated Values&#39;,
+   &#39;originalFileSize&#39;: 2609506,
+   &#39;originalFileName&#39;: &#39;WX18_data_wtd.csv&#39;,
+   &#39;UNF&#39;: &#39;UNF:6:Yyyznfcg+cNLP/7D2v9/wg==&#39;,
+   &#39;rootDataFileId&#39;: -1,
+   &#39;md5&#39;: &#39;c56b9b5ac4e603b085a00feabc4e6b04&#39;,
+   &#39;checksum&#39;: {&#39;type&#39;: &#39;MD5&#39;, &#39;value&#39;: &#39;c56b9b5ac4e603b085a00feabc4e6b04&#39;},
+   &#39;tabularData&#39;: True,
+   &#39;creationDate&#39;: &#39;2020-01-13&#39;,
+   &#39;publicationDate&#39;: &#39;2020-02-03&#39;,
+   &#39;fileAccessRequest&#39;: False}},
+ {&#39;label&#39;: &#39;WX18 Instrument.pdf&#39;,
+  &#39;restricted&#39;: False,
+  &#39;version&#39;: 1,
+  &#39;datasetVersionId&#39;: 210551,
+  &#39;dataFile&#39;: {&#39;id&#39;: 3657709,
+   &#39;persistentId&#39;: &#39;doi:10.7910/DVN/RHT4ON/VBCEWA&#39;,
+   &#39;pidURL&#39;: &#39;https://doi.org/10.7910/DVN/RHT4ON/VBCEWA&#39;,
+   &#39;filename&#39;: &#39;WX18 Instrument.pdf&#39;,
+   &#39;contentType&#39;: &#39;application/pdf&#39;,
+   &#39;friendlyType&#39;: &#39;Adobe PDF&#39;,
+   &#39;filesize&#39;: 234344,
+   &#39;storageIdentifier&#39;: &#39;s3://dvn-cloud:16f9f4b7300-1ef8892476d5&#39;,
+   &#39;rootDataFileId&#39;: -1,
+   &#39;md5&#39;: &#39;4cc0791ef645b9c1440a005cf28ed7ce&#39;,
+   &#39;checksum&#39;: {&#39;type&#39;: &#39;MD5&#39;, &#39;value&#39;: &#39;4cc0791ef645b9c1440a005cf28ed7ce&#39;},
+   &#39;tabularData&#39;: False,
+   &#39;creationDate&#39;: &#39;2020-01-13&#39;,
+   &#39;publicationDate&#39;: &#39;2020-02-03&#39;,
+   &#39;fileAccessRequest&#39;: False}},
+ {&#39;label&#39;: &#39;WX18 Reference Report.pdf&#39;,
+  &#39;restricted&#39;: False,
+  &#39;version&#39;: 1,
+  &#39;datasetVersionId&#39;: 210551,
+  &#39;dataFile&#39;: {&#39;id&#39;: 3657708,
+   &#39;persistentId&#39;: &#39;doi:10.7910/DVN/RHT4ON/PIZ2S6&#39;,
+   &#39;pidURL&#39;: &#39;https://doi.org/10.7910/DVN/RHT4ON/PIZ2S6&#39;,
+   &#39;filename&#39;: &#39;WX18 Reference Report.pdf&#39;,
+   &#39;contentType&#39;: &#39;application/pdf&#39;,
+   &#39;friendlyType&#39;: &#39;Adobe PDF&#39;,
+   &#39;filesize&#39;: 437743,
+   &#39;storageIdentifier&#39;: &#39;s3://dvn-cloud:16f9f4b6e56-79235ea20c8b&#39;,
+   &#39;rootDataFileId&#39;: -1,
+   &#39;md5&#39;: &#39;703b99829c8976ff33428ce2681afe9c&#39;,
+   &#39;checksum&#39;: {&#39;type&#39;: &#39;MD5&#39;, &#39;value&#39;: &#39;703b99829c8976ff33428ce2681afe9c&#39;},
+   &#39;tabularData&#39;: False,
+   &#39;creationDate&#39;: &#39;2020-01-13&#39;,
+   &#39;publicationDate&#39;: &#39;2020-02-03&#39;,
+   &#39;fileAccessRequest&#39;: False}}]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="full-dataset-metadata">
+<h3>Full dataset metadata<a class="headerlink" href="#full-dataset-metadata" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract persistent ID (DOI) from the first row</span>
+<span class="n">persistent_id</span> <span class="o">=</span> <span class="n">df_subset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;global_id&#39;</span><span class="p">]</span>
+
+<span class="c1"># Get full dataset metadata (latest version)</span>
+<span class="n">metadata_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/datasets/:persistentId/versions/:latest?persistentId=</span><span class="si">{</span><span class="n">persistent_id</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">metadata_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">metadata_url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># Display the JSON</span>
+<span class="n">metadata_response</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;status&#39;: &#39;OK&#39;,
+ &#39;data&#39;: {&#39;id&#39;: 210551,
+  &#39;datasetId&#39;: 3657707,
+  &#39;datasetPersistentId&#39;: &#39;doi:10.7910/DVN/RHT4ON&#39;,
+  &#39;datasetType&#39;: &#39;dataset&#39;,
+  &#39;storageIdentifier&#39;: &#39;s3://10.7910/DVN/RHT4ON&#39;,
+  &#39;versionNumber&#39;: 1,
+  &#39;internalVersionNumber&#39;: 4,
+  &#39;versionMinorNumber&#39;: 1,
+  &#39;versionState&#39;: &#39;RELEASED&#39;,
+  &#39;latestVersionPublishingState&#39;: &#39;RELEASED&#39;,
+  &#39;deaccessionLink&#39;: &#39;&#39;,
+  &#39;UNF&#39;: &#39;UNF:6:Yyyznfcg+cNLP/7D2v9/wg==&#39;,
+  &#39;lastUpdateTime&#39;: &#39;2020-09-01T14:43:00Z&#39;,
+  &#39;releaseTime&#39;: &#39;2020-09-01T14:43:00Z&#39;,
+  &#39;createTime&#39;: &#39;2020-09-01T14:42:39Z&#39;,
+  &#39;publicationDate&#39;: &#39;2020-02-03&#39;,
+  &#39;citationDate&#39;: &#39;2020-02-03&#39;,
+  &#39;license&#39;: {&#39;name&#39;: &#39;CC0 1.0&#39;,
+   &#39;uri&#39;: &#39;http://creativecommons.org/publicdomain/zero/1.0&#39;,
+   &#39;iconUri&#39;: &#39;https://licensebuttons.net/p/zero/1.0/88x31.png&#39;,
+   &#39;rightsIdentifier&#39;: &#39;CC0-1.0&#39;,
+   &#39;rightsIdentifierScheme&#39;: &#39;SPDX&#39;,
+   &#39;schemeUri&#39;: &#39;https://spdx.org/licenses/&#39;,
+   &#39;languageCode&#39;: &#39;en&#39;},
+  &#39;fileAccessRequest&#39;: False,
+  &#39;metadataBlocks&#39;: {&#39;citation&#39;: {&#39;displayName&#39;: &#39;Citation Metadata&#39;,
+    &#39;name&#39;: &#39;citation&#39;,
+    &#39;fields&#39;: [{&#39;typeName&#39;: &#39;title&#39;,
+      &#39;multiple&#39;: False,
+      &#39;typeClass&#39;: &#39;primitive&#39;,
+      &#39;value&#39;: &#39;WX18&#39;},
+     {&#39;typeName&#39;: &#39;author&#39;,
+      &#39;multiple&#39;: True,
+      &#39;typeClass&#39;: &#39;compound&#39;,
+      &#39;value&#39;: [{&#39;authorName&#39;: {&#39;typeName&#39;: &#39;authorName&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;Ripberger, Joseph&#39;},
+        &#39;authorAffiliation&#39;: {&#39;typeName&#39;: &#39;authorAffiliation&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;University of Oklahoma&#39;},
+        &#39;authorIdentifierScheme&#39;: {&#39;typeName&#39;: &#39;authorIdentifierScheme&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;controlledVocabulary&#39;,
+         &#39;value&#39;: &#39;ORCID&#39;},
+        &#39;authorIdentifier&#39;: {&#39;typeName&#39;: &#39;authorIdentifier&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;0000-0003-0343-8262&#39;}},
+       {&#39;authorName&#39;: {&#39;typeName&#39;: &#39;authorName&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;Silva, Carol&#39;},
+        &#39;authorAffiliation&#39;: {&#39;typeName&#39;: &#39;authorAffiliation&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;University of Oklahoma&#39;},
+        &#39;authorIdentifierScheme&#39;: {&#39;typeName&#39;: &#39;authorIdentifierScheme&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;controlledVocabulary&#39;,
+         &#39;value&#39;: &#39;ORCID&#39;},
+        &#39;authorIdentifier&#39;: {&#39;typeName&#39;: &#39;authorIdentifier&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;0000-0001-7171-6944&#39;}},
+       {&#39;authorName&#39;: {&#39;typeName&#39;: &#39;authorName&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;Jenkins-Smith, Hank&#39;},
+        &#39;authorAffiliation&#39;: {&#39;typeName&#39;: &#39;authorAffiliation&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;University of Oklahoma&#39;},
+        &#39;authorIdentifierScheme&#39;: {&#39;typeName&#39;: &#39;authorIdentifierScheme&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;controlledVocabulary&#39;,
+         &#39;value&#39;: &#39;ORCID&#39;},
+        &#39;authorIdentifier&#39;: {&#39;typeName&#39;: &#39;authorIdentifier&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;0000-0002-5204-2726&#39;}},
+       {&#39;authorName&#39;: {&#39;typeName&#39;: &#39;authorName&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;Krocak, Makenzie&#39;},
+        &#39;authorAffiliation&#39;: {&#39;typeName&#39;: &#39;authorAffiliation&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;University of Oklahoma&#39;},
+        &#39;authorIdentifierScheme&#39;: {&#39;typeName&#39;: &#39;authorIdentifierScheme&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;controlledVocabulary&#39;,
+         &#39;value&#39;: &#39;ORCID&#39;},
+        &#39;authorIdentifier&#39;: {&#39;typeName&#39;: &#39;authorIdentifier&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;0000-0002-0943-8725&#39;}}]},
+     {&#39;typeName&#39;: &#39;datasetContact&#39;,
+      &#39;multiple&#39;: True,
+      &#39;typeClass&#39;: &#39;compound&#39;,
+      &#39;value&#39;: [{&#39;datasetContactName&#39;: {&#39;typeName&#39;: &#39;datasetContactName&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;Ripberger, Joseph&#39;},
+        &#39;datasetContactAffiliation&#39;: {&#39;typeName&#39;: &#39;datasetContactAffiliation&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;University of Oklahoma&#39;},
+        &#39;datasetContactEmail&#39;: {&#39;typeName&#39;: &#39;datasetContactEmail&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;jtr@ou.edu&#39;}}]},
+     {&#39;typeName&#39;: &#39;dsDescription&#39;,
+      &#39;multiple&#39;: True,
+      &#39;typeClass&#39;: &#39;compound&#39;,
+      &#39;value&#39;: [{&#39;dsDescriptionValue&#39;: {&#39;typeName&#39;: &#39;dsDescriptionValue&#39;,
+         &#39;multiple&#39;: False,
+         &#39;typeClass&#39;: &#39;primitive&#39;,
+         &#39;value&#39;: &#39;The Severe Weather and Society Survey (WX) was designed and administered by the Center for Risk and Crisis Management (CRCM) at the University of Oklahoma. This is the second survey in the annual series (see Silva et al., 2017 for information on WX17). WX18 was fielded July 6-11, 2018 using an online questionnaire that was completed by 3,000 U.S. adults (age 18+) that were recruited from an Internet panel that matches the characteristics of the U.S. population as estimated in the U.S. Census. Following WX17, which was designed to establish baseline measures of the extent to which U.S. adults receive, understand, and respond to severe weather forecasts and warnings, WX18 was designed to continue and, in some cases, refine the measurement of these concepts. Additionally, WX18 measured public trust in the National Weather Service (NWS), extreme weather and climate risk perceptions, risk literacy, interpretations of probabilistic language, and response efficacy.&#39;}}]},
+     {&#39;typeName&#39;: &#39;subject&#39;,
+      &#39;multiple&#39;: True,
+      &#39;typeClass&#39;: &#39;controlledVocabulary&#39;,
+      &#39;value&#39;: [&#39;Social Sciences&#39;]},
+     {&#39;typeName&#39;: &#39;depositor&#39;,
+      &#39;multiple&#39;: False,
+      &#39;typeClass&#39;: &#39;primitive&#39;,
+      &#39;value&#39;: &#39;Ripberger, Joseph&#39;},
+     {&#39;typeName&#39;: &#39;dateOfDeposit&#39;,
+      &#39;multiple&#39;: False,
+      &#39;typeClass&#39;: &#39;primitive&#39;,
+      &#39;value&#39;: &#39;2020-01-13&#39;}]}},
+  &#39;files&#39;: [{&#39;label&#39;: &#39;WX18_data_wtd.tab&#39;,
+    &#39;restricted&#39;: False,
+    &#39;version&#39;: 1,
+    &#39;datasetVersionId&#39;: 210551,
+    &#39;dataFile&#39;: {&#39;id&#39;: 3657710,
+     &#39;persistentId&#39;: &#39;doi:10.7910/DVN/RHT4ON/7TRD5D&#39;,
+     &#39;pidURL&#39;: &#39;https://doi.org/10.7910/DVN/RHT4ON/7TRD5D&#39;,
+     &#39;filename&#39;: &#39;WX18_data_wtd.tab&#39;,
+     &#39;contentType&#39;: &#39;text/tab-separated-values&#39;,
+     &#39;friendlyType&#39;: &#39;Tab-Delimited&#39;,
+     &#39;filesize&#39;: 2602546,
+     &#39;storageIdentifier&#39;: &#39;s3://dvn-cloud:16f9f4bba61-8bbfafa227e7&#39;,
+     &#39;originalFileFormat&#39;: &#39;text/csv&#39;,
+     &#39;originalFormatLabel&#39;: &#39;Comma Separated Values&#39;,
+     &#39;originalFileSize&#39;: 2609506,
+     &#39;originalFileName&#39;: &#39;WX18_data_wtd.csv&#39;,
+     &#39;UNF&#39;: &#39;UNF:6:Yyyznfcg+cNLP/7D2v9/wg==&#39;,
+     &#39;rootDataFileId&#39;: -1,
+     &#39;md5&#39;: &#39;c56b9b5ac4e603b085a00feabc4e6b04&#39;,
+     &#39;checksum&#39;: {&#39;type&#39;: &#39;MD5&#39;, &#39;value&#39;: &#39;c56b9b5ac4e603b085a00feabc4e6b04&#39;},
+     &#39;tabularData&#39;: True,
+     &#39;creationDate&#39;: &#39;2020-01-13&#39;,
+     &#39;publicationDate&#39;: &#39;2020-02-03&#39;,
+     &#39;fileAccessRequest&#39;: False}},
+   {&#39;label&#39;: &#39;WX18 Instrument.pdf&#39;,
+    &#39;restricted&#39;: False,
+    &#39;version&#39;: 1,
+    &#39;datasetVersionId&#39;: 210551,
+    &#39;dataFile&#39;: {&#39;id&#39;: 3657709,
+     &#39;persistentId&#39;: &#39;doi:10.7910/DVN/RHT4ON/VBCEWA&#39;,
+     &#39;pidURL&#39;: &#39;https://doi.org/10.7910/DVN/RHT4ON/VBCEWA&#39;,
+     &#39;filename&#39;: &#39;WX18 Instrument.pdf&#39;,
+     &#39;contentType&#39;: &#39;application/pdf&#39;,
+     &#39;friendlyType&#39;: &#39;Adobe PDF&#39;,
+     &#39;filesize&#39;: 234344,
+     &#39;storageIdentifier&#39;: &#39;s3://dvn-cloud:16f9f4b7300-1ef8892476d5&#39;,
+     &#39;rootDataFileId&#39;: -1,
+     &#39;md5&#39;: &#39;4cc0791ef645b9c1440a005cf28ed7ce&#39;,
+     &#39;checksum&#39;: {&#39;type&#39;: &#39;MD5&#39;, &#39;value&#39;: &#39;4cc0791ef645b9c1440a005cf28ed7ce&#39;},
+     &#39;tabularData&#39;: False,
+     &#39;creationDate&#39;: &#39;2020-01-13&#39;,
+     &#39;publicationDate&#39;: &#39;2020-02-03&#39;,
+     &#39;fileAccessRequest&#39;: False}},
+   {&#39;label&#39;: &#39;WX18 Reference Report.pdf&#39;,
+    &#39;restricted&#39;: False,
+    &#39;version&#39;: 1,
+    &#39;datasetVersionId&#39;: 210551,
+    &#39;dataFile&#39;: {&#39;id&#39;: 3657708,
+     &#39;persistentId&#39;: &#39;doi:10.7910/DVN/RHT4ON/PIZ2S6&#39;,
+     &#39;pidURL&#39;: &#39;https://doi.org/10.7910/DVN/RHT4ON/PIZ2S6&#39;,
+     &#39;filename&#39;: &#39;WX18 Reference Report.pdf&#39;,
+     &#39;contentType&#39;: &#39;application/pdf&#39;,
+     &#39;friendlyType&#39;: &#39;Adobe PDF&#39;,
+     &#39;filesize&#39;: 437743,
+     &#39;storageIdentifier&#39;: &#39;s3://dvn-cloud:16f9f4b6e56-79235ea20c8b&#39;,
+     &#39;rootDataFileId&#39;: -1,
+     &#39;md5&#39;: &#39;703b99829c8976ff33428ce2681afe9c&#39;,
+     &#39;checksum&#39;: {&#39;type&#39;: &#39;MD5&#39;, &#39;value&#39;: &#39;703b99829c8976ff33428ce2681afe9c&#39;},
+     &#39;tabularData&#39;: False,
+     &#39;creationDate&#39;: &#39;2020-01-13&#39;,
+     &#39;publicationDate&#39;: &#39;2020-02-03&#39;,
+     &#39;fileAccessRequest&#39;: False}}]}}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="transform-the-results-from-json">
+<h3>Transform the results from JSON<a class="headerlink" href="#transform-the-results-from-json" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Flatten JSON into a single row using json_normalize</span>
+<span class="n">df_meta</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">metadata_response</span><span class="p">)</span>
+
+<span class="c1"># Transpose so keys become a column and values another</span>
+<span class="n">df_meta_t</span> <span class="o">=</span> <span class="n">df_meta</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">df_meta_t</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;field&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">]</span>
+
+<span class="n">df_meta_t</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># show first 20 rows</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>field</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>status</td>
+      <td>OK</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>data.id</td>
+      <td>210551</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>data.datasetId</td>
+      <td>3657707</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>data.datasetPersistentId</td>
+      <td>doi:10.7910/DVN/RHT4ON</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>data.datasetType</td>
+      <td>dataset</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>data.storageIdentifier</td>
+      <td>s3://10.7910/DVN/RHT4ON</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>data.versionNumber</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>data.internalVersionNumber</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>data.versionMinorNumber</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>data.versionState</td>
+      <td>RELEASED</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>data.latestVersionPublishingState</td>
+      <td>RELEASED</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>data.deaccessionLink</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>data.UNF</td>
+      <td>UNF:6:Yyyznfcg+cNLP/7D2v9/wg==</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>data.lastUpdateTime</td>
+      <td>2020-09-01T14:43:00Z</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>data.releaseTime</td>
+      <td>2020-09-01T14:43:00Z</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>data.createTime</td>
+      <td>2020-09-01T14:42:39Z</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>data.publicationDate</td>
+      <td>2020-02-03</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>data.citationDate</td>
+      <td>2020-02-03</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>data.license.name</td>
+      <td>CC0 1.0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>data.license.uri</td>
+      <td>http://creativecommons.org/publicdomain/zero/1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="getting-metadata-for-multiple-datasets">
+<h3>Getting metadata for multiple datasets<a class="headerlink" href="#getting-metadata-for-multiple-datasets" title="Link to this heading">#</a></h3>
+<p>Let’s say we want the file-level metadata for all waves.  Against, we set up a loop call, to loop through all of the files using the persistent ID (DOI) and pick up the metadata information we want.  This time, we will limit the items we want to see (as seen in the “for f in files” loop below) and have the results formatted into a dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an empty list to hold all file metadata</span>
+<span class="n">all_files</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Loop through persistent IDs</span>
+<span class="k">for</span> <span class="n">pid</span> <span class="ow">in</span> <span class="n">df_subset</span><span class="p">[</span><span class="s1">&#39;global_id&#39;</span><span class="p">]:</span>
+    <span class="n">metadata_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=</span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">metadata_url</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;latestVersion&#39;</span><span class="p">][</span><span class="s1">&#39;files&#39;</span><span class="p">]</span>
+        
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">file_info</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;dataset_title&#39;</span><span class="p">:</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;latestVersion&#39;</span><span class="p">][</span><span class="s1">&#39;metadataBlocks&#39;</span><span class="p">][</span><span class="s1">&#39;citation&#39;</span><span class="p">][</span><span class="s1">&#39;fields&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;file_id&#39;</span><span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;dataFile&#39;</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;file_label&#39;</span><span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;file_size&#39;</span><span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;dataFile&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;filesize&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+                <span class="s1">&#39;file_description&#39;</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;persistent_id&#39;</span><span class="p">:</span> <span class="n">pid</span>
+            <span class="p">}</span>
+            <span class="n">all_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_info</span><span class="p">)</span>
+    
+    <span class="c1"># Be respectful of API limits</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Convert to DataFrame</span>
+<span class="n">df_files</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_files</span><span class="p">)</span>
+<span class="n">df_files</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dataset_title</th>
+      <th>file_id</th>
+      <th>file_label</th>
+      <th>file_size</th>
+      <th>file_description</th>
+      <th>persistent_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>WX18</td>
+      <td>3657710</td>
+      <td>WX18_data_wtd.tab</td>
+      <td>2602546</td>
+      <td></td>
+      <td>doi:10.7910/DVN/RHT4ON</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>WX18</td>
+      <td>3657709</td>
+      <td>WX18 Instrument.pdf</td>
+      <td>234344</td>
+      <td></td>
+      <td>doi:10.7910/DVN/RHT4ON</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>WX18</td>
+      <td>3657708</td>
+      <td>WX18 Reference Report.pdf</td>
+      <td>437743</td>
+      <td></td>
+      <td>doi:10.7910/DVN/RHT4ON</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>WX19</td>
+      <td>3657724</td>
+      <td>WX19_data_wtd.tab</td>
+      <td>2872171</td>
+      <td></td>
+      <td>doi:10.7910/DVN/MLCJEW</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>WX19</td>
+      <td>3657725</td>
+      <td>WX19 Instrument.pdf</td>
+      <td>205960</td>
+      <td></td>
+      <td>doi:10.7910/DVN/MLCJEW</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>WX19</td>
+      <td>3657723</td>
+      <td>WX19 Reference Report.pdf</td>
+      <td>462399</td>
+      <td></td>
+      <td>doi:10.7910/DVN/MLCJEW</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>WX17</td>
+      <td>3674405</td>
+      <td>WX17_data_wtd.tab</td>
+      <td>1935657</td>
+      <td></td>
+      <td>doi:10.7910/DVN/GSTYK4</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>WX17</td>
+      <td>3674410</td>
+      <td>WX17 Instrument.pdf</td>
+      <td>776810</td>
+      <td></td>
+      <td>doi:10.7910/DVN/GSTYK4</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>WX17</td>
+      <td>3674409</td>
+      <td>WX17 Reference Report.pdf</td>
+      <td>1348083</td>
+      <td></td>
+      <td>doi:10.7910/DVN/GSTYK4</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>WX20</td>
+      <td>4004498</td>
+      <td>WX20_data_wtd.tab</td>
+      <td>2265980</td>
+      <td></td>
+      <td>doi:10.7910/DVN/EWOCUA</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>WX20</td>
+      <td>4004499</td>
+      <td>WX20 Instrument.pdf</td>
+      <td>275558</td>
+      <td></td>
+      <td>doi:10.7910/DVN/EWOCUA</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>WX20</td>
+      <td>4054174</td>
+      <td>WX20 Reference Report.pdf</td>
+      <td>2107866</td>
+      <td></td>
+      <td>doi:10.7910/DVN/EWOCUA</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>WX21</td>
+      <td>4882758</td>
+      <td>WX21_data_wtd.tab</td>
+      <td>1085370</td>
+      <td></td>
+      <td>doi:10.7910/DVN/QYZLSO</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>WX21</td>
+      <td>4882759</td>
+      <td>WX21 Instrument.pdf</td>
+      <td>258276</td>
+      <td></td>
+      <td>doi:10.7910/DVN/QYZLSO</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>WX21</td>
+      <td>6425188</td>
+      <td>WX21 reference report.pdf</td>
+      <td>523004</td>
+      <td></td>
+      <td>doi:10.7910/DVN/QYZLSO</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>WX22</td>
+      <td>6435540</td>
+      <td>WX22_data_wtd.tab</td>
+      <td>1082321</td>
+      <td></td>
+      <td>doi:10.7910/DVN/TD5DGD</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>WX22</td>
+      <td>6435541</td>
+      <td>WX22 Instrument.pdf</td>
+      <td>329108</td>
+      <td></td>
+      <td>doi:10.7910/DVN/TD5DGD</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>WX22</td>
+      <td>6435542</td>
+      <td>WX22 Reference Report.pdf</td>
+      <td>718129</td>
+      <td></td>
+      <td>doi:10.7910/DVN/TD5DGD</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>WX23</td>
+      <td>7367274</td>
+      <td>WX23_data_wtd.tab</td>
+      <td>1237602</td>
+      <td></td>
+      <td>doi:10.7910/DVN/PPXI8H</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>WX23</td>
+      <td>7367275</td>
+      <td>WX23 Instrument.pdf</td>
+      <td>326240</td>
+      <td></td>
+      <td>doi:10.7910/DVN/PPXI8H</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>WX23</td>
+      <td>10162149</td>
+      <td>WX23 reference report.pdf</td>
+      <td>701193</td>
+      <td></td>
+      <td>doi:10.7910/DVN/PPXI8H</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>WX24</td>
+      <td>10975177</td>
+      <td>WX24_data_wtd.tab</td>
+      <td>1097340</td>
+      <td></td>
+      <td>doi:10.7910/DVN/QMEKYJ</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>WX24</td>
+      <td>10975176</td>
+      <td>WX24 Instrument.pdf</td>
+      <td>297155</td>
+      <td></td>
+      <td>doi:10.7910/DVN/QMEKYJ</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>WX24</td>
+      <td>10975175</td>
+      <td>WX24 reference report.pdf</td>
+      <td>1030229</td>
+      <td></td>
+      <td>doi:10.7910/DVN/QMEKYJ</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="step-3-download-a-file">
+<h2>Step 3: Download a File<a class="headerlink" href="#step-3-download-a-file" title="Link to this heading">#</a></h2>
+<p>Above, we see that each dataset file (.tab) is accompanied by PDFs of the instrument and a reference report.</p>
+<p>Let’s download the dataset file (.tab) for first year of the survey, WX18, which has a file_id of “3657710”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># File ID for WxEM_Wave1.tab</span>
+<span class="n">file_id</span> <span class="o">=</span> <span class="mi">3657710</span>
+
+<span class="c1"># Download directly to memory</span>
+<span class="n">file_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/access/datafile/</span><span class="si">{</span><span class="n">file_id</span><span class="si">}</span><span class="s2">?format=original&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">file_url</span><span class="p">)</span>
+
+<span class="c1"># Load into pandas directly from memory, assuming comma-delimited content</span>
+<span class="n">df_18</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">on_bad_lines</span><span class="o">=</span><span class="s1">&#39;skip&#39;</span><span class="p">)</span>
+<span class="n">df_18</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>p_id</th>
+      <th>age</th>
+      <th>age_group</th>
+      <th>gend</th>
+      <th>hisp</th>
+      <th>race</th>
+      <th>state</th>
+      <th>zip</th>
+      <th>nws_region</th>
+      <th>lat</th>
+      <th>...</th>
+      <th>begin_datetime</th>
+      <th>end_datetime</th>
+      <th>begin_date</th>
+      <th>end_date</th>
+      <th>begin_time</th>
+      <th>end_time</th>
+      <th>time_taken</th>
+      <th>censusproportion</th>
+      <th>surveyproportion</th>
+      <th>weightfactor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>EPO77VBNDHYXC5L4M3</td>
+      <td>54</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>Illinois</td>
+      <td>60060</td>
+      <td>Central Region</td>
+      <td>42.200806</td>
+      <td>...</td>
+      <td>1530900028</td>
+      <td>1530900853</td>
+      <td>2018-07-06</td>
+      <td>2018-07-06</td>
+      <td>13:00:00</td>
+      <td>13:14:00</td>
+      <td>13</td>
+      <td>0.001122</td>
+      <td>0.003155</td>
+      <td>0.355626</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>EPO77VDZDV5LMGD4M9</td>
+      <td>66</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Maryland</td>
+      <td>21921</td>
+      <td>Eastern Region</td>
+      <td>39.575394</td>
+      <td>...</td>
+      <td>1530900035</td>
+      <td>1530901159</td>
+      <td>2018-07-06</td>
+      <td>2018-07-06</td>
+      <td>13:00:00</td>
+      <td>13:19:00</td>
+      <td>18</td>
+      <td>0.027792</td>
+      <td>0.032461</td>
+      <td>0.856166</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>EPO77VFD67MR5R44M7</td>
+      <td>54</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>New York</td>
+      <td>14420</td>
+      <td>Eastern Region</td>
+      <td>43.250793</td>
+      <td>...</td>
+      <td>1530900046</td>
+      <td>1530900927</td>
+      <td>2018-07-06</td>
+      <td>2018-07-06</td>
+      <td>13:00:00</td>
+      <td>13:15:00</td>
+      <td>14</td>
+      <td>0.030340</td>
+      <td>0.057592</td>
+      <td>0.526809</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>EPO77VFJ2CJKML44M9</td>
+      <td>56</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>Utah</td>
+      <td>84097</td>
+      <td>Western Region</td>
+      <td>40.296799</td>
+      <td>...</td>
+      <td>1530900046</td>
+      <td>1530900878</td>
+      <td>2018-07-06</td>
+      <td>2018-07-06</td>
+      <td>13:00:00</td>
+      <td>13:14:00</td>
+      <td>13</td>
+      <td>0.024319</td>
+      <td>0.034826</td>
+      <td>0.698300</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>EPO77VFD4CZHV2M4M0</td>
+      <td>66</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>California</td>
+      <td>90620</td>
+      <td>Western Region</td>
+      <td>33.875504</td>
+      <td>...</td>
+      <td>1530900048</td>
+      <td>1530900993</td>
+      <td>2018-07-06</td>
+      <td>2018-07-06</td>
+      <td>13:00:00</td>
+      <td>13:16:00</td>
+      <td>15</td>
+      <td>0.020574</td>
+      <td>0.023217</td>
+      <td>0.886161</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 223 columns</p>
+</div></div></div>
+</div>
+<section id="examine-the-dataset">
+<h3>Examine the dataset<a class="headerlink" href="#examine-the-dataset" title="Link to this heading">#</a></h3>
+<p>Pandas has a number of attributes that can be used to examine characteristics of the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># See basic shape of the data (rows, columns).  Each row represents a respondent.</span>
+<span class="n">df_18</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3000, 223)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="variable-names">
+<h4>Variable names<a class="headerlink" href="#variable-names" title="Link to this heading">#</a></h4>
+<p>Listing the columns shows all the variable names contained in the data.  To integrate with weather data, we are most interested in locating possible ways to join the data.  Typically, geographic variables are a good start.  In this survey, some good possible variables are state, zip, lat/lon.  These are pretty straightforward, but what about “nws_region”?  Does it contain WFOs?  Let’s examine.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># List all column names</span>
+<span class="n">df_18</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;p_id&#39;,
+ &#39;age&#39;,
+ &#39;age_group&#39;,
+ &#39;gend&#39;,
+ &#39;hisp&#39;,
+ &#39;race&#39;,
+ &#39;state&#39;,
+ &#39;zip&#39;,
+ &#39;nws_region&#39;,
+ &#39;lat&#39;,
+ &#39;lon&#39;,
+ &#39;long_years&#39;,
+ &#39;long_months&#39;,
+ &#39;last_state&#39;,
+ &#39;now&#39;,
+ &#39;rural&#39;,
+ &#39;home&#39;,
+ &#39;home_spec&#39;,
+ &#39;rent&#39;,
+ &#39;adults&#39;,
+ &#39;children&#39;,
+ &#39;follow&#39;,
+ &#39;plan_around&#39;,
+ &#39;und_weather&#39;,
+ &#39;risk_wind&#39;,
+ &#39;risk_rain&#39;,
+ &#39;risk_heat&#39;,
+ &#39;risk_drought&#39;,
+ &#39;risk_cold&#39;,
+ &#39;risk_snow&#39;,
+ &#39;risk_tor&#39;,
+ &#39;risk_flood&#39;,
+ &#39;risk_hur&#39;,
+ &#39;risk_fire&#39;,
+ &#39;risk_tie&#39;,
+ &#39;alert_und&#39;,
+ &#39;tortrack&#39;,
+ &#39;torwatch&#39;,
+ &#39;torwarn&#39;,
+ &#39;warn_prob_area&#39;,
+ &#39;prob_dist&#39;,
+ &#39;warn_prob_house&#39;,
+ &#39;warn_cons&#39;,
+ &#39;warn_time&#39;,
+ &#39;warn_size&#39;,
+ &#39;warn_time_minutes&#39;,
+ &#39;warn_time_hours&#39;,
+ &#39;watch_prob_area&#39;,
+ &#39;watch_prob_house&#39;,
+ &#39;watch_cons&#39;,
+ &#39;watch_time&#39;,
+ &#39;watch_size&#39;,
+ &#39;watch_time_minutes&#39;,
+ &#39;watch_time_hours&#39;,
+ &#39;tor_watchwarn_und&#39;,
+ &#39;tor_map_und&#39;,
+ &#39;tor_radar_und&#39;,
+ &#39;svr_hail&#39;,
+ &#39;svr_wind&#39;,
+ &#39;svr_lightning&#39;,
+ &#39;svr_flood&#39;,
+ &#39;svr_rain&#39;,
+ &#39;svr_watchwarn_und&#39;,
+ &#39;rec_all&#39;,
+ &#39;rec_most&#39;,
+ &#39;rec_soon&#39;,
+ &#39;rec_miss&#39;,
+ &#39;rec_area&#39;,
+ &#39;rec_time&#39;,
+ &#39;rec_sleep&#39;,
+ &#39;rec_driving&#39;,
+ &#39;rec_work&#39;,
+ &#39;rec_store&#39;,
+ &#39;rec_small_group&#39;,
+ &#39;rec_large_group&#39;,
+ &#39;rec_dif_sit&#39;,
+ &#39;warn_hist&#39;,
+ &#39;warn_when&#39;,
+ &#39;warn_how_br_rad&#39;,
+ &#39;warn_how_wx_rad&#39;,
+ &#39;warn_how_tv&#39;,
+ &#39;warn_how_siren&#39;,
+ &#39;warn_how_int&#39;,
+ &#39;warn_how_soc&#39;,
+ &#39;warn_how_word&#39;,
+ &#39;warn_how_phone&#39;,
+ &#39;warn_how_oth&#39;,
+ &#39;warn_how_spec&#39;,
+ &#39;warn_how_dk&#39;,
+ &#39;warn_timercv&#39;,
+ &#39;warn_where&#39;,
+ &#39;warn_where_specify&#39;,
+ &#39;warn_iss&#39;,
+ &#39;warn_sure&#39;,
+ &#39;warn_tor&#39;,
+ &#39;last_act&#39;,
+ &#39;last_act_spec&#39;,
+ &#39;last_act_satis&#39;,
+ &#39;last_act_again&#39;,
+ &#39;next_act_day&#39;,
+ &#39;next_act_day_spec&#39;,
+ &#39;next_act_night&#39;,
+ &#39;next_act_night_spec&#39;,
+ &#39;next_act_car&#39;,
+ &#39;resp_ignore&#39;,
+ &#39;resp_prot&#39;,
+ &#39;resp_busy&#39;,
+ &#39;resp_unsure&#39;,
+ &#39;resp_sleep&#39;,
+ &#39;resp_driving&#39;,
+ &#39;resp_work&#39;,
+ &#39;resp_store&#39;,
+ &#39;resp_small_group&#39;,
+ &#39;resp_large_group&#39;,
+ &#39;resp_dif_sit&#39;,
+ &#39;rand_morn&#39;,
+ &#39;rec_morn&#39;,
+ &#39;und_morn&#39;,
+ &#39;resp_morn&#39;,
+ &#39;rand_aft&#39;,
+ &#39;rec_aft&#39;,
+ &#39;und_aft&#39;,
+ &#39;resp_aft&#39;,
+ &#39;rand_eve&#39;,
+ &#39;rec_eve&#39;,
+ &#39;und_eve&#39;,
+ &#39;resp_eve&#39;,
+ &#39;short_torhit_time&#39;,
+ &#39;short_torhit_resp&#39;,
+ &#39;short_torhit_resp_confidence&#39;,
+ &#39;short_torhit_resp_protect&#39;,
+ &#39;long_torhit_time&#39;,
+ &#39;long_torhit_resp&#39;,
+ &#39;long_torhit_resp_confidence&#39;,
+ &#39;long_torhit_resp_protect&#39;,
+ &#39;tor_eff1&#39;,
+ &#39;tor_eff2&#39;,
+ &#39;tor_eff3&#39;,
+ &#39;tor_eff4&#39;,
+ &#39;tor_eff5&#39;,
+ &#39;tor_eff6&#39;,
+ &#39;tor_eff7&#39;,
+ &#39;tor_eff8&#39;,
+ &#39;nws_trust&#39;,
+ &#39;lotv_trust&#39;,
+ &#39;natv_trust&#39;,
+ &#39;em_trust&#39;,
+ &#39;fam_trust&#39;,
+ &#39;wx_info1&#39;,
+ &#39;wx_info2&#39;,
+ &#39;wx_info3&#39;,
+ &#39;wx_info4&#39;,
+ &#39;wx_info5&#39;,
+ &#39;wx_info6&#39;,
+ &#39;wx_info7&#39;,
+ &#39;wx_info8&#39;,
+ &#39;wx_info_tie&#39;,
+ &#39;prob_event&#39;,
+ &#39;prob_word&#39;,
+ &#39;whichphrases&#39;,
+ &#39;ext_low&#39;,
+ &#39;vry_low&#39;,
+ &#39;vry_small&#39;,
+ &#39;prty_low&#39;,
+ &#39;small&#39;,
+ &#39;low&#39;,
+ &#39;remote&#39;,
+ &#39;slight&#39;,
+ &#39;medium&#39;,
+ &#39;moderate&#39;,
+ &#39;good&#39;,
+ &#39;high&#39;,
+ &#39;large&#39;,
+ &#39;prty_high&#39;,
+ &#39;vry_high&#39;,
+ &#39;sig&#39;,
+ &#39;ext_high&#39;,
+ &#39;tor_exp_no&#39;,
+ &#39;tor_exp_per&#39;,
+ &#39;tor_exp_fam&#39;,
+ &#39;tor_exp_neighbors&#39;,
+ &#39;tor_exp_friends&#39;,
+ &#39;svr_exp_no&#39;,
+ &#39;svr_exp_per&#39;,
+ &#39;svr_exp_fam&#39;,
+ &#39;svr_exp_neighbors&#39;,
+ &#39;svr_exp_friends&#39;,
+ &#39;prep_plan&#39;,
+ &#39;prep_kit&#39;,
+ &#39;prep_water&#39;,
+ &#39;prep_gen&#39;,
+ &#39;prep_room&#39;,
+ &#39;prep_shelt&#39;,
+ &#39;transp_delay&#39;,
+ &#39;transp_closures&#39;,
+ &#39;transp_accidents&#39;,
+ &#39;transp_qual&#39;,
+ &#39;transp_spend&#39;,
+ &#39;rel_1&#39;,
+ &#39;rel_2&#39;,
+ &#39;rel_3&#39;,
+ &#39;rel_4&#39;,
+ &#39;income&#39;,
+ &#39;inc_50&#39;,
+ &#39;inc_100&#39;,
+ &#39;inc_150&#39;,
+ &#39;inc_200&#39;,
+ &#39;edu&#39;,
+ &#39;oft_twit&#39;,
+ &#39;oft_FB&#39;,
+ &#39;ign_instruct&#39;,
+ &#39;is_bluedot&#39;,
+ &#39;comments&#39;,
+ &#39;begin_datetime&#39;,
+ &#39;end_datetime&#39;,
+ &#39;begin_date&#39;,
+ &#39;end_date&#39;,
+ &#39;begin_time&#39;,
+ &#39;end_time&#39;,
+ &#39;time_taken&#39;,
+ &#39;censusproportion&#39;,
+ &#39;surveyproportion&#39;,
+ &#39;weightfactor&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Is nws_region usefl at all?</span>
+<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;nws_region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Central Region&#39;, &#39;Eastern Region&#39;, &#39;Western Region&#39;,
+       &#39;Southern Region&#39;, nan], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="unfortunately-nws-region-only-has-four-regions-nonetheless-it-might-be-useful-at-some-point">
+<h5>Unfortunately, “nws_region” only has four regions.  Nonetheless, it might be useful at some point.<a class="headerlink" href="#unfortunately-nws-region-only-has-four-regions-nonetheless-it-might-be-useful-at-some-point" title="Link to this heading">#</a></h5>
+</section>
+</section>
+</section>
+</section>
+<section id="step-4-merge-with-weather-data">
+<h2>Step 4: Merge with Weather Data<a class="headerlink" href="#step-4-merge-with-weather-data" title="Link to this heading">#</a></h2>
+<p>In this example, we will extract warnings/watches/advisories from the Iowa Mesonet for each respondent three days prior to the start of the survey.  I know, that’s pretty arbitrary but perhaps we’re interested in the impact of the weather on responses to a weather survey.</p>
+<p>For each respondent, we will use their:</p>
+<ol class="arabic simple">
+<li><p>lat, lon, and begin_date</p></li>
+<li><p>Query the IEM for any warnings/watches/advisories issued within 3 days prior to begin_date</p></li>
+<li><p>Store or summarize those results (e.g., number of WWAs, types, text, etc.)</p></li>
+</ol>
+<p>Please note the API Endpoint (Rest-like) and the structure of the request for those variables:</p>
+<p><a class="reference external" href="https://mesonet.agron.iastate.edu/vtec/json.php?lon=%7Blon%7D&amp;amp;lat=%7Blat%7D&amp;amp;sdate=%7Bstart%7D&amp;amp;edate=%7Bend%7D">https://mesonet.agron.iastate.edu/vtec/json.php?lon={lon}&amp;lat={lat}&amp;sdate={start}&amp;edate={end}</a></p>
+<p>Remember, you can always check the API documentation for guidance: the <a class="reference external" href="https://mesonet.agron.iastate.edu/api/">Iowa Mesonet API Guide</a>.</p>
+<p>We will use this API call to loop through all 3,000 respondents and gather their information.</p>
+<section id="iowa-mesonet">
+<h3>Iowa Mesonet<a class="headerlink" href="#iowa-mesonet" title="Link to this heading">#</a></h3>
+<p>So I’m just going to use lat/lon and the date to directly get watches/warnings/advisories.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure begin_date is in datetime format</span>
+<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;begin_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;begin_date&#39;</span><span class="p">])</span>
+
+<span class="c1"># New column to store list of WWA names</span>
+<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># Loop through each respondent</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">df_18</span><span class="o">.</span><span class="n">iterrows</span><span class="p">(),</span> <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_18</span><span class="p">)):</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+    <span class="n">end_date</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;begin_date&#39;</span><span class="p">]</span>
+    <span class="n">start_date</span> <span class="o">=</span> <span class="n">end_date</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="c1"># Build API URL</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;https://mesonet.agron.iastate.edu/json/vtec_events_bypoint.py&quot;</span>
+        <span class="sa">f</span><span class="s2">&quot;?lat=</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">&amp;lon=</span><span class="si">{</span><span class="n">lon</span><span class="si">}</span><span class="s2">&amp;sdate=</span><span class="si">{</span><span class="n">start_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&amp;edate=</span><span class="si">{</span><span class="n">end_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;events&#39;</span><span class="p">,</span> <span class="p">[])]</span>
+            <span class="n">df_18</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">df_18</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed for idx=</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">, lat=</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">, lon=</span><span class="si">{</span><span class="n">lon</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">df_18</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/3000 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 1/3000 [00:00&lt;24:02,  2.08it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 2/3000 [00:00&lt;17:54,  2.79it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 3/3000 [00:01&lt;15:58,  3.13it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 4/3000 [00:01&lt;15:32,  3.21it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 5/3000 [00:01&lt;16:00,  3.12it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 6/3000 [00:01&lt;15:15,  3.27it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 7/3000 [00:02&lt;14:57,  3.33it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 8/3000 [00:02&lt;14:23,  3.46it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 9/3000 [00:02&lt;14:15,  3.50it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 10/3000 [00:03&lt;14:33,  3.42it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 11/3000 [00:03&lt;14:21,  3.47it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 12/3000 [00:03&lt;14:01,  3.55it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 13/3000 [00:03&lt;13:44,  3.62it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 14/3000 [00:04&lt;14:03,  3.54it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 15/3000 [00:04&lt;13:55,  3.57it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 16/3000 [00:04&lt;13:46,  3.61it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 17/3000 [00:04&lt;13:35,  3.66it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 18/3000 [00:05&lt;13:54,  3.57it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 19/3000 [00:05&lt;13:59,  3.55it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 20/3000 [00:05&lt;14:01,  3.54it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 21/3000 [00:06&lt;13:50,  3.59it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 22/3000 [00:06&lt;13:33,  3.66it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 23/3000 [00:06&lt;13:21,  3.72it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 24/3000 [00:06&lt;13:17,  3.73it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 25/3000 [00:07&lt;13:28,  3.68it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 26/3000 [00:07&lt;13:47,  3.59it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 27/3000 [00:07&lt;13:42,  3.62it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 28/3000 [00:08&lt;13:34,  3.65it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 29/3000 [00:08&lt;13:53,  3.56it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 30/3000 [00:08&lt;13:40,  3.62it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 31/3000 [00:08&lt;14:12,  3.48it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 32/3000 [00:09&lt;13:51,  3.57it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 33/3000 [00:09&lt;13:56,  3.55it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 34/3000 [00:09&lt;13:46,  3.59it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 35/3000 [00:10&lt;14:03,  3.51it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 36/3000 [00:10&lt;13:32,  3.65it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|          | 37/3000 [00:10&lt;13:57,  3.54it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|▏         | 38/3000 [00:10&lt;13:35,  3.63it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|▏         | 39/3000 [00:11&lt;14:01,  3.52it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|▏         | 40/3000 [00:11&lt;13:43,  3.59it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|▏         | 41/3000 [00:11&lt;13:35,  3.63it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|▏         | 42/3000 [00:11&lt;13:26,  3.67it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|▏         | 43/3000 [00:12&lt;13:45,  3.58it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1%|▏         | 44/3000 [00:12&lt;13:41,  3.60it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 45/3000 [00:12&lt;14:01,  3.51it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 46/3000 [00:13&lt;13:34,  3.63it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 47/3000 [00:13&lt;13:33,  3.63it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 48/3000 [00:13&lt;13:24,  3.67it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 49/3000 [00:13&lt;13:10,  3.73it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 50/3000 [00:14&lt;13:21,  3.68it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 51/3000 [00:14&lt;13:50,  3.55it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 52/3000 [00:14&lt;14:15,  3.44it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 53/3000 [00:15&lt;14:01,  3.50it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 54/3000 [00:15&lt;13:33,  3.62it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 55/3000 [00:15&lt;14:13,  3.45it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 56/3000 [00:15&lt;13:50,  3.54it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 57/3000 [00:16&lt;13:26,  3.65it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 58/3000 [00:16&lt;13:15,  3.70it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 59/3000 [00:16&lt;13:06,  3.74it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 60/3000 [00:16&lt;12:06,  4.05it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 61/3000 [00:17&lt;12:17,  3.98it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 62/3000 [00:17&lt;12:30,  3.91it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 63/3000 [00:17&lt;12:35,  3.89it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 64/3000 [00:17&lt;12:34,  3.89it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 65/3000 [00:18&lt;12:32,  3.90it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 66/3000 [00:18&lt;13:05,  3.74it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 67/3000 [00:18&lt;12:53,  3.79it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 68/3000 [00:18&lt;13:03,  3.74it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 69/3000 [00:19&lt;13:11,  3.70it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 70/3000 [00:19&lt;13:07,  3.72it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 71/3000 [00:19&lt;13:16,  3.68it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 72/3000 [00:20&lt;13:09,  3.71it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 73/3000 [00:20&lt;12:59,  3.76it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▏         | 74/3000 [00:20&lt;13:31,  3.61it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  2%|▎         | 75/3000 [00:20&lt;13:44,  3.55it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 76/3000 [00:21&lt;14:12,  3.43it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 77/3000 [00:21&lt;14:30,  3.36it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 78/3000 [00:21&lt;14:03,  3.46it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 79/3000 [00:22&lt;13:36,  3.58it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 80/3000 [00:22&lt;13:27,  3.62it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 81/3000 [00:22&lt;13:43,  3.54it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 82/3000 [00:22&lt;13:20,  3.65it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 83/3000 [00:23&lt;13:13,  3.67it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 84/3000 [00:23&lt;13:52,  3.50it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 85/3000 [00:23&lt;12:32,  3.88it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 86/3000 [00:24&lt;13:47,  3.52it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 87/3000 [00:24&lt;13:26,  3.61it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 88/3000 [00:24&lt;13:18,  3.65it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 89/3000 [00:24&lt;12:10,  3.98it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 90/3000 [00:24&lt;12:20,  3.93it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 91/3000 [00:25&lt;11:26,  4.24it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 92/3000 [00:25&lt;11:48,  4.10it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 93/3000 [00:25&lt;11:58,  4.04it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 94/3000 [00:25&lt;11:14,  4.31it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 95/3000 [00:26&lt;10:40,  4.54it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 96/3000 [00:26&lt;11:29,  4.21it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 97/3000 [00:26&lt;11:53,  4.07it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 98/3000 [00:26&lt;12:48,  3.78it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 99/3000 [00:27&lt;12:45,  3.79it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 100/3000 [00:27&lt;12:41,  3.81it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 101/3000 [00:27&lt;12:33,  3.85it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 102/3000 [00:27&lt;12:34,  3.84it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 103/3000 [00:28&lt;12:41,  3.81it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  3%|▎         | 104/3000 [00:28&lt;12:47,  3.77it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  4%|▎         | 105/3000 [00:28&lt;11:48,  4.08it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  4%|▎         | 106/3000 [00:28&lt;12:07,  3.98it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  4%|▎         | 107/3000 [00:29&lt;12:10,  3.96it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  4%|▎         | 108/3000 [00:29&lt;12:24,  3.89it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  4%|▎         | 109/3000 [00:29&lt;12:24,  3.89it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  4%|▎         | 109/3000 [00:29&lt;13:15,  3.63it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">search_url</span> <span class="o">=</span> <span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/search?&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="sa">f</span><span class="s2">&quot;q=</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">&amp;type=dataset&amp;start=</span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2">&amp;per_page=</span><span class="si">{</span><span class="n">per_page</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">12</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search_url</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">items</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">]</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="sa">f</span><span class="s2">&quot;https://mesonet.agron.iastate.edu/json/vtec_events_bypoint.py&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="sa">f</span><span class="s2">&quot;?lat=</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">&amp;lon=</span><span class="si">{</span><span class="n">lon</span><span class="si">}</span><span class="s2">&amp;sdate=</span><span class="si">{</span><span class="n">start_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&amp;edate=</span><span class="si">{</span><span class="n">end_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">21</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>         <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 <span class="nn">File ~/micromamba/envs/data-forums/lib/python3.10/site-packages/requests/api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
 <span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -849,242 +2773,6 @@ September 2025</p>
 <span class="g g-Whitespace">   </span><span class="mi">1165</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#How many datasets?  Each row (first number) represents a dataset.</span>
-<span class="n">df_results</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="subsetting-our-results">
-<h3>Subsetting Our Results<a class="headerlink" href="#subsetting-our-results" title="Link to this heading">#</a></h3>
-<p>Let’s say we don’t want all of these, but only a subset of related surveys.  For this step, and the remainder of notebook, we will focus on the yearly waves of the Extreme Weather and Society Survey (WXYY). So let’s subset them the dataframe from the earlier API call.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the dataset names you want to filter on</span>
-<span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;WX17&quot;</span><span class="p">,</span> <span class="s2">&quot;WX18&quot;</span><span class="p">,</span> <span class="s2">&quot;WX19&quot;</span><span class="p">,</span> <span class="s2">&quot;WX20&quot;</span><span class="p">,</span> <span class="s2">&quot;WX21&quot;</span><span class="p">,</span> <span class="s2">&quot;WX22&quot;</span><span class="p">,</span> <span class="s2">&quot;WX23&quot;</span><span class="p">,</span> <span class="s2">&quot;WX24&quot;</span><span class="p">]</span>
-
-<span class="c1"># Subset the dataframe</span>
-<span class="n">df_subset</span> <span class="o">=</span> <span class="n">df_results</span><span class="p">[</span><span class="n">df_results</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">target_names</span><span class="p">)]</span>
-
-<span class="c1"># Display the result</span>
-<span class="n">df_subset</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="step-2-get-dataset-metadata-and-files">
-<h2>Step 2: Get Dataset Metadata and Files<a class="headerlink" href="#step-2-get-dataset-metadata-and-files" title="Link to this heading">#</a></h2>
-<section id="getting-metadata-for-a-single-dataset">
-<h3>Getting metadata for a single dataset<a class="headerlink" href="#getting-metadata-for-a-single-dataset" title="Link to this heading">#</a></h3>
-<p>Let’s examine the metadata for one of the datasets in the subset, WX18.  The Dataverse uses it’s own API file metadata.  First, we will look at file-level metadata.  Next, we will pull the full dataset metadata.  Since the results will be in JSON, we will convert that to a flat file.</p>
-</section>
-<section id="file-level-metadata">
-<h3>File level metadata<a class="headerlink" href="#file-level-metadata" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract persistent ID (DOI) from the first row [0] by position</span>
-<span class="n">persistent_id</span> <span class="o">=</span> <span class="n">df_subset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;global_id&#39;</span><span class="p">]</span>
-
-<span class="c1"># Get dataset metadata</span>
-<span class="n">metadata_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=</span><span class="si">{</span><span class="n">persistent_id</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="n">metadata_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">metadata_url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-
-<span class="c1"># Display list of files</span>
-<span class="n">files</span> <span class="o">=</span> <span class="n">metadata_response</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;latestVersion&#39;</span><span class="p">][</span><span class="s1">&#39;files&#39;</span><span class="p">]</span>
-<span class="n">files</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="full-dataset-metadata">
-<h3>Full dataset metadata<a class="headerlink" href="#full-dataset-metadata" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract persistent ID (DOI) from the first row</span>
-<span class="n">persistent_id</span> <span class="o">=</span> <span class="n">df_subset</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;global_id&#39;</span><span class="p">]</span>
-
-<span class="c1"># Get full dataset metadata (latest version)</span>
-<span class="n">metadata_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/datasets/:persistentId/versions/:latest?persistentId=</span><span class="si">{</span><span class="n">persistent_id</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="n">metadata_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">metadata_url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-
-<span class="c1"># Display the JSON</span>
-<span class="n">metadata_response</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="transform-the-results-from-json">
-<h3>Transform the results from JSON<a class="headerlink" href="#transform-the-results-from-json" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Flatten JSON into a single row using json_normalize</span>
-<span class="n">df_meta</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">metadata_response</span><span class="p">)</span>
-
-<span class="c1"># Transpose so keys become a column and values another</span>
-<span class="n">df_meta_t</span> <span class="o">=</span> <span class="n">df_meta</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-<span class="n">df_meta_t</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;field&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">]</span>
-
-<span class="n">df_meta_t</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># show first 20 rows</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="getting-metadata-for-multiple-datasets">
-<h3>Getting metadata for multiple datasets<a class="headerlink" href="#getting-metadata-for-multiple-datasets" title="Link to this heading">#</a></h3>
-<p>Let’s say we want the file-level metadata for all waves.  Against, we set up a loop call, to loop through all of the files using the persistent ID (DOI) and pick up the metadata information we want.  This time, we will limit the items we want to see (as seen in the “for f in files” loop below) and have the results formatted into a dataframe.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an empty list to hold all file metadata</span>
-<span class="n">all_files</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># Loop through persistent IDs</span>
-<span class="k">for</span> <span class="n">pid</span> <span class="ow">in</span> <span class="n">df_subset</span><span class="p">[</span><span class="s1">&#39;global_id&#39;</span><span class="p">]:</span>
-    <span class="n">metadata_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=</span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">metadata_url</span><span class="p">)</span>
-    
-    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-        <span class="n">metadata</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-        <span class="n">files</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;latestVersion&#39;</span><span class="p">][</span><span class="s1">&#39;files&#39;</span><span class="p">]</span>
-        
-        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-            <span class="n">file_info</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="s1">&#39;dataset_title&#39;</span><span class="p">:</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;latestVersion&#39;</span><span class="p">][</span><span class="s1">&#39;metadataBlocks&#39;</span><span class="p">][</span><span class="s1">&#39;citation&#39;</span><span class="p">][</span><span class="s1">&#39;fields&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">],</span>
-                <span class="s1">&#39;file_id&#39;</span><span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;dataFile&#39;</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">],</span>
-                <span class="s1">&#39;file_label&#39;</span><span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span>
-                <span class="s1">&#39;file_size&#39;</span><span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;dataFile&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;filesize&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-                <span class="s1">&#39;file_description&#39;</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
-                <span class="s1">&#39;persistent_id&#39;</span><span class="p">:</span> <span class="n">pid</span>
-            <span class="p">}</span>
-            <span class="n">all_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_info</span><span class="p">)</span>
-    
-    <span class="c1"># Be respectful of API limits</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-
-<span class="c1"># Convert to DataFrame</span>
-<span class="n">df_files</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_files</span><span class="p">)</span>
-<span class="n">df_files</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="step-3-download-a-file">
-<h2>Step 3: Download a File<a class="headerlink" href="#step-3-download-a-file" title="Link to this heading">#</a></h2>
-<p>Above, we see that each dataset file (.tab) is accompanied by PDFs of the instrument and a reference report.</p>
-<p>Let’s download the dataset file (.tab) for first year of the survey, WX18, which has a file_id of “3657710”.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># File ID for WxEM_Wave1.tab</span>
-<span class="n">file_id</span> <span class="o">=</span> <span class="mi">3657710</span>
-
-<span class="c1"># Download directly to memory</span>
-<span class="n">file_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://dataverse.harvard.edu/api/access/datafile/</span><span class="si">{</span><span class="n">file_id</span><span class="si">}</span><span class="s2">?format=original&quot;</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">file_url</span><span class="p">)</span>
-
-<span class="c1"># Load into pandas directly from memory, assuming comma-delimited content</span>
-<span class="n">df_18</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">on_bad_lines</span><span class="o">=</span><span class="s1">&#39;skip&#39;</span><span class="p">)</span>
-<span class="n">df_18</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="examine-the-dataset">
-<h3>Examine the dataset<a class="headerlink" href="#examine-the-dataset" title="Link to this heading">#</a></h3>
-<p>Pandas has a number of attributes that can be used to examine characteristics of the dataset.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># See basic shape of the data (rows, columns).  Each row represents a respondent.</span>
-<span class="n">df_18</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="variable-names">
-<h4>Variable names<a class="headerlink" href="#variable-names" title="Link to this heading">#</a></h4>
-<p>Listing the columns shows all the variable names contained in the data.  To integrate with weather data, we are most interested in locating possible ways to join the data.  Typically, geographic variables are a good start.  In this survey, some good possible variables are state, zip, lat/lon.  These are pretty straightforward, but what about “nws_region”?  Does it contain WFOs?  Let’s examine.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># List all column names</span>
-<span class="n">df_18</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Is nws_region usefl at all?</span>
-<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;nws_region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="unfortunately-nws-region-only-has-four-regions-nonetheless-it-might-be-useful-at-some-point">
-<h5>Unfortunately, “nws_region” only has four regions.  Nonetheless, it might be useful at some point.<a class="headerlink" href="#unfortunately-nws-region-only-has-four-regions-nonetheless-it-might-be-useful-at-some-point" title="Link to this heading">#</a></h5>
-</section>
-</section>
-</section>
-</section>
-<section id="step-4-merge-with-weather-data">
-<h2>Step 4: Merge with Weather Data<a class="headerlink" href="#step-4-merge-with-weather-data" title="Link to this heading">#</a></h2>
-<p>In this example, we will extract warnings/watches/advisories from the Iowa Mesonet for each respondent three days prior to the start of the survey.  I know, that’s pretty arbitrary but perhaps we’re interested in the impact of the weather on responses to a weather survey.</p>
-<p>For each respondent, we will use their:</p>
-<ol class="arabic simple">
-<li><p>lat, lon, and begin_date</p></li>
-<li><p>Query the IEM for any warnings/watches/advisories issued within 3 days prior to begin_date</p></li>
-<li><p>Store or summarize those results (e.g., number of WWAs, types, text, etc.)</p></li>
-</ol>
-<p>Please note the API Endpoint (Rest-like) and the structure of the request for those variables:</p>
-<p><a class="reference external" href="https://mesonet.agron.iastate.edu/vtec/json.php?lon=%7Blon%7D&amp;amp;lat=%7Blat%7D&amp;amp;sdate=%7Bstart%7D&amp;amp;edate=%7Bend%7D">https://mesonet.agron.iastate.edu/vtec/json.php?lon={lon}&amp;lat={lat}&amp;sdate={start}&amp;edate={end}</a></p>
-<p>Remember, you can always check the API documentation for guidance: the <a class="reference external" href="https://mesonet.agron.iastate.edu/api/">Iowa Mesonet API Guide</a>.</p>
-<p>We will use this API call to loop through all 3,000 respondents and gather their information.</p>
-<section id="iowa-mesonet">
-<h3>Iowa Mesonet<a class="headerlink" href="#iowa-mesonet" title="Link to this heading">#</a></h3>
-<p>So I’m just going to use lat/lon and the date to directly get watches/warnings/advisories.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure begin_date is in datetime format</span>
-<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;begin_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;begin_date&#39;</span><span class="p">])</span>
-
-<span class="c1"># New column to store list of WWA names</span>
-<span class="n">df_18</span><span class="p">[</span><span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-
-<span class="c1"># Loop through each respondent</span>
-<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">df_18</span><span class="o">.</span><span class="n">iterrows</span><span class="p">(),</span> <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_18</span><span class="p">)):</span>
-    <span class="n">lat</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span>
-    <span class="n">lon</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
-    <span class="n">end_date</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;begin_date&#39;</span><span class="p">]</span>
-    <span class="n">start_date</span> <span class="o">=</span> <span class="n">end_date</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-
-    <span class="c1"># Build API URL</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;https://mesonet.agron.iastate.edu/json/vtec_events_bypoint.py&quot;</span>
-        <span class="sa">f</span><span class="s2">&quot;?lat=</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">&amp;lon=</span><span class="si">{</span><span class="n">lon</span><span class="si">}</span><span class="s2">&amp;sdate=</span><span class="si">{</span><span class="n">start_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&amp;edate=</span><span class="si">{</span><span class="n">end_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="p">)</span>
-
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-            <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;events&#39;</span><span class="p">,</span> <span class="p">[])]</span>
-            <span class="n">df_18</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">df_18</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed for idx=</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">, lat=</span><span class="si">{</span><span class="n">lat</span><span class="si">}</span><span class="s2">, lon=</span><span class="si">{</span><span class="n">lon</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="n">df_18</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;wwa_names&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </div>
@@ -1481,7 +3169,7 @@ We encourage you to take this workflow and apply it to your own research questio
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Forum 2 Overview</p>
+        <p class="prev-next-title">Forum 2 Overview - From Metadata to Insights</p>
       </div>
     </a>
 </div>
