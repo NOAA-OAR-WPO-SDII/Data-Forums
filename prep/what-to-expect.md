@@ -27,8 +27,8 @@ The **SSP Data Forums** are designed to be **approachable, interactive, and prac
 
 ---
 
-## 🧩 **Come Prepared**
-To make the data forums more relevant for your work, we invite participants to reflect on the following as they engage in the Forums:  
+## 🧩 **Come Prepared**  
+To make the Data Forums more relevant for your work, we invite participants to reflect on the following as they engage in the Forums (see also [🧩 What to Bring](what-to-bring.md)):  
 
 1. **Your Data Story**  
    - What kind of social, behavioral, economic, hazard, or climate-related data do you work with?  
