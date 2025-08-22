@@ -1,6 +1,6 @@
 # 📚 Additional Resources
 
-The Data Forums are an introduction to metadata and data integration for social scientists working with natural hazards and weather.  
+The Data Forums are only an introduction to metadata, Jupyter notebooks, and data integration for social scientists working with natural hazards and weather.  
 If you are interested in exploring further, the following resources may be useful:
 
 ## Jupyter Notebooks
