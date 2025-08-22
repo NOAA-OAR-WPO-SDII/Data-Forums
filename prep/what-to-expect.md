@@ -28,19 +28,25 @@ The **SSP Data Forums** are designed to be **approachable, interactive, and prac
 ---
 
 ## 🧩 **Come Prepared**
-To make the discussions more relevant and collaborative, we ask that participants come ready to reflect on:
+To make the data forums more relevant for your work, we invite participants to reflect on the following as they engage in the Forums:  
 
 1. **Your Data Story**  
-   - What kind of social, behavioral, or hazard-related data do you work with?  
+   - What kind of social, behavioral, economic, hazard, or climate-related data do you work with?  
    - What are your biggest integration challenges or opportunities?  
+   - How well documented is your data? Could improving or enriching your **metadata** make integration easier?  
    - What new collaborations would you like to see?  
 
-2. **A Dataset & a Question**  
-   - Think of a dataset you’ve created or worked with (real or hypothetical).  
-   - Pose a question that could be answered — at least in part — by integrating your dataset with additional data sources.  
-   - Consider what kind of data (social, meteorological, environmental, etc.) could help answer it.
+2. **Looking Ahead: A Dataset & a Question**  
+   - After the Forums, begin thinking about a dataset you’ve created or worked with (real or hypothetical).  
+   - Consider what new insights might come from combining it with other data sources.  
+   - Reflect on what types of data (social, meteorological, environmental, etc.) could help answer those questions.  
 
-These reflections will spark the **opening discussion in Forum 1**, showcase the diversity of data across our community, and help identify future collaboration opportunities. Over time, they could even seed the beginnings of a **community directory or network map** to strengthen SBES connections.
+💡 **Why This Matters**  
+By keeping these reflections in mind during the Forums, you’ll be better positioned to:  
+- Connect discussions to your own data and challenges  
+- Recognize common opportunities across disciplines  
+- See how metadata and documentation support collaboration  
+- Carry forward ideas that could grow into future projects, partnerships, or even a **community directory or network map** to strengthen SBES connections  
 
 ---
 
