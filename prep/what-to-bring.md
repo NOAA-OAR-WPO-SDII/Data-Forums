@@ -1,53 +1,45 @@
-## 🧩 What to Bring
+## 🧩 What to Keep in Mind  
 
-Come ready to share your **Data Story** and ideas for integration!  
-Your preparation will help make the discussions richer, more focused, and more useful for everyone.
+As you participate in the Data Forums, keep your own **Data Story** and perspectives on integration in mind.  
+Reflecting on these points during discussions will help you connect the sessions to your own work and see new opportunities.  
 
 ---
 
-### 📖 Your Data Story
-Think of this as a brief personal introduction to your work with data. You do **not** need to prepare slides or a formal write-up — just have these points in mind:
+### 📖 Your Data Story  
+Think of this as a brief mental sketch of your work with data. You do **not** need to prepare slides or a formal write-up — just consider these questions as you listen and engage:  
 
-1. **The Data You Work With**
-   - What kind of **social, behavioral, economic, hazard, or climate-related data** do you use?  
-     _(Example: Public survey results on hurricane evacuation, NWS warning polygons, FEMA disaster claims, social media sentiment during severe weather events.)_
+1. **The Data You Work With**  
+   - What kinds of **social, behavioral, economic, hazard, or climate-related data** are part of your work?  
+     _(Example: Public survey results on hurricane evacuation, NWS warning polygons, FEMA disaster claims, social media sentiment during severe weather events.)_  
 
-2. **Integration Challenges or Opportunities**
+2. **Integration Challenges or Opportunities**  
    - Where do you see the most potential for combining your data with other datasets?  
    - What technical, policy, or cultural barriers make integration difficult?  
-     _(Example: Geospatial misalignment between survey areas and hazard data, restricted data access, lack of metadata.)_
+     _(Example: Geospatial misalignment between survey areas and hazard data, restricted data access, lack of metadata.)_  
 
-3. **Collaboration Interests**
+3. **Metadata**  
+   - How well documented is your data? Are there ways you could **improve or enrich your metadata** to make integration easier for others?  
+
+4. **Collaboration Interests**  
    - What types of partners or disciplines would you like to connect with?  
-     _(Example: Partnering with atmospheric scientists to model public response to heat advisories, or with economists to quantify storm recovery impacts.)_
+     _(Example: Partnering with atmospheric scientists to model public response to heat advisories, or with economists to quantify storm recovery impacts.)_  
 
 ---
 
-### 📊 A Dataset & a Question
-Identify a dataset you’ve created or worked with — **real or hypothetical** — and think through how integration might expand its value.
+### 🔭 Looking Ahead  
+After the Data Forums, we encourage you to begin thinking about a **dataset and a question** that could spark deeper exploration. This isn’t something to prepare in advance, but a way to carry the conversation forward:  
 
-1. **The Dataset**
-   - What’s in it? (Variables, time range, geography)  
-   - Who collects it, and how often?  
-     _(Example: A 5-year dataset of household flood insurance claims by ZIP code, collected annually.)_
-
-2. **The Question**
-   - What could you learn by combining your dataset with **other** data sources?  
-     _(Example: Could integrating flood insurance data with precipitation records and social vulnerability indices help target community outreach before flood season?)_
-   - You do not need to identify the exact data sources — just think about **what type** of data might answer your question.
-
-3. **Action Step**
-   - Jot down a few bullet points before the Forums so you can quickly share your dataset and question with the group.
+- **The Dataset**: What data (real or hypothetical) could you draw on in future collaborations? What’s in it, and who maintains it?  
+- **The Question**: What new insights might come from linking your dataset with other sources? What kinds of data would help answer that question?  
+- **The Potential**: How could such integration expand the usefulness of your work or open opportunities for collaboration?  
 
 ---
 
 💡 **Why This Matters**  
-We’ll use your Data Stories and dataset questions to:
-- Kick off **Forum 1** with real-world examples from our community
-- Kick off **Forum 2** with the range of datasets our community is focused on
-- Showcase the diversity of SBES and hazard-related data being used
-- Identify common integration challenges and opportunities
-- Seed potential collaborations that extend beyond the event
+By keeping your Data Story in mind, you’ll be able to:  
+- Connect Forum discussions to your own data and challenges  
+- Recognize common integration opportunities across disciplines  
+- Identify ways metadata and documentation could smooth collaboration  
+- Carry ideas forward into post-Forum collaborations and projects  
 
 ---
-
