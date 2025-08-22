@@ -3,6 +3,11 @@
 The Data Forums are an introduction to metadata and data integration for social scientists working with natural hazards and weather.  
 If you are interested in exploring further, the following resources may be useful:
 
+## Jupyter Notebooks
+- [Neal Caren's Learning Python for Social Scientists](https://nealcaren.github.io/python-tutorials/) - A collection of Python notebook tutorials oriented for social scientists.
+- [Github's Social Sciences Topic Page](https://github.com/topics/social-sciences) - A listing of Github repositories tagged as "social science", with many Juptyer notebooks.  You can also Use GitHub’s topic search (e.g., "Jupyter Notebook" + "social science") to discover additional notebooks.
+-  [Awesome Computational Social Science](https://github.com/gesiscss/awesome-computational-social-science) - A curated list collecting a rich array of tutorials, books, software tools, and educational materials specifically for computational social science.
+
 ## Metadata and Data Standards
 - [Inspire Metadata Scheme](https://noaa-oar-wpo-sdii.github.io/inspire-labs/metadata-schema/) – A metadata framework developed under NOAA’s Inspire Labs initiative to promote consistent documentation of social science datasets.  
 - [NOAA Data Documentation Guidance](https://data.noaa.gov) – Overview of NOAA’s requirements and best practices for documenting datasets.  
