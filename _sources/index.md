@@ -1,4 +1,4 @@
-![SSP Data Forums](images/background.png)
+![SSP Data Forums](images/sept 24 25 data forums.jpg)
 
 # SSP Data Forums
 
