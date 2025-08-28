@@ -10,15 +10,15 @@ Think of this as a brief mental sketch of your work with data. You do **not** ne
 
 1. **The Data You Work With**  
    - What kinds of **social, behavioral, economic, hazard, or climate-related data** are part of your work?  
-     _(Example: Public survey results on hurricane evacuation, NWS warning polygons, FEMA disaster claims, social media sentiment during severe weather events.)_  
+     _(Example: Public survey results on hurricane evacuation, NWS warning polygons, FEMA disaster claims, social media sentiment during severe weather events.)_
 
-2. **Integration Challenges or Opportunities**  
+2. **Metadata**  
+   - How well documented is your data? Are there ways you could **improve or enrich your metadata** to make integration easier for others?  
+
+3. **Integration Challenges or Opportunities**  
    - Where do you see the most potential for combining your data with other datasets?  
    - What technical, policy, or cultural barriers make integration difficult?  
      _(Example: Geospatial misalignment between survey areas and hazard data, restricted data access, lack of metadata.)_  
-
-3. **Metadata**  
-   - How well documented is your data? Are there ways you could **improve or enrich your metadata** to make integration easier for others?  
 
 4. **Collaboration Interests**  
    - What types of partners or disciplines would you like to connect with?  
