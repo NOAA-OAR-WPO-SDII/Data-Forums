@@ -13,7 +13,7 @@ Think of this as a brief mental sketch of your work with data. You do **not** ne
      _(Example: Public survey results on hurricane evacuation, NWS warning polygons, FEMA disaster claims, social media sentiment during severe weather events.)_
 
 2. **Metadata**  
-   - How well documented is your data? Are there ways you could **improve or enrich your metadata** to make integration easier for others?  
+   - How well documented is your data? Are there ways you could **improve or enrich your metadata** to make your data more findable, accessible, interoperable, and reusable ([FAIR](https://www.go-fair.org/fair-principles/) principles)?  
 
 3. **Integration Challenges or Opportunities**  
    - Where do you see the most potential for combining your data with other datasets?  
