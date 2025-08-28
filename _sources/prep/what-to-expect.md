@@ -15,7 +15,7 @@ The **SSP Data Forums** are designed to be **approachable, interactive, and prac
 - **Forum 1 – Data Generation & Stewardship**  
   Learn how to apply draft metadata standards, explore why metadata matters for discovery and reuse, and practice adding metadata to your own datasets using Jupyter notebooks.
   
-- **Forum 2 – Data Reuse & Workflows**  
+- **Forum 2 – From Metadata to Insights**  
   See examples of SBES data integrated with weather/climate datasets, walk through a reproducible workflow in a Jupyter notebook, and discuss best practices for making your data integration-ready.
 
 ---
