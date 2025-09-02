@@ -53,4 +53,4 @@ During the forums:
 - Use the **Help** section of this Jupyter Book for notebook or dataset troubleshooting
 
 Before the forums:
-- Email: **[WPO.SSP@noaa.gov](mailto:WPO.SSP@noaa.gov)**
+- Email: **[socialscience.WPO@noaa.gov](mailto:socialscience.WPOP@noaa.gov)**
