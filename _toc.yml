@@ -10,7 +10,7 @@ parts:
 
   - caption: Preparation & Technical Details
     chapters:
-      - file: prep/who-should-attend
+      - file: prep/who-should-attend.md
       - file: prep/what-to-expect
       - file: prep/what-to-bring
       - file: prep/technical-notes
