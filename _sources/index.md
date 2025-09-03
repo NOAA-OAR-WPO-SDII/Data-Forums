@@ -17,7 +17,7 @@ These virtual sessions are the starting point for building a more connected, col
 
 ## 📅 Forum Details
 
-| **Forum 1** <br> *September 24 – Data Generation & Stewardship* | **Forum 2** <br> *September 25 – From Metadata to Insights* |
+| **Forum 1** <br> *September 24 – All About Metadata* | **Forum 2** <br> *September 25 – From Metadata to Insights* |
 | --- | --- |
 | **Objectives** <br> 1. Introduce and apply draft metadata standards  <br> 2. Highlight how metadata supports discovery, interoperability, and reuse  <br> 3. Provide hands-on metadata application using Jupyter notebooks  <br> 4. Gather feedback to refine standards | **Objectives** <br> 1. Demonstrate reuse of SBES data alongside weather/climate datasets  <br> 2. Walk through a reproducible, transparent workflow in a Jupyter notebook  <br> 3. Encourage adoption of integration-ready data practices |
 
