@@ -18,7 +18,7 @@
 
 ## Launch the Notebook
 
-Go ahead and launch the notebook by cliking on the Binder button below.  Binder can some times take a while to load, so be patient.  If after 10 minutes it has not loaded, try the alternate links below.
+Go ahead and launch the notebook by clicking on the Binder button below.  Binder can some times take a while to load, so be patient.  If after 10 minutes it has not loaded, try the alternate links below.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/Forum2.ipynb)
 
