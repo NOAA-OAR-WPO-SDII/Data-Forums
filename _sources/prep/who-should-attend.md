@@ -1,4 +1,4 @@
-![group icon](image/group){:height="24px" width="24px"} # Who Should Attend
+# ![group icon](image/group.png){:height="24px" width="24px"} Who Should Attend
 
 
 The Data Forums are designed to be **accessible and inclusive**. No technical background is required—our goal is to make concepts like metadata and data integration approachable for all participants.  
