@@ -18,7 +18,7 @@
 
 ## Launch the Notebook
 
-Feel free to launch the notebook while we review it.  This is suggested only if you are familiar with Jupyter notebooks.  There will be another opportunity to launch the notebook after our review as well.
+Go ahead and launch the notebook by cliking on the Binder button below.  Binder can some times take a while to load, so be patient.  If after 10 minutes it has not loaded, try the alternate links below.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/Forum2.ipynb)
 
