@@ -33,12 +33,3 @@ After the Data Forums, we encourage you to begin thinking about a **dataset and 
 - **The Potential**: How could such integration expand the usefulness of your work or open opportunities for collaboration?  
 
 ---
-
-💡 **Why This Matters**  
-By keeping your Data Story in mind, you’ll be able to:  
-- Connect Forum discussions to your own data and challenges  
-- Recognize common integration opportunities across disciplines  
-- Identify ways metadata and documentation could smooth collaboration  
-- Carry ideas forward into post-Forum collaborations and projects  
-
----
