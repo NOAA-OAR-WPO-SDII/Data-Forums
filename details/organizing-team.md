@@ -1,4 +1,4 @@
-# 🧑‍🤝‍🧑 Organizing Team
+# Organizing Team
 
 ## Alison Krepp
 
@@ -15,7 +15,7 @@ Kyle Metta is a computational social scientist serving as the SBES Data Integrat
 
 ## Jonathon Mote
 
-Jonathon is a contractor supporting the Social Science Research Program in the Weather Program Office (WPO). While now a self-proclaimed data scientist, Jon has a background in sociology - which is where his passion for using data science to solve real-world problems originated.
+Jonathon is a contractor supporting the Social Science Program in the Weather Program Office (WPO). While now a self-proclaimed data scientist, Jon has a background in sociology - which is where his passion for using data science to solve real-world problems originated.
 
 - Website: [WPO Bio](https://wpo.noaa.gov/team/jonathan-mote/)
 - Google Scholar: [Scholar Profile](https://scholar.google.com/citations?user=ZvqCWpsAAAAJ&hl=en&oi=ao)
