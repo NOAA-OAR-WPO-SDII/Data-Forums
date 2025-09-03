@@ -35,7 +35,7 @@ This page provides the **logistics and technical setup** you need to participate
   - Your *Data Story*
   - A dataset and a question it could help answer when combined with other data
 - Familiarize yourself with:
-  - Basic Jupyter Notebook construction - [Jupyter Notebook]([Forum2.ipynb](https://jmote-noaa.github.io/Data-Forums/notebooks/Forum2.html))
+  - Basic Jupyter Notebook construction - [Jupyter Notebook](https://jmote-noaa.github.io/Data-Forums/notebooks/Forum2.html))
   - Where the resources are located in these pages
 
 ---
