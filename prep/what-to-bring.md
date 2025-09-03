@@ -1,7 +1,6 @@
 ## 🧩 What to Keep in Mind  
 
 As you participate in the Data Forums, keep your own **Data Story** and perspectives on integration in mind.  
-Reflecting on these points during discussions will help you connect the sessions to your own work and see new opportunities.  
 
 ---
 
