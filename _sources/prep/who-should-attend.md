@@ -1,7 +1,8 @@
 <h1>
-  <img src="/Data-Forums/images/group.png" alt="group" width="36" height="36" style="vertical-align:middle; margin-right:8px;">
+  <img src="../images/group.png" alt="group" width="36" height="36" style="vertical-align:middle; margin-right:8px;">
   Who Should Attend
 </h1>
+
 
 
 The Data Forums are designed to be **accessible and inclusive**. No technical background is required—our goal is to make concepts like metadata and data integration approachable for all participants.  
