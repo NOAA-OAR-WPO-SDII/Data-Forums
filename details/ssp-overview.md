@@ -18,18 +18,12 @@ By understanding **societal needs** and **decision-making**, SSP ensures that fo
 - 🗺 **Advances that enhance forecaster effectiveness**  
   Research that introduces innovations into operations while **balancing real-world cognitive demands**.  
 
-- 💵 **Evaluations of the societal and economic value of NOAA’s work**  
-  Analyses that assess the benefits of NOAA’s products and services for communities and decision-makers.  
-
-- ⚡ **Projects that strengthen operational readiness**  
-  Work that improves processes, practices, and policies supporting NOAA’s 24/7 forecast and warning mission.  
-
 ---
 
 ## 🤝 How We Work
 
 SSP builds impact by engaging across the **public, private, and academic** sectors of the weather community.  
 
-- We **fund research** through competitive **Notices of Funding Opportunities (NOFOs)**, supporting projects aligned with NOAA’s mission and national priorities.  
+- We **fund competitive research**, supporting projects aligned with NOAA’s mission and national priorities.  
 - We **connect and engage the community**, building **capacity and collaboration** that extend beyond individual projects.  
 - We work to ensure that **social science insights** inform NOAA’s forecasting enterprise and lead to **better outcomes for communities nationwide**.  
