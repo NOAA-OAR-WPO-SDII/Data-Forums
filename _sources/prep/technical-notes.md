@@ -24,7 +24,7 @@ This page provides the **logistics and technical setup** you need to participate
 - Optional: If you want to run Jupyter notebooks locally, install:
   - [Anaconda](https://www.anaconda.com/download) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
   - Python 3.10 or later
-  - Required Python packages (listed in `requirements.txt` in the GitHub repo)
+  - Required Python packages (listed in `environment.yml` in the GitHub repo)
 
 💡 **Tip:** You do not need to install anything locally if you prefer to use the provided **Binder** link for cloud-based notebook execution.
 
@@ -35,9 +35,8 @@ This page provides the **logistics and technical setup** you need to participate
   - Your *Data Story*
   - A dataset and a question it could help answer when combined with other data
 - Familiarize yourself with:
-  - Basic Jupyter Notebook navigation
-  - How to open `.ipynb` files in a browser
-  - Where the resources are located in this Jupyter Book
+  - Basic Jupyter Notebook construction - [Jupyter Notebook]
+  - Where the resources are located in these pages
 
 ---
 
