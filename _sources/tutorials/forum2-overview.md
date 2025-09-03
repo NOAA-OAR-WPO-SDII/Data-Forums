@@ -24,6 +24,6 @@ Feel free to launch the notebook while we review it.  This is suggested only if 
 1. [![Binder](https://mybinder.org/badge_logo.svg)](https://ovh.mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/Forum2.ipynb)
 2. [![Binder](https://mybinder.org/badge_logo.svg)](https://gke.mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/Forum2.ipynb)
 
-## Forum 2 Notebook (Markdown Only)
+## Forum 2 Notebook (Downloaded)
 
-add notebook as markdown
+If have a Python distribution installed, feel free to download the notebook and run in your own installation: [Forum 2 Jupyter Notebook](https://jmote-noaa.github.io/Data-Forums/notebooks/Forum2.html)
