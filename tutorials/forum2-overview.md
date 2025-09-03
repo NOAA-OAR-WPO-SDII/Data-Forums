@@ -6,12 +6,14 @@
 
 | Time     | Activity                                                                 |
 |----------|--------------------------------------------------------------------------|
-| 0:00–0:10 | Welcome and recap of Forum 1                                             |
-| 0:10–0:30 | Brief Talk: *From Metadata to Insights: Open Science Workflows in Jupyter Notebooks*                     |
-| 0:30–1:00 | Demo - Part 1: Jupyter Notebook showing API access + basic transformation |
-| 1:00–1:10 | Break    |
-| 1:10–1:30 | Demo - Part 2: Jupyter Notebook showing data integration, visualization, and analysis      |
-| 1:30–1:45 | Group reflection and suggested next steps or community of practice       |
+| 0:00–0:10 | Data Forum 1 Knowledge Check                                           |
+| 0:10–0:30 | Overview - From Metadata to Insights                   |
+| 0:30–0:45 | Set Up for Success - Jupyter Introduction |
+| 0:45–1:10 | The Beginning - Datasets through Download Demo    |
+| 1:10–1:20 | 10 Minute Break     |
+| 1:20–1:35 | The Middle - Merging, Transformation, and Visualization Demo      |
+| 1:35–1:50 | The End - Interpretations and Considerations Discussion     |
+| 1:50–2:00 | Wrap Up, Next Steps     |
 
 
 ## Launch the Notebook
