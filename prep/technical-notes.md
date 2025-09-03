@@ -13,7 +13,7 @@ This page provides the **logistics and technical setup** you need to participate
 
 ## 🗂 Files & Resources
 - **Jupyter Notebooks:** Provided in advance via this Jupyter Book and linked GitHub repository
-- **Sample Datasets:** Open-access datasets will be included for hands-on exercises
+- **Sample Datasets:** Open-access datasets will be utilized for hands-on exercises
 - **Metadata Standards Draft:** PDF and web versions available before Forum 1
 
 ---
