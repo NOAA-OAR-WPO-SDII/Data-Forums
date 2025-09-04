@@ -29,7 +29,7 @@ Go ahead and launch the notebook by clicking on the Binder button below.  Binder
 
 ## Google Colab (if all else fails)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jmote-noaa/Data-Forums/blob/main/prep/forum2.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jmote-noaa/Data-Forums/blob/main/notebooks/Forum2.ipynb)
 
 ## Forum 2 Notebook (Downloaded)
 
