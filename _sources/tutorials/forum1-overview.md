@@ -1,4 +1,4 @@
-# Forum 1 Overview
+# Forum 1
 
 ## All About Metadata
 
