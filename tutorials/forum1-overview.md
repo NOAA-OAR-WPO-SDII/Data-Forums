@@ -1,6 +1,4 @@
-# Forum 1
-
-## All About Metadata
+# Forum 1 - All About Metadata
 
 
 ## Why Use Repositories? A Note on Open Science
