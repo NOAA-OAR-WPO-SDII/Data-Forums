@@ -31,6 +31,10 @@ Go ahead and launch the notebook by clicking on the Binder button below.  Binder
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jmote-noaa/Data-Forums/blob/main/notebooks/Forum2.ipynb)
 
-## Forum 2 Notebook (Downloaded)
+## Forum 2 Notebook (HTML/Downloadable)
 
-If have a Python distribution installed, feel free to download the notebook and run in your own installation: [Forum 2 Jupyter Notebook](https://jmote-noaa.github.io/Data-Forums/notebooks/Forum2.html)
+If you just want to follow along without running the notebook, you can follow along with this HTML version.  
+
+Also, if have a Python distribution installed, feel free to download the notebook (clicking on the icon in the top right) and run in your own installation 
+
+[Forum 2 Jupyter Notebook](https://jmote-noaa.github.io/Data-Forums/notebooks/Forum2.html)
