@@ -16,7 +16,7 @@ parts:
       - file: prep/technical-notes
       - file: prep/additional-resources
 
-  - caption: Tutorials
+  - caption: Forum Resources
     chapters:
       - file: tutorials/forum1-overview
         title: Forum 1
