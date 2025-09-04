@@ -19,6 +19,9 @@ parts:
   - caption: Tutorials
     chapters:
       - file: tutorials/forum1-overview
+        title: Forum 1
       - file: notebooks/forum1                    # ← notebook (Forum 1)
       - file: tutorials/forum2-overview
+        title: Forum 2
       - file: notebooks/Forum2                    # ← notebook (Forum 2)
+        title: Forum 2 Notebook (Downloadable)
