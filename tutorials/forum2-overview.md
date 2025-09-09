@@ -29,7 +29,7 @@ Go ahead and launch the notebook by clicking on the Binder button below.  Binder
 
 ## Google Colab (if all else fails)
 
-<a href="https://colab.research.google.com/github/jmote-noaa/Data-Forums/blob/main/notebooks/Forum2.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/jmote-noaa/Data-Forums/blob/main/notebooks/Forum2-Colab.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
