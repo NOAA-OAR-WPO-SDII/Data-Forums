@@ -54,5 +54,3 @@ Come join others in the **weather and hazard social science community** to explo
 ## 📂 Site Navigation
 
 Use the **Table of Contents** on the left to explore resources and materials.
-
----
