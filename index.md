@@ -2,16 +2,18 @@
 
 # SSP Data Forums: Building a Connected, Data-Capable SBES Community
 
+<hr>
+
 ## 📢 About the Forums
 
 Welcome to the **first annual SSP Data Forums**, an effort of the Social Science Program at **NOAA's Weather Program Office (WPO)**!  
 These virtual sessions are the starting point for building a more connected, collaborative, and data-capable **Social, Behavioral, and Economic Sciences (SBES)** community within NOAA and across our partners.  
 
-🗓 **When:** September 24 & 25, 2025 (1-3 PM ET) 
+🗓 **When:** September 24 & 25, 2025 (1-3 PM ET)  
 💻 **Where:** Virtual (Vimeo)  
 🎯 **Focus:** Metadata standards, data integration tools, and fostering sustained community engagement.
 
----
+<hr>
 
 ## 📅 Forum Details
 
@@ -19,20 +21,21 @@ These virtual sessions are the starting point for building a more connected, col
 | --- | --- |
 | **Objectives** <br> 1. Introduce and apply draft metadata standards  <br> 2. Highlight how metadata supports discovery, interoperability, and reuse  <br> 3. Provide hands-on metadata application using Jupyter notebooks  <br> 4. Gather feedback to refine standards | **Objectives** <br> 1. Demonstrate reuse of SBES data alongside weather/climate datasets  <br> 2. Walk through a reproducible, transparent workflow in a Jupyter notebook  <br> 3. Encourage adoption of integration-ready data practices |
 
----
+<hr>
+
 ## 📝 Registration
 
 The Data Forums will be hosted on **Vimeo**.  
 Please register here: [**Link Forthcoming**](https://library.noaa.gov/seminars) to receive event access details.
 
----
+<hr>
 
 ## 📝 Code of Conduct
 
 We are committed to creating a welcoming, inclusive environment for all participants.  
 Please review our [**Code of Conduct**](code-of-conduct.md) to understand the community guidelines for the SSP Data Forums.
 
----
+<hr>
 
 ## 📓 Jupyter Notebooks
 
@@ -47,7 +50,7 @@ Jupyter is a **powerful open-source tool** for scientific computing, reproducibl
 
 Come join others in the **weather and hazard social science community** to explore these tools and apply them to your own work.
 
----
+<hr>
 
 ## 📂 Site Navigation
 
