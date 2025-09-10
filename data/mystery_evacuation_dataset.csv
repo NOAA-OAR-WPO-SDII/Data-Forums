@@ -1,0 +1,1248 @@
+resp_id,zip_code,survey_date,evac_timing,dest_type,network_size,info_source,prev_hurricane,income_level,age_group,household_comp,evac_decision,prep_score,risk_perception,social_media_use
+1001,33902,2022-09-29,2,A,8,Official Warning,0,3.0,B,SA,Y,4.4,5,Other
+1002,33919,2022-09-29,4,D,3,"TV,Family",1,2.0,C,SF,Y,3.1,3,Other
+1003,33907,2022-09-29,3,C,5,Weather App,0,6.0,D,CF,Y,5.0,3,IG
+1004,33906,2022-09-29,3,C,3,News Website,1,2.0,D,SF,Y,3.2,4,"Instagram,Facebook"
+1005,33903,2022-09-28,2,B,5,"TV,Radio,Social",1,3.0,C,CF,N,4.5,4,"Twitter,Instagram"
+1006,UNK,2022-09-28,2,A,3,"TV,Family",0,4.0,C,SF,Y,3.5,4,"FB,TW"
+1007,33967-4611,2022-09-28,1,A,1,Social Media,1,3.0,B,CA,Y,3.8,4,IG
+1008,33901,2022-09-30,4,C,4,News Website,0,2.0,C,SF,Y,1.4,3,"Facebook,Twitter"
+1009,33912,2022-09-29,3,B,8,Weather App,1,4.0,B,SF,N,3.6,3,Twitter
+1010,33931,2022-09-30,3,A,3,"TV,Radio,Social",0,1.0,B,CA,Y,2.4,3,"FB,TW"
+1011,33916,2022-09-30,1,B,2,Emergency Alert,1,1.0,C,SF,Y,2.3,2,"Instagram,Facebook"
+1012,33931,2022-09-30,4,A,4,Social Media,1,3.0,A,SF,Y,5.0,4,"Twitter,Instagram"
+1013,33965,2022-09-28,3,C,3,"TV,Radio,Social",0,5.0,C,SF,Y,3.0,2,None
+1014,UNK,2022-09-28,2,B,3,Family,0,4.0,C,SF,Y,2.1,5,"Instagram,Facebook"
+1015,33908,2022-09-29,2,C,2,Family,1,3.0,B,OT,Y,2.8,5,Instagram
+1016,33965,2022-09-28,2,B,5,Family,0,4.0,B,SA,N,1.8,5,"Instagram,Facebook"
+1017,UNK,2022-09-28,2,B,5,News Website,1,3.0,D,SF,Y,4.8,5,Facebook
+1018,339,2022-09-30,3,A,4,"TV,Social",1,6.0,C,SA,Y,2.4,3,Facebook
+1019,33965,2022-09-28,2,A,3,News Website,1,1.0,B,CF,Y,3.8,5,IG
+1020,33957,2022-09-29,2,B,7,Weather App,1,4.0,B,OT,Y,4.7,2,Instagram
+1021,33936,2022-09-29,3,B,4,TV,1,5.0,C,SF,Y,2.6,1,"Twitter,Instagram"
+1022,33921,2022-09-30,1,C,3,Emergency Alert,1,5.0,C,CF,N,3.8,4,"Instagram,Facebook"
+1023,33905,2022-09-28,2,B,0,Emergency Alert,1,2.0,A,CF,P,2.1,2,"FB,TW"
+1024,33912,2022-09-30,2,C,2,Emergency Alert,0,3.0,B,CF,Y,5.0,5,IG
+1025,33919,2022-09-29,2,C,3,Family,0,5.0,D,CF,Y,4.2,4,Facebook
+1026,33965,2022-09-29,3,C,3,Weather App,1,1.0,C,SF,Y,3.0,4,YouTube
+1027,33917,2022-09-28,2,A,5,"Radio,Social",1,5.0,D,SA,Y,2.3,3,"FB,TW"
+1028,33904,2022-09-28,3,B,4,"TV,Radio,Social",1,5.0,C,CF,Y,3.1,4,"FB,TW"
+1029,,2022-09-29,3,A,5,TV,0,5.0,D,OT,N,2.8,1,"Instagram,Facebook"
+1030,33966,2022-09-29,1,A,7,TV,1,2.0,B,SF,N,5.0,5,Facebook
+1031,33916,2022-09-30,3,D,3,News Website,0,5.0,C,SA,Y,1.9,2,None
+1032,33928,2022-09-30,2,A,5,"TV,Social",0,4.0,A,OT,Y,3.3,4,"Instagram,Facebook"
+1033,33976,2022-09-30,1,B,2,Social Media,1,5.0,C,SA,Y,3.2,3,"FB,IG,TW"
+1034,33973,2022-09-28,4,C,6,Official Warning,0,1.0,B,CA,Y,3.1,2,"Facebook,Twitter"
+1035,33909,2022-09-28,4,C,5,"TV,Family",1,1.0,B,CA,Y,3.1,4,Facebook
+1036,33920,2022-09-29,3,C,6,Family,0,3.0,D,SF,Y,3.1,2,IG
+1037,33971,2022-09-28,2,A,3,"TV,Family",1,2.0,D,CF,Y,4.2,4,"Twitter,Instagram"
+1038,33966,2022-09-28,1,B,2,"TV,Family",1,4.0,A,SF,Y,3.9,3,"Facebook,Twitter"
+1039,33909,2022-09-28,3,B,1,Neighbors,0,6.0,C,CF,Y,3.7,3,None
+1040,33906,2022-09-28,2,A,2,"TV,Family",0,3.0,B,SF,N,1.0,4,IG
+1041,33908,2022-09-28,1,B,3,Social Media,1,5.0,B,SA,Y,3.5,3,None
+1042,33912,2022-09-28,2,A,2,Weather App,1,1.0,C,CF,Y,1.4,3,None
+1043,33971,2022-09-28,1,A,7,News Website,1,2.0,B,CF,Y,3.9,5,"Facebook,Twitter"
+1044,33965,2022-09-28,4,B,2,News Website,0,1.0,D,SF,Y,4.8,2,Instagram
+1045,33973,2022-09-29,2,A,4,Weather App,1,3.0,A,OT,Y,2.2,2,YouTube
+1046,33901,2022-09-29,3,C,4,"Radio,Social",1,6.0,C,SF,Y,2.9,3,YouTube
+1047,33908,2022-09-30,2,C,0,Family,1,1.0,C,SF,Y,2.5,3,Other
+1048,33921,2022-09-30,3,C,4,Official Warning,1,4.0,B,SF,Y,4.6,4,None
+1049,33931,2022-09-30,3,A,6,"TV,Radio,Social",0,4.0,B,OT,P,3.3,3,None
+1050,33971,2022-09-28,2,A,4,News Website,0,6.0,C,OT,Y,5.0,4,"Facebook,Twitter"
+1051,33901,2022-09-30,4,A,7,Official Warning,1,2.0,C,SA,Y,3.7,1,"Instagram,Facebook"
+1052,33920,2022-09-30,3,C,2,Social Media,1,2.0,B,CA,Y,3.5,3,Twitter
+1053,33913,2022-09-29,4,C,4,Family,0,1.0,C,SF,Y,3.3,3,None
+1054,33907,2022-09-28,4,A,5,News Website,1,,A,OT,N,4.1,4,Other
+1055,33924,2022-09-28,3,D,5,Social Media,0,3.0,B,SF,Y,1.3,5,"Facebook,Twitter"
+1056,33914,2022-09-28,4,A,1,"TV,Social",0,5.0,B,SF,Y,3.3,4,IG
+1057,33912,2022-09-28,1,B,5,Neighbors,0,4.0,A,SF,Y,3.1,5,"FB,IG,TW"
+1058,33901,2022-09-30,2,C,3,"TV,Radio",0,4.0,C,CF,Y,4.0,3,YouTube
+1059,33976,2022-09-29,1,C,4,Weather App,1,4.0,C,SA,N,3.0,1,Other
+1060,339,2022-09-28,2,C,2,Radio,1,1.0,D,SF,Y,2.1,2,"Instagram,Facebook"
+1061,33906,2022-09-28,2,C,5,"TV,Radio",0,3.0,C,OT,Y,3.2,3,"Instagram,Facebook"
+1062,339,2022-09-29,2,B,8,"TV,Radio",0,6.0,D,CF,N,2.0,3,Other
+1063,,2022-09-28,3,C,4,News Website,1,5.0,C,SF,N,1.1,2,YouTube
+1064,33912,2022-09-28,2,A,9,"TV,Radio,Social",0,5.0,C,CF,Y,4.0,3,IG
+1065,33971,2022-09-29,2,C,3,Radio,1,5.0,D,SA,Y,3.8,3,"Instagram,Facebook"
+1066,33914,2022-09-28,3,B,3,Emergency Alert,0,,C,CA,Y,3.7,2,None
+1067,,2022-09-28,1,C,0,TV,1,2.0,A,CF,Y,4.6,3,"Facebook,Twitter"
+1068,33957,2022-09-30,3,B,4,Emergency Alert,0,1.0,C,CF,P,2.5,5,Twitter
+1069,33972,2022-09-29,1,C,4,"TV,Social",0,3.0,D,SF,Y,1.6,3,Instagram
+1070,33917,2022-09-30,4,B,1,"TV,Radio,Social",0,2.0,C,CF,Y,3.1,4,Instagram
+1071,339,2022-09-29,3,C,3,"TV,Social",0,4.0,C,OT,N,2.8,4,"Instagram,Facebook"
+1072,339,2022-09-29,2,A,4,"TV,Radio",1,4.0,C,SF,Y,2.3,3,Twitter
+1073,33905,2022-09-28,1,A,7,"TV,Radio",1,5.0,D,CA,Y,3.1,3,Other
+1074,33921,2022-09-29,3,A,4,Official Warning,0,5.0,A,CF,P,2.5,3,"FB,TW"
+1075,33916,2022-09-30,3,A,3,"TV,Family",0,6.0,C,SF,N,1.2,4,"FB,IG,TW"
+1076,33974,2022-09-29,3,C,1,"TV,Social",1,1.0,B,OT,N,2.7,3,"FB,TW"
+1077,33974,2022-09-28,3,A,5,TV,1,1.0,C,CF,Y,1.9,3,"Instagram,Facebook"
+1078,33914,2022-09-29,1,D,7,"Radio,Social",1,4.0,C,SF,N,3.5,2,YouTube
+1079,33936-7939,2022-09-28,2,B,4,Neighbors,1,3.0,A,SF,Y,2.5,5,"FB,IG,TW"
+1080,33904,2022-09-28,1,A,4,News Website,1,3.0,B,SF,Y,4.4,3,"FB,TW"
+1081,33907,2022-09-29,4,C,1,"TV,Radio",1,3.0,C,CA,P,5.0,4,"Facebook,Twitter"
+1082,339,2022-09-29,3,C,8,TV,1,3.0,A,CF,Y,3.9,4,"Twitter,Instagram"
+1083,33972,2022-09-29,2,B,4,"TV,Radio",1,4.0,B,OT,N,1.5,5,Facebook
+1084,33913,2022-09-28,1,C,1,"Radio,Social",0,3.0,C,SF,Y,4.9,4,Instagram
+1085,33919,2022-09-28,2,C,1,Official Warning,0,4.0,B,SF,Y,4.9,4,Facebook
+1086,33905,2022-09-30,2,A,2,TV,0,4.0,B,SF,N,3.2,5,IG
+1087,33907,2022-09-30,3,D,4,Family,1,3.0,D,CF,Y,4.7,4,Facebook
+1088,,2022-09-30,3,D,0,Weather App,1,3.0,B,OT,Y,2.6,2,Instagram
+1089,33974,2022-09-28,4,C,7,Official Warning,1,,B,SA,Y,1.1,2,Twitter
+1090,33966,2022-09-30,2,A,4,"TV,Family",0,3.0,C,SF,P,2.4,4,"Instagram,Facebook"
+1091,33912,2022-09-29,1,C,7,Weather App,1,,C,CA,Y,5.0,5,"Instagram,Facebook"
+1092,33965,2022-09-29,3,A,6,"TV,Social",1,5.0,D,SA,Y,1.6,4,Instagram
+1093,33973,2022-09-29,3,A,5,Neighbors,0,4.0,D,SF,Y,3.2,4,YouTube
+1094,33976,2022-09-30,3,B,7,Family,1,2.0,C,CA,P,3.2,4,"FB,TW"
+1095,33922,2022-09-29,3,B,6,Official Warning,1,4.0,B,SF,N,2.6,3,YouTube
+1096,33904,2022-09-28,2,C,8,"TV,Radio,Social",1,4.0,A,SF,N,2.7,4,Facebook
+1097,33904,2022-09-28,3,C,4,"Radio,Social",1,4.0,B,SF,Y,3.3,2,"Facebook,Twitter"
+1098,33904,2022-09-29,2,C,2,Radio,1,4.0,A,CF,Y,2.6,5,Twitter
+1099,,2022-09-29,1,B,8,Family,1,4.0,C,CF,Y,1.6,4,Instagram
+1100,UNK,2022-09-28,1,B,6,News Website,1,4.0,C,SF,Y,3.4,4,Facebook
+1101,33966,2022-09-29,1,B,2,"Radio,Social",1,5.0,A,SF,Y,4.4,3,"FB,TW"
+1102,33919,2022-09-28,3,D,5,"TV,Radio,Social",0,2.0,C,SA,P,4.2,2,"Facebook,Twitter"
+1103,33903,2022-09-30,2,A,4,Social Media,1,5.0,B,OT,N,2.3,3,"Twitter,Instagram"
+1104,33967,2022-09-30,3,C,3,"TV,Radio",0,,B,SA,Y,1.8,4,None
+1105,,2022-09-28,4,C,4,"TV,Radio,Social",0,1.0,C,SF,Y,2.9,4,"Instagram,Facebook"
+1106,33916,2022-09-30,2,B,3,Radio,1,6.0,B,SF,N,4.9,3,"FB,TW"
+1107,33928,2022-09-30,2,C,3,Family,1,6.0,B,SF,Y,3.9,4,"Twitter,Instagram"
+1108,33966,2022-09-28,3,B,6,"TV,Radio,Social",1,1.0,A,SF,Y,4.0,5,"FB,TW"
+1109,33924,2022-09-29,2,C,3,"TV,Radio",0,3.0,B,CF,Y,4.2,1,YouTube
+1110,33905,2022-09-30,1,D,3,Emergency Alert,0,2.0,C,CF,Y,3.7,4,Facebook
+1111,339,2022-09-29,2,B,3,"TV,Radio,Social",0,4.0,D,SA,N,3.3,4,"Twitter,Instagram"
+1112,33909,2022-09-29,2,B,5,"TV,Radio,Social",0,5.0,B,SA,Y,3.9,4,Twitter
+1113,33905,2022-09-30,4,C,3,Emergency Alert,1,6.0,B,SF,Y,2.6,4,Instagram
+1114,33957,2022-09-29,3,D,4,Radio,0,4.0,C,SF,Y,1.6,4,Facebook
+1115,33972,2022-09-29,3,A,3,"Radio,Social",1,3.0,D,SA,N,4.0,5,"Instagram,Facebook"
+1116,33924,2022-09-30,4,C,3,Social Media,0,4.0,B,SF,Y,4.6,2,None
+1117,,2022-09-30,3,C,6,Social Media,1,3.0,B,SF,Y,2.0,4,Twitter
+1118,33924,2022-09-29,2,C,4,Weather App,0,6.0,C,SF,P,4.1,2,IG
+1119,33907,2022-09-29,4,A,7,"Radio,Social",0,5.0,C,SF,P,5.0,2,"FB,TW"
+1120,33909,2022-09-29,3,C,0,"Radio,Social",0,4.0,A,SF,P,3.2,3,Instagram
+1121,33907,2022-09-28,3,D,6,"Radio,Social",1,3.0,C,CA,N,2.3,2,"Facebook,Twitter"
+1122,33910,2022-09-28,4,A,3,"TV,Social",1,3.0,A,CA,Y,3.3,5,"Instagram,Facebook"
+1123,33916,2022-09-29,2,A,4,Social Media,1,1.0,C,SF,Y,2.6,5,None
+1124,33916,2022-09-30,1,D,3,Family,1,5.0,C,SF,Y,2.5,3,Facebook
+1125,33920,2022-09-28,2,A,5,Official Warning,0,4.0,D,SA,Y,3.7,4,Twitter
+1126,33920,2022-09-28,2,C,3,"TV,Radio,Social",1,,B,SF,P,1.4,4,YouTube
+1127,33904,2022-09-29,3,B,2,Neighbors,1,4.0,B,SF,N,1.6,5,"Facebook,Twitter"
+1128,339,2022-09-28,4,A,1,"TV,Radio,Social",0,5.0,B,SF,N,3.2,4,None
+1129,33909,2022-09-29,1,C,4,"TV,Family",0,2.0,D,SF,Y,3.2,1,"FB,TW"
+1130,33920,2022-09-30,3,B,9,Family,0,5.0,A,SA,P,3.6,4,"Facebook,Twitter"
+1131,33972,2022-09-29,2,B,2,Weather App,0,5.0,B,CA,N,5.0,4,YouTube
+1132,33971,2022-09-30,2,B,6,TV,1,6.0,A,SF,Y,3.3,4,Facebook
+1133,33908,2022-09-28,1,C,5,Radio,0,3.0,C,SF,N,3.9,5,"Facebook,Twitter"
+1134,UNK,2022-09-28,2,A,3,Weather App,0,2.0,B,SF,Y,2.1,5,"FB,TW"
+1135,33971,2022-09-28,4,B,3,"Radio,Social",0,3.0,B,SF,Y,4.0,4,YouTube
+1136,33924,2022-09-28,2,D,2,Neighbors,1,3.0,B,OT,Y,2.6,4,Twitter
+1137,33903,2022-09-30,3,B,4,Social Media,1,2.0,D,SA,Y,3.3,5,IG
+1138,33916,2022-09-28,3,C,3,Weather App,0,4.0,C,CF,Y,3.1,3,Other
+1139,33907,2022-09-29,2,B,1,Official Warning,0,4.0,C,SA,Y,4.3,3,"Facebook,Twitter"
+1140,33967,2022-09-30,4,C,5,Official Warning,0,5.0,D,CA,P,1.8,2,"FB,TW"
+1141,33910,2022-09-30,4,A,4,Social Media,1,1.0,D,CA,Y,1.0,5,None
+1142,33919,2022-09-28,2,D,7,TV,0,4.0,B,SF,N,3.0,4,Other
+1143,33913,2022-09-28,2,B,4,Weather App,1,5.0,D,SF,Y,3.7,2,"Instagram,Facebook"
+1144,33902,2022-09-30,2,A,7,"Radio,Social",1,5.0,A,SA,Y,3.4,5,"Twitter,Instagram"
+1145,33931,2022-09-29,2,A,4,Emergency Alert,1,5.0,B,SF,Y,4.6,4,Instagram
+1146,33967,2022-09-29,1,A,3,Family,0,5.0,D,OT,Y,3.7,5,Other
+1147,33919,2022-09-28,3,B,0,Radio,1,6.0,B,SA,Y,2.6,1,YouTube
+1148,33907,2022-09-28,3,B,4,Emergency Alert,1,3.0,B,OT,Y,1.0,4,Facebook
+1149,33903,2022-09-28,1,C,1,"TV,Social",0,4.0,B,SF,Y,2.9,4,YouTube
+1150,33917,2022-09-30,2,B,3,"TV,Radio,Social",0,1.0,C,CA,Y,4.3,4,IG
+1151,33973,2022-09-29,4,A,3,News Website,0,1.0,B,SF,N,2.8,4,IG
+1152,33917,2022-09-30,2,C,2,"TV,Social",0,2.0,C,OT,Y,3.2,5,Twitter
+1153,33914,2022-09-30,1,C,5,TV,0,2.0,D,SF,Y,3.7,3,"Instagram,Facebook"
+1154,,2022-09-29,2,A,5,"TV,Radio,Social",1,3.0,C,CF,Y,2.1,5,"FB,TW"
+1155,33921,2022-09-30,4,A,5,"TV,Family",1,2.0,B,SA,Y,3.9,2,Other
+1156,33966,2022-09-28,2,A,3,Family,1,1.0,D,CF,Y,5.0,3,"Instagram,Facebook"
+1157,33931,2022-09-30,3,C,4,"Radio,Social",0,6.0,B,CF,P,3.0,1,"Facebook,Twitter"
+1158,33908,2022-09-30,3,C,0,"TV,Radio,Social",1,1.0,A,OT,N,2.0,3,"Twitter,Instagram"
+1159,33920,2022-09-29,2,B,3,Family,0,5.0,A,CF,Y,3.1,3,Facebook
+1160,33920,2022-09-30,3,C,3,"TV,Radio,Social",1,2.0,C,CF,Y,1.0,5,Other
+1161,33936-6139,2022-09-30,2,C,8,Neighbors,0,6.0,A,SF,Y,3.6,4,"Facebook,Twitter"
+1162,33908,2022-09-28,3,C,4,Neighbors,0,5.0,A,CA,N,3.7,3,Twitter
+1163,,2022-09-30,3,C,4,TV,1,4.0,B,CF,Y,5.0,4,"Facebook,Twitter"
+1164,33971,2022-09-28,3,A,4,"TV,Social",0,4.0,B,CF,Y,3.0,2,Other
+1165,339,2022-09-29,1,A,2,Weather App,1,1.0,C,SF,N,3.6,2,None
+1166,33931,2022-09-30,3,B,5,Social Media,1,6.0,C,CF,N,2.3,4,"Twitter,Instagram"
+1167,33908,2022-09-29,2,A,2,"Radio,Social",1,5.0,C,SF,N,2.8,4,Facebook
+1168,33924,2022-09-28,2,B,5,"TV,Radio,Social",1,5.0,B,SF,N,1.5,4,Instagram
+1169,33967,2022-09-29,1,D,3,Radio,1,4.0,B,CF,P,3.0,3,"Instagram,Facebook"
+1170,33922,2022-09-28,3,A,4,Radio,0,3.0,D,SF,Y,2.9,4,"FB,IG,TW"
+1171,33914,2022-09-28,3,A,6,"TV,Radio",1,5.0,A,SF,Y,3.5,4,Twitter
+1172,33965,2022-09-28,1,B,3,Family,1,3.0,D,SA,N,2.5,5,None
+1173,33913,2022-09-28,3,D,9,"TV,Radio,Social",0,4.0,A,SF,Y,3.3,3,"Facebook,Twitter"
+1174,33924,2022-09-30,2,B,4,"TV,Radio,Social",0,1.0,D,SF,P,2.8,4,Facebook
+1175,33901,2022-09-28,3,B,4,TV,1,6.0,B,SF,Y,2.8,4,Facebook
+1176,33916,2022-09-28,2,A,1,Weather App,1,2.0,B,CF,Y,3.3,5,"FB,IG,TW"
+1177,33928,2022-09-30,3,A,7,Radio,1,2.0,C,SA,Y,3.2,3,YouTube
+1178,33972,2022-09-29,2,D,4,Social Media,0,4.0,C,SA,Y,4.0,4,"FB,TW"
+1179,33974,2022-09-28,4,D,4,Weather App,1,5.0,B,SF,Y,3.1,3,YouTube
+1180,33912,2022-09-29,1,A,4,Weather App,0,4.0,C,SF,N,2.8,4,"FB,IG,TW"
+1181,33922,2022-09-30,2,D,3,Family,1,2.0,C,SF,Y,3.0,3,Instagram
+1182,33931,2022-09-28,1,C,1,Social Media,1,1.0,A,CF,N,2.4,1,"Twitter,Instagram"
+1183,339,2022-09-28,4,C,3,"TV,Family",0,5.0,A,OT,Y,2.8,4,Twitter
+1184,33903,2022-09-29,4,B,9,Weather App,1,6.0,B,SF,Y,5.0,3,"Facebook,Twitter"
+1185,33974,2022-09-30,2,B,2,Emergency Alert,1,5.0,A,SF,Y,2.2,2,Instagram
+1186,33905,2022-09-28,3,B,7,"TV,Family",1,4.0,C,SF,Y,2.9,3,"FB,TW"
+1187,33914,2022-09-29,3,C,2,Radio,1,6.0,B,CF,N,2.8,1,Twitter
+1188,33965,2022-09-28,3,A,5,Social Media,1,3.0,B,SA,N,2.9,5,Other
+1189,33919,2022-09-28,3,A,0,"TV,Radio,Social",1,4.0,A,CF,N,2.8,4,"FB,IG,TW"
+1190,33901,2022-09-28,2,B,3,"TV,Family",0,4.0,C,CA,P,3.5,5,"Twitter,Instagram"
+1191,33907,2022-09-30,1,C,9,News Website,0,3.0,A,CF,Y,1.3,3,Other
+1192,,2022-09-30,4,A,6,News Website,0,5.0,A,SF,P,4.3,5,Facebook
+1193,33973,2022-09-28,4,C,8,Family,1,4.0,A,SF,N,3.9,4,Facebook
+1194,339,2022-09-28,3,D,5,Emergency Alert,1,3.0,D,SA,N,1.8,4,"Twitter,Instagram"
+1195,33928,2022-09-30,2,A,5,Weather App,0,3.0,A,CF,Y,1.0,4,Other
+1196,33972,2022-09-29,2,C,5,"TV,Family",1,1.0,C,CF,P,2.1,4,Instagram
+1197,33971,2022-09-28,3,B,2,Radio,1,4.0,A,SA,Y,2.9,4,YouTube
+1198,33972,2022-09-29,4,C,9,News Website,1,2.0,A,CF,N,5.0,3,IG
+1199,33974,2022-09-30,4,A,5,Weather App,0,2.0,C,CA,Y,3.8,2,Twitter
+1200,33919,2022-09-30,3,C,1,"TV,Radio",1,4.0,B,CF,Y,1.2,4,Instagram
+1201,33921,2022-09-29,3,C,4,TV,0,4.0,D,SA,Y,2.4,4,"FB,TW"
+1202,33976,2022-09-30,1,D,5,Neighbors,0,5.0,D,SF,Y,3.1,2,"Facebook,Twitter"
+1203,33921,2022-09-28,2,C,3,News Website,1,4.0,C,SA,Y,3.5,3,"Twitter,Instagram"
+1204,33922,2022-09-29,4,B,5,"Radio,Social",0,5.0,C,OT,N,1.8,4,IG
+1205,33931,2022-09-29,3,C,3,TV,0,6.0,B,SF,Y,3.1,5,Other
+1206,33906,2022-09-29,1,C,4,Radio,1,5.0,B,SA,Y,2.4,2,"Twitter,Instagram"
+1207,33917,2022-09-28,1,C,3,Radio,0,4.0,D,SA,Y,2.0,3,"FB,TW"
+1208,33910,2022-09-28,3,A,1,TV,1,3.0,C,SF,Y,3.5,5,YouTube
+1209,33905,2022-09-30,1,D,5,"TV,Radio",0,6.0,C,CF,Y,4.1,4,"Facebook,Twitter"
+1210,33931,2022-09-29,2,C,3,Family,0,3.0,B,SF,Y,4.1,3,Facebook
+1211,33967,2022-09-30,3,C,2,"TV,Social",0,2.0,A,OT,Y,3.8,5,YouTube
+1212,UNK,2022-09-29,3,A,2,"TV,Radio,Social",0,3.0,D,CA,Y,2.7,4,None
+1213,33901,2022-09-30,3,C,4,Radio,1,1.0,B,SF,Y,4.0,4,"Twitter,Instagram"
+1214,33924,2022-09-29,2,B,2,Official Warning,1,6.0,B,SF,Y,3.5,5,YouTube
+1215,33967,2022-09-28,3,C,4,"TV,Family",1,4.0,A,CF,Y,3.3,5,Instagram
+1216,33917,2022-09-30,2,A,3,Social Media,1,4.0,C,SF,P,2.5,3,"Instagram,Facebook"
+1217,33921,2022-09-30,2,C,2,"TV,Social",0,4.0,A,SF,Y,2.7,2,Facebook
+1218,33902,2022-09-30,3,D,3,Emergency Alert,1,4.0,C,CF,Y,3.3,3,"FB,TW"
+1219,33966,2022-09-30,3,A,10,Emergency Alert,1,1.0,A,SF,Y,5.0,1,YouTube
+1220,33973,2022-09-29,3,D,4,Neighbors,1,4.0,D,SF,Y,3.5,1,"FB,TW"
+1221,33902,2022-09-28,3,B,5,Weather App,0,5.0,C,CA,Y,2.5,3,IG
+1222,33902,2022-09-30,3,C,3,Emergency Alert,1,3.0,A,OT,Y,2.3,5,"Instagram,Facebook"
+1223,339,2022-09-30,1,C,4,Emergency Alert,1,5.0,C,SA,Y,2.7,5,IG
+1224,33928-4467,2022-09-28,2,C,4,"Radio,Social",0,2.0,B,CA,Y,5.0,4,YouTube
+1225,,2022-09-29,2,C,3,TV,1,2.0,A,SF,Y,2.8,4,"FB,TW"
+1226,33967,2022-09-29,2,C,6,Emergency Alert,0,2.0,D,SF,Y,4.2,1,"Facebook,Twitter"
+1227,33906,2022-09-30,4,B,3,Weather App,1,3.0,B,SF,P,2.8,3,"FB,IG,TW"
+1228,33904,2022-09-30,2,B,5,Radio,1,5.0,B,SA,Y,3.5,1,Instagram
+1229,33936,2022-09-29,4,C,3,"TV,Radio,Social",1,5.0,A,OT,Y,4.1,4,IG
+1230,33905,2022-09-28,3,C,0,TV,1,3.0,B,SA,P,2.6,2,"Twitter,Instagram"
+1231,33903,2022-09-28,3,C,6,Weather App,0,4.0,D,CA,N,2.5,5,"Twitter,Instagram"
+1232,33919,2022-09-30,3,C,3,News Website,1,5.0,B,CF,Y,5.0,4,YouTube
+1233,,2022-09-28,3,B,2,Official Warning,1,2.0,D,SF,N,4.3,3,"FB,TW"
+1234,33919,2022-09-30,2,C,5,Radio,0,2.0,D,CF,Y,4.1,2,"Instagram,Facebook"
+1235,33908,2022-09-30,2,A,6,Family,1,6.0,A,SF,Y,4.1,4,"FB,IG,TW"
+1236,33916,2022-09-29,3,B,1,News Website,1,4.0,A,SF,Y,3.7,5,IG
+1237,33920,2022-09-30,2,A,6,Official Warning,0,6.0,D,SA,Y,5.0,4,Instagram
+1238,33912,2022-09-28,1,B,2,TV,0,3.0,B,CF,Y,3.2,3,Twitter
+1239,33908,2022-09-28,3,B,2,News Website,0,5.0,A,CF,Y,3.8,4,IG
+1240,33912,2022-09-30,2,B,2,"TV,Family",1,2.0,B,CF,Y,1.6,3,Instagram
+1241,33907,2022-09-29,4,C,3,Radio,1,3.0,C,SF,Y,2.3,5,"FB,TW"
+1242,33924,2022-09-30,4,B,4,"Radio,Social",1,4.0,C,CF,Y,1.9,4,"Instagram,Facebook"
+1243,33965,2022-09-28,4,B,3,"TV,Radio,Social",1,3.0,A,CF,Y,4.6,4,"Instagram,Facebook"
+1244,33914,2022-09-30,2,A,3,Radio,1,2.0,A,SF,Y,1.0,3,IG
+1245,UNK,2022-09-30,1,B,1,"TV,Social",1,3.0,D,CA,Y,2.8,4,"Twitter,Instagram"
+1246,33908,2022-09-28,4,A,4,Family,0,1.0,C,CF,P,1.0,3,"FB,TW"
+1247,33903,2022-09-29,2,A,7,Weather App,1,5.0,C,CF,Y,2.3,1,Facebook
+1248,33971,2022-09-28,4,C,6,"TV,Social",1,4.0,C,CA,Y,2.7,3,Other
+1249,,2022-09-29,4,C,6,Official Warning,1,1.0,B,CA,N,4.7,5,IG
+1250,33931,2022-09-30,4,C,5,Radio,1,2.0,C,CA,Y,3.6,4,None
+1251,33976-2729,2022-09-28,2,B,3,"TV,Social",0,2.0,B,SF,N,2.3,2,YouTube
+1252,33973,2022-09-28,2,B,2,Family,1,4.0,B,SF,Y,4.4,5,Instagram
+1253,33971,2022-09-29,4,C,5,Neighbors,0,1.0,C,SF,Y,3.2,3,Facebook
+1254,33921,2022-09-29,2,B,6,Emergency Alert,1,5.0,B,SF,Y,3.2,3,"FB,IG,TW"
+1255,33974,2022-09-28,2,B,0,Emergency Alert,0,1.0,D,OT,Y,1.9,3,"Twitter,Instagram"
+1256,33921,2022-09-30,3,A,6,"TV,Family",1,2.0,B,CF,Y,2.1,4,"FB,IG,TW"
+1257,33919,2022-09-28,4,B,3,Weather App,0,5.0,D,SF,N,2.3,4,"Facebook,Twitter"
+1258,33906,2022-09-30,3,B,4,TV,0,5.0,D,SF,N,3.3,4,"Twitter,Instagram"
+1259,33972,2022-09-30,3,B,4,Neighbors,0,1.0,B,SF,Y,3.3,4,YouTube
+1260,33973,2022-09-30,1,C,3,"TV,Radio",0,5.0,C,CF,N,4.9,3,Twitter
+1261,33965,2022-09-30,3,B,10,"TV,Radio,Social",0,4.0,B,SA,Y,3.6,4,Other
+1262,33976,2022-09-29,4,C,1,Social Media,1,5.0,D,CA,Y,1.0,2,IG
+1263,33913,2022-09-29,1,C,5,"TV,Radio",1,4.0,B,OT,Y,3.5,4,None
+1264,33936,2022-09-28,3,C,2,News Website,0,4.0,C,SF,N,1.6,4,"Facebook,Twitter"
+1265,33931,2022-09-29,4,C,2,Emergency Alert,0,6.0,B,SF,Y,2.1,4,IG
+1266,33921,2022-09-28,3,D,3,Family,1,2.0,B,SF,Y,2.3,4,Other
+1267,33914,2022-09-28,3,A,7,Family,1,4.0,A,SF,N,2.5,4,"FB,TW"
+1268,UNK,2022-09-30,3,A,1,"TV,Family",1,4.0,B,OT,Y,1.7,2,IG
+1269,33976,2022-09-28,2,A,2,"TV,Radio,Social",1,1.0,C,CF,Y,3.4,5,Instagram
+1270,33902,2022-09-29,2,C,4,"TV,Social",0,1.0,C,SA,Y,1.6,2,"FB,IG,TW"
+1271,33966-4986,2022-09-29,3,C,6,Weather App,0,2.0,C,CF,Y,3.6,2,"Instagram,Facebook"
+1272,33957,2022-09-28,3,A,1,"TV,Radio",0,4.0,B,SF,Y,5.0,4,"Twitter,Instagram"
+1273,33936,2022-09-30,4,D,4,"TV,Social",1,4.0,B,SF,P,1.7,4,None
+1274,33931,2022-09-28,4,A,6,Weather App,1,4.0,A,CF,Y,2.9,2,Other
+1275,33973,2022-09-28,3,D,3,Family,1,1.0,C,SA,Y,1.0,5,"Twitter,Instagram"
+1276,33920,2022-09-29,3,B,5,"TV,Family",0,4.0,D,SF,Y,2.9,5,Twitter
+1277,33914,2022-09-29,3,A,3,News Website,0,6.0,B,SA,Y,3.9,4,Twitter
+1278,33913,2022-09-30,3,B,4,Weather App,0,3.0,A,CA,Y,4.0,4,IG
+1279,33974,2022-09-29,3,B,6,"Radio,Social",1,4.0,A,CF,P,3.3,4,Other
+1280,33922,2022-09-28,3,B,2,TV,0,5.0,C,SA,Y,4.2,3,Twitter
+1281,33914,2022-09-29,4,B,3,"TV,Radio,Social",1,5.0,C,CF,Y,5.0,4,Facebook
+1282,33957,2022-09-29,2,C,3,"TV,Family",0,4.0,C,SA,Y,5.0,5,Instagram
+1283,,2022-09-29,2,B,4,"TV,Radio,Social",1,5.0,B,SA,Y,2.6,5,Instagram
+1284,33909,2022-09-29,1,B,9,"TV,Radio",1,3.0,C,OT,N,1.6,5,Facebook
+1285,33904,2022-09-30,3,C,6,Radio,1,5.0,C,SF,N,2.8,3,"Facebook,Twitter"
+1286,33909,2022-09-29,1,C,6,TV,1,2.0,B,CF,Y,2.2,3,Twitter
+1287,33976,2022-09-28,2,B,5,TV,1,3.0,C,SF,P,3.7,3,"FB,TW"
+1288,33901,2022-09-29,3,B,1,Official Warning,1,1.0,A,SF,Y,1.9,3,"Facebook,Twitter"
+1289,33974,2022-09-30,2,A,0,Official Warning,1,5.0,B,SA,Y,3.1,3,Twitter
+1290,33931,2022-09-30,3,A,9,Emergency Alert,1,3.0,D,OT,Y,4.1,3,Facebook
+1291,33904,2022-09-30,1,C,2,"TV,Radio,Social",1,2.0,B,SF,Y,3.1,4,"FB,IG,TW"
+1292,,2022-09-28,1,A,5,"TV,Radio,Social",1,2.0,C,SF,P,2.2,4,Other
+1293,33905,2022-09-28,3,B,4,Radio,1,6.0,C,SF,Y,4.5,4,None
+1294,33905,2022-09-29,2,C,2,"TV,Social",1,5.0,A,CF,Y,1.1,5,Other
+1295,33904,2022-09-28,1,A,4,Social Media,0,4.0,C,SF,N,2.8,1,"FB,TW"
+1296,33924,2022-09-28,3,C,0,News Website,0,4.0,C,SF,Y,3.2,1,IG
+1297,UNK,2022-09-29,3,B,3,News Website,1,4.0,B,SA,N,3.2,4,"FB,IG,TW"
+1298,33917,2022-09-28,2,D,3,News Website,1,3.0,A,SF,Y,3.4,4,YouTube
+1299,33965,2022-09-29,3,B,4,"Radio,Social",1,6.0,B,CF,Y,3.9,4,"FB,IG,TW"
+1300,33972,2022-09-29,1,C,2,Social Media,1,2.0,A,SA,P,3.2,2,"Instagram,Facebook"
+1301,33971,2022-09-28,1,C,1,Emergency Alert,1,3.0,A,SF,Y,2.8,3,Facebook
+1302,33904,2022-09-28,3,A,0,Weather App,1,3.0,B,CF,N,2.8,4,"Twitter,Instagram"
+1303,33907,2022-09-29,3,C,2,"TV,Family",0,4.0,B,SA,Y,2.5,5,"Facebook,Twitter"
+1304,33916,2022-09-28,3,D,6,"TV,Radio,Social",1,4.0,D,SA,N,4.1,5,"FB,IG,TW"
+1305,33920,2022-09-29,3,C,3,"TV,Radio",1,4.0,B,CF,Y,2.5,4,YouTube
+1306,33912,2022-09-28,4,C,4,"TV,Radio",0,2.0,C,SF,Y,4.1,4,Twitter
+1307,33905,2022-09-30,3,C,4,"TV,Radio",1,4.0,C,CA,N,3.2,5,Facebook
+1308,33967,2022-09-28,2,A,2,Social Media,1,2.0,C,SA,Y,2.6,4,"Facebook,Twitter"
+1309,33974,2022-09-30,3,A,3,Official Warning,0,2.0,B,SF,N,3.9,4,Other
+1310,33917,2022-09-28,2,C,3,"TV,Family",0,1.0,D,SF,N,2.4,5,"FB,TW"
+1311,,2022-09-29,2,B,4,"TV,Social",1,5.0,C,SF,N,3.9,4,Twitter
+1312,33973,2022-09-30,1,C,4,Social Media,0,3.0,C,SF,P,3.4,5,"FB,TW"
+1313,33920-4241,2022-09-30,1,D,1,Radio,0,4.0,B,CF,Y,2.5,3,Other
+1314,,2022-09-29,4,B,5,"TV,Radio",0,5.0,A,SF,Y,3.8,4,Facebook
+1315,33921,2022-09-30,3,A,3,Weather App,1,4.0,C,SF,Y,3.8,5,"Twitter,Instagram"
+1316,33905,2022-09-28,3,C,6,Family,1,,A,SA,Y,4.5,2,IG
+1317,339,2022-09-29,2,B,3,Official Warning,1,3.0,B,SF,Y,4.3,4,YouTube
+1318,33924,2022-09-30,2,C,8,"TV,Family",0,3.0,A,SA,Y,3.7,2,None
+1319,33921,2022-09-28,2,B,4,TV,1,4.0,C,SA,Y,2.0,5,"Twitter,Instagram"
+1320,33976,2022-09-30,2,C,8,"TV,Family",0,4.0,D,SF,Y,5.0,4,YouTube
+1321,33903,2022-09-29,3,A,4,Family,0,5.0,B,SA,Y,1.7,2,Facebook
+1322,33928,2022-09-28,3,C,4,"TV,Radio,Social",1,5.0,C,SA,N,4.2,4,"FB,IG,TW"
+1323,33902,2022-09-28,3,B,5,Neighbors,0,2.0,C,SF,Y,3.7,4,"Instagram,Facebook"
+1324,339,2022-09-28,2,C,5,Weather App,1,2.0,B,SF,Y,1.9,4,IG
+1325,33972,2022-09-29,4,A,4,"TV,Radio,Social",1,4.0,D,CF,N,3.1,3,Facebook
+1326,33913,2022-09-28,3,C,2,Radio,0,3.0,D,OT,Y,3.1,5,YouTube
+1327,33971,2022-09-28,3,C,3,"TV,Social",1,1.0,C,CF,P,4.6,4,Twitter
+1328,33976,2022-09-29,3,A,5,Weather App,1,5.0,B,SF,Y,2.4,4,"Instagram,Facebook"
+1329,33974,2022-09-30,2,A,0,Radio,1,2.0,C,SA,Y,2.9,2,Twitter
+1330,33931,2022-09-30,2,A,2,"TV,Social",0,6.0,B,CF,Y,1.0,5,"Facebook,Twitter"
+1331,33907,2022-09-30,2,C,4,Radio,1,5.0,B,CF,N,5.0,2,IG
+1332,33931,2022-09-30,3,C,4,Social Media,0,5.0,B,SA,Y,2.0,4,Twitter
+1333,33976,2022-09-30,1,B,3,News Website,1,2.0,C,CF,N,3.6,5,Twitter
+1334,33966,2022-09-29,1,A,4,Official Warning,0,2.0,D,CA,Y,3.1,3,YouTube
+1335,33903,2022-09-30,1,B,9,Neighbors,1,4.0,B,SA,Y,3.1,4,"Facebook,Twitter"
+1336,33928,2022-09-29,1,C,0,"Radio,Social",0,2.0,A,CF,Y,4.1,3,IG
+1337,33908,2022-09-29,4,B,4,"Radio,Social",0,3.0,D,SF,Y,5.0,4,None
+1338,33966,2022-09-28,3,D,0,"TV,Radio",1,3.0,A,CA,Y,3.5,4,"Facebook,Twitter"
+1339,33901,2022-09-28,2,A,5,Weather App,1,2.0,C,OT,P,3.9,5,"Facebook,Twitter"
+1340,33973,2022-09-28,1,C,4,Weather App,1,2.0,A,SF,Y,3.6,5,IG
+1341,33914,2022-09-29,2,B,4,Social Media,1,5.0,B,CF,Y,4.3,4,Other
+1342,33976,2022-09-30,2,B,3,Radio,0,2.0,D,SF,Y,2.7,4,"Facebook,Twitter"
+1343,33904,2022-09-30,2,C,5,"TV,Social",1,1.0,A,SA,N,4.4,4,"FB,IG,TW"
+1344,33909,2022-09-29,2,C,4,Official Warning,1,4.0,B,SA,P,4.4,3,Other
+1345,33972,2022-09-28,2,D,2,Radio,0,6.0,B,SF,N,4.4,4,Instagram
+1346,33976,2022-09-28,3,A,7,Social Media,1,3.0,D,CA,P,2.5,5,IG
+1347,33919,2022-09-29,3,A,5,"Radio,Social",1,2.0,D,SF,N,3.0,3,YouTube
+1348,33924,2022-09-28,1,C,2,Neighbors,1,4.0,B,SA,P,3.5,3,IG
+1349,33967,2022-09-29,2,C,8,Neighbors,1,6.0,A,CF,N,1.7,3,None
+1350,UNK,2022-09-28,3,B,1,"Radio,Social",1,5.0,C,SF,Y,5.0,3,YouTube
+1351,33976,2022-09-29,3,A,4,Official Warning,0,4.0,B,SF,Y,3.2,2,Twitter
+1352,33922,2022-09-30,4,A,4,Weather App,0,3.0,C,SF,Y,3.5,4,Other
+1353,33921,2022-09-30,3,C,1,"TV,Social",1,4.0,A,SA,Y,2.6,4,"FB,IG,TW"
+1354,33974,2022-09-30,2,A,3,News Website,0,1.0,A,CF,Y,1.7,4,"Twitter,Instagram"
+1355,33919,2022-09-29,1,B,3,Official Warning,0,4.0,C,SF,Y,2.5,3,Other
+1356,33910,2022-09-28,3,A,6,"TV,Radio",1,5.0,B,SF,P,3.4,4,"FB,TW"
+1357,33909,2022-09-28,1,B,4,Official Warning,1,6.0,D,SF,Y,3.9,5,YouTube
+1358,33921,2022-09-28,3,A,4,Official Warning,0,3.0,A,SA,N,3.4,5,Other
+1359,33967,2022-09-28,4,B,1,"Radio,Social",1,1.0,B,SA,N,3.6,4,None
+1360,33921,2022-09-28,3,A,6,Family,1,4.0,D,SF,P,2.8,1,Twitter
+1361,33922,2022-09-30,2,C,3,"Radio,Social",0,5.0,B,CF,P,3.7,5,Instagram
+1362,33976,2022-09-29,3,A,3,Emergency Alert,1,5.0,C,SF,N,4.8,4,Instagram
+1363,33972,2022-09-28,2,B,3,"TV,Radio",1,2.0,A,OT,Y,4.0,3,IG
+1364,33936,2022-09-29,3,C,4,TV,1,3.0,C,OT,Y,4.1,2,None
+1365,33965,2022-09-28,4,C,6,"Radio,Social",1,4.0,C,SA,Y,3.5,2,IG
+1366,33928,2022-09-29,2,B,7,Social Media,0,3.0,B,OT,N,1.5,2,"Twitter,Instagram"
+1367,33919,2022-09-29,4,B,2,Family,1,5.0,C,CA,N,2.1,1,Other
+1368,33917,2022-09-29,4,B,3,Social Media,0,4.0,C,CA,N,3.7,5,Instagram
+1369,33967,2022-09-29,2,C,3,News Website,1,5.0,B,CF,Y,3.2,4,IG
+1370,,2022-09-30,1,D,4,News Website,1,4.0,C,SF,Y,3.7,4,"FB,IG,TW"
+1371,33910,2022-09-29,1,C,4,Weather App,1,5.0,C,SF,Y,5.0,5,"FB,TW"
+1372,33903,2022-09-28,1,C,3,Emergency Alert,0,3.0,A,SF,Y,4.0,4,"Twitter,Instagram"
+1373,33931,2022-09-30,1,C,5,"TV,Social",0,5.0,B,CF,Y,4.6,5,"Twitter,Instagram"
+1374,33972,2022-09-30,3,B,5,"TV,Family",0,3.0,B,SF,Y,3.3,5,IG
+1375,33901-3361,2022-09-29,1,A,4,"Radio,Social",1,4.0,B,SF,N,2.3,3,"Twitter,Instagram"
+1376,33910,2022-09-28,2,C,8,"TV,Radio",0,2.0,C,CF,Y,3.1,5,"Twitter,Instagram"
+1377,UNK,2022-09-29,3,D,4,Weather App,1,4.0,B,SF,Y,2.3,4,None
+1378,UNK,2022-09-29,1,A,3,News Website,0,3.0,D,CF,P,4.9,2,Other
+1379,33976,2022-09-29,3,C,5,"Radio,Social",1,3.0,B,OT,Y,4.1,4,None
+1380,33903,2022-09-28,2,A,9,Neighbors,0,6.0,B,SA,Y,3.8,4,YouTube
+1381,33919,2022-09-29,1,B,5,Neighbors,1,2.0,C,SA,Y,4.6,5,"Twitter,Instagram"
+1382,33922,2022-09-28,3,A,2,Neighbors,1,5.0,C,CF,Y,1.0,3,"FB,IG,TW"
+1383,33906,2022-09-29,3,B,5,"Radio,Social",1,6.0,C,CF,Y,3.8,4,"Facebook,Twitter"
+1384,33907,2022-09-29,4,C,2,Family,1,1.0,A,SF,Y,1.8,1,"FB,IG,TW"
+1385,33907,2022-09-29,3,B,2,"TV,Social",1,4.0,B,CA,Y,3.2,3,IG
+1386,33924,2022-09-29,3,C,5,Neighbors,1,3.0,B,SF,Y,2.9,2,"Facebook,Twitter"
+1387,33903,2022-09-28,2,C,2,"TV,Radio,Social",0,1.0,D,SF,Y,3.9,4,None
+1388,33904,2022-09-29,2,D,5,Radio,0,3.0,B,SA,N,3.5,5,IG
+1389,33957,2022-09-30,3,A,1,"TV,Radio",1,6.0,D,SF,Y,4.7,3,YouTube
+1390,33919,2022-09-28,3,B,3,Weather App,1,1.0,C,SF,P,2.5,4,"Instagram,Facebook"
+1391,33913,2022-09-28,4,A,3,Official Warning,1,,B,SF,Y,4.0,3,"Twitter,Instagram"
+1392,33906,2022-09-30,2,D,2,Radio,0,4.0,C,SF,Y,3.4,2,"FB,TW"
+1393,33965,2022-09-30,2,D,6,"TV,Family",0,5.0,C,SF,N,1.4,4,"FB,TW"
+1394,33919,2022-09-28,3,B,2,"TV,Social",0,1.0,D,SF,Y,2.2,2,None
+1395,33910,2022-09-28,2,C,0,"TV,Family",0,4.0,A,SA,Y,3.0,4,Facebook
+1396,33920,2022-09-30,4,B,5,"TV,Family",0,4.0,B,CA,Y,4.4,1,YouTube
+1397,33901,2022-09-29,4,C,2,"TV,Radio",0,4.0,B,SF,Y,3.7,2,Facebook
+1398,33973,2022-09-30,2,A,5,"TV,Radio,Social",0,6.0,A,CA,N,1.9,4,"Instagram,Facebook"
+1399,33912,2022-09-29,3,C,1,Social Media,1,5.0,C,SF,P,3.0,4,"FB,IG,TW"
+1400,UNK,2022-09-30,3,A,5,"TV,Social",0,1.0,D,SF,Y,5.0,1,Facebook
+1401,33924,2022-09-28,1,C,5,News Website,1,,B,SF,Y,3.3,4,IG
+1402,33965,2022-09-30,4,C,5,Weather App,0,3.0,C,CF,Y,2.8,5,Instagram
+1403,33907,2022-09-28,3,C,8,Radio,1,3.0,C,CF,P,3.7,4,"Instagram,Facebook"
+1404,33936,2022-09-29,3,A,4,News Website,1,4.0,B,CF,N,4.0,2,Facebook
+1405,33922,2022-09-30,2,B,5,Radio,0,3.0,A,SA,P,2.7,4,"Instagram,Facebook"
+1406,UNK,2022-09-29,4,B,6,TV,1,3.0,C,CF,Y,3.8,4,"Facebook,Twitter"
+1407,33904,2022-09-30,2,B,5,"TV,Family",0,6.0,D,CF,N,2.8,1,"Facebook,Twitter"
+1408,33976,2022-09-30,1,A,4,"TV,Radio,Social",1,1.0,C,OT,Y,4.0,5,"Twitter,Instagram"
+1409,33922,2022-09-29,4,D,2,Weather App,0,6.0,A,SF,Y,3.4,5,Facebook
+1410,33917,2022-09-30,1,C,7,TV,1,4.0,B,SF,P,3.7,5,YouTube
+1411,33936,2022-09-28,2,B,2,"TV,Family",1,4.0,A,SA,Y,2.4,5,"Instagram,Facebook"
+1412,33914,2022-09-29,4,B,4,Official Warning,0,5.0,C,CF,P,2.3,4,IG
+1413,33909,2022-09-29,4,B,3,Official Warning,1,3.0,C,SF,Y,4.2,4,IG
+1414,33903,2022-09-28,3,C,4,Emergency Alert,0,3.0,A,SF,N,3.1,4,IG
+1415,33972,2022-09-29,3,B,5,Family,1,3.0,C,CF,Y,3.5,5,"FB,IG,TW"
+1416,33909-2476,2022-09-30,2,D,2,Official Warning,1,3.0,C,CF,Y,2.9,4,"FB,IG,TW"
+1417,33967,2022-09-28,2,B,7,Social Media,1,6.0,C,SF,Y,4.2,3,Instagram
+1418,,2022-09-30,2,D,2,TV,0,5.0,D,OT,Y,2.5,3,Twitter
+1419,33957,2022-09-30,3,C,5,"TV,Radio,Social",1,2.0,A,SA,Y,3.1,5,Facebook
+1420,33921,2022-09-30,3,A,1,"TV,Social",1,2.0,D,CF,Y,4.1,1,"FB,TW"
+1421,,2022-09-30,3,D,3,"TV,Radio,Social",0,3.0,A,SA,Y,4.5,4,"Twitter,Instagram"
+1422,33974,2022-09-30,3,A,1,"TV,Radio,Social",0,1.0,B,CA,Y,2.6,5,Instagram
+1423,33922,2022-09-30,1,C,4,Neighbors,0,4.0,D,SF,Y,5.0,4,Instagram
+1424,33931,2022-09-28,2,B,5,Weather App,1,2.0,D,SF,Y,3.5,5,"Instagram,Facebook"
+1425,,2022-09-28,1,C,5,Family,0,4.0,C,CF,N,2.1,4,"Twitter,Instagram"
+1426,33910,2022-09-29,3,C,3,"TV,Radio",1,1.0,C,SA,N,3.6,1,"FB,IG,TW"
+1427,33917,2022-09-28,2,C,4,"Radio,Social",0,3.0,C,SF,Y,2.8,5,"Facebook,Twitter"
+1428,33966,2022-09-28,4,C,4,Emergency Alert,0,4.0,C,OT,Y,3.7,3,"Facebook,Twitter"
+1429,33957,2022-09-28,2,B,9,Social Media,1,4.0,A,CF,N,3.2,3,"Instagram,Facebook"
+1430,UNK,2022-09-28,1,A,5,Family,1,6.0,C,SF,Y,3.3,3,"Instagram,Facebook"
+1431,33957,2022-09-28,1,B,5,Official Warning,1,5.0,B,SF,Y,2.2,3,Twitter
+1432,33920,2022-09-28,3,A,7,News Website,1,3.0,B,SF,Y,4.3,3,"FB,IG,TW"
+1433,33957,2022-09-29,3,C,3,"TV,Family",1,1.0,B,SA,Y,1.9,3,None
+1434,,2022-09-28,1,B,2,"TV,Social",0,5.0,C,OT,Y,2.0,4,"FB,IG,TW"
+1435,33928,2022-09-30,1,D,7,"TV,Radio",0,6.0,D,CF,Y,3.6,5,"Facebook,Twitter"
+1436,33917,2022-09-29,3,C,7,Neighbors,1,5.0,C,OT,Y,5.0,3,YouTube
+1437,33973,2022-09-28,1,C,5,"TV,Radio,Social",1,2.0,D,CA,Y,2.8,3,Twitter
+1438,33924,2022-09-30,3,A,6,"TV,Radio,Social",1,6.0,A,CF,Y,4.0,4,YouTube
+1439,33908,2022-09-28,3,C,5,Radio,0,3.0,C,SA,Y,4.4,4,"Twitter,Instagram"
+1440,33903,2022-09-30,1,D,2,Emergency Alert,0,5.0,C,CF,Y,4.1,5,"FB,TW"
+1441,33976,2022-09-29,1,B,5,"Radio,Social",0,6.0,C,CF,Y,2.9,1,Instagram
+1442,33919,2022-09-29,4,C,7,"TV,Radio,Social",1,2.0,C,SF,P,2.0,5,"FB,TW"
+1443,33909,2022-09-30,2,C,6,TV,1,6.0,C,SA,Y,1.0,4,YouTube
+1444,33957,2022-09-28,2,A,2,Weather App,1,3.0,D,SF,Y,2.9,4,YouTube
+1445,33967,2022-09-28,3,B,6,Social Media,0,6.0,C,CA,Y,4.5,2,"FB,IG,TW"
+1446,33910,2022-09-29,4,B,3,"TV,Family",1,3.0,A,CA,Y,2.0,3,Twitter
+1447,33907,2022-09-30,4,A,5,Family,1,6.0,C,SF,Y,4.0,3,"FB,IG,TW"
+1448,33967,2022-09-29,3,B,4,Official Warning,0,1.0,B,SF,Y,2.2,3,Other
+1449,33921,2022-09-30,2,A,2,Weather App,1,5.0,B,CF,N,3.3,4,"Instagram,Facebook"
+1450,33916-8264,2022-09-29,1,A,5,"TV,Radio",0,4.0,D,CF,Y,4.0,5,Facebook
+1451,33957,2022-09-29,3,A,6,Family,0,4.0,B,SF,N,2.5,4,YouTube
+1452,33936-1992,2022-09-30,3,D,6,"TV,Radio,Social",1,2.0,C,CF,Y,3.4,4,"FB,IG,TW"
+1453,33908,2022-09-29,2,B,3,"TV,Radio",1,5.0,B,SF,P,2.7,4,None
+1454,33973,2022-09-28,4,D,4,Neighbors,1,2.0,A,SF,N,4.0,3,Twitter
+1455,33902-1828,2022-09-30,1,B,4,"TV,Radio",1,4.0,B,SF,P,3.5,5,Facebook
+1456,33909,2022-09-30,2,B,5,"TV,Radio",0,,A,SF,Y,3.3,4,"Twitter,Instagram"
+1457,33916,2022-09-30,1,B,2,Official Warning,1,6.0,C,SA,Y,4.9,3,"Twitter,Instagram"
+1458,33916-4817,2022-09-30,2,B,1,Official Warning,1,1.0,B,OT,N,3.9,3,None
+1459,33901,2022-09-29,1,A,1,Weather App,1,2.0,B,CF,N,2.4,4,None
+1460,33910,2022-09-28,1,C,7,"TV,Family",1,2.0,A,CF,P,3.1,4,Twitter
+1461,33920,2022-09-29,1,A,7,"TV,Radio",0,3.0,B,SF,Y,3.1,1,"Facebook,Twitter"
+1462,33908,2022-09-28,3,C,5,News Website,0,2.0,C,CF,N,3.3,5,YouTube
+1463,33902,2022-09-28,3,C,5,News Website,1,4.0,A,SF,Y,5.0,4,Other
+1464,33936,2022-09-30,3,A,2,Neighbors,0,5.0,C,CF,Y,3.6,4,"FB,IG,TW"
+1465,33919,2022-09-30,4,A,1,"Radio,Social",1,5.0,D,OT,Y,1.0,2,Facebook
+1466,33902,2022-09-30,2,C,6,TV,0,4.0,C,SF,Y,2.6,3,Other
+1467,33904,2022-09-28,2,B,3,Social Media,0,1.0,C,SA,P,1.1,5,Other
+1468,33967,2022-09-28,4,A,3,Family,0,4.0,A,SF,Y,2.8,5,None
+1469,33905,2022-09-30,2,D,3,Neighbors,1,2.0,B,SF,Y,1.0,3,Facebook
+1470,33957,2022-09-28,4,A,2,Social Media,0,5.0,D,SF,Y,2.2,2,"Instagram,Facebook"
+1471,33907,2022-09-29,1,C,4,Radio,1,3.0,C,SF,Y,1.5,3,IG
+1472,33917,2022-09-30,4,D,3,"TV,Social",1,3.0,C,SF,Y,3.6,3,Facebook
+1473,33903,2022-09-29,1,A,7,"Radio,Social",0,3.0,C,SF,Y,3.2,4,"Twitter,Instagram"
+1474,33924,2022-09-29,4,A,4,Social Media,1,5.0,B,CF,Y,3.5,5,IG
+1475,33902,2022-09-29,3,A,3,TV,1,2.0,A,SF,N,3.1,3,"FB,IG,TW"
+1476,UNK,2022-09-29,4,B,5,Weather App,1,4.0,C,SA,P,1.7,2,Instagram
+1477,33972,2022-09-30,1,A,2,Social Media,1,2.0,C,OT,Y,3.8,5,"Twitter,Instagram"
+1478,339,2022-09-29,3,C,4,"TV,Radio,Social",0,5.0,B,CF,Y,5.0,1,IG
+1479,,2022-09-30,4,A,3,Family,0,6.0,D,SF,Y,3.7,5,YouTube
+1480,33922,2022-09-30,3,B,5,"Radio,Social",1,3.0,B,SF,N,2.7,4,"Facebook,Twitter"
+1481,33971,2022-09-29,3,D,2,Emergency Alert,0,4.0,B,CA,Y,1.6,5,Instagram
+1482,33916-8046,2022-09-28,3,C,6,Neighbors,1,6.0,D,CF,Y,2.2,2,Facebook
+1483,33967,2022-09-28,2,C,3,Neighbors,1,4.0,C,CF,Y,3.7,1,Other
+1484,33973,2022-09-29,3,B,4,TV,0,4.0,C,SF,P,4.4,4,YouTube
+1485,33907,2022-09-29,3,C,5,TV,1,4.0,A,CF,Y,3.5,4,None
+1486,33928,2022-09-28,4,B,4,Weather App,0,4.0,B,SF,Y,4.1,3,"FB,TW"
+1487,33957,2022-09-30,1,B,4,"Radio,Social",0,2.0,C,OT,P,4.0,5,"FB,IG,TW"
+1488,33974,2022-09-30,2,A,2,Radio,0,5.0,B,CA,Y,3.8,5,"FB,IG,TW"
+1489,339,2022-09-30,4,C,3,News Website,1,3.0,C,SF,N,2.5,4,IG
+1490,33957,2022-09-30,4,B,2,"TV,Radio,Social",0,1.0,D,CF,Y,3.4,2,Twitter
+1491,33904,2022-09-29,2,A,1,Weather App,1,5.0,C,SF,P,2.3,4,"Facebook,Twitter"
+1492,33931,2022-09-28,3,B,3,"TV,Family",1,3.0,B,CF,Y,3.2,4,None
+1493,33967,2022-09-29,2,B,4,"TV,Social",1,2.0,C,CA,N,3.6,3,"Instagram,Facebook"
+1494,33971,2022-09-29,2,C,4,"TV,Family",1,4.0,B,CF,Y,5.0,5,None
+1495,33904,2022-09-30,2,C,7,News Website,1,5.0,A,SF,N,1.8,2,Instagram
+1496,33924,2022-09-28,2,C,2,"TV,Social",0,5.0,A,SF,Y,3.7,3,Instagram
+1497,33916,2022-09-28,3,A,5,Official Warning,1,6.0,B,CA,Y,4.8,2,"Twitter,Instagram"
+1498,33974,2022-09-30,1,B,8,"TV,Radio,Social",1,5.0,D,CF,N,4.0,4,Twitter
+1499,33907,2022-09-29,4,B,9,Official Warning,1,1.0,B,CF,Y,4.1,4,"FB,TW"
+1500,33957,2022-09-29,4,A,2,"TV,Radio",1,3.0,B,SF,Y,3.8,3,"FB,IG,TW"
+1501,33921,2022-09-29,3,B,4,Emergency Alert,1,,D,SF,Y,4.6,2,YouTube
+1502,33971,2022-09-28,3,C,4,Weather App,1,3.0,A,OT,N,2.0,1,Facebook
+1503,33902,2022-09-29,2,A,6,Emergency Alert,1,4.0,C,CF,Y,1.7,2,IG
+1504,,2022-09-29,3,B,5,"Radio,Social",1,4.0,B,CF,N,3.2,4,None
+1505,33924-6567,2022-09-29,3,A,1,Official Warning,1,3.0,A,CF,Y,1.0,3,"Instagram,Facebook"
+1506,339,2022-09-29,2,A,2,Weather App,0,6.0,D,SA,Y,4.6,3,Twitter
+1507,33902,2022-09-29,4,A,6,"TV,Family",1,4.0,A,SF,Y,4.5,5,None
+1508,33965-7878,2022-09-30,3,D,5,Radio,1,4.0,C,SF,Y,2.7,4,IG
+1509,33957,2022-09-30,4,C,4,"TV,Radio,Social",1,6.0,B,CF,Y,2.8,4,None
+1510,33928,2022-09-28,3,D,5,"TV,Social",1,4.0,A,SA,Y,3.1,1,YouTube
+1511,33906,2022-09-28,3,B,4,Emergency Alert,1,2.0,A,SA,Y,3.3,3,Instagram
+1512,33910,2022-09-28,2,A,4,Social Media,0,4.0,A,CA,P,3.3,4,Instagram
+1513,33904,2022-09-29,4,B,1,"TV,Radio,Social",1,5.0,A,SF,Y,3.8,2,"FB,TW"
+1514,33921,2022-09-30,4,B,8,Emergency Alert,1,5.0,C,SF,Y,3.0,2,IG
+1515,33971,2022-09-29,1,C,2,"Radio,Social",0,5.0,B,OT,Y,4.2,5,"Facebook,Twitter"
+1516,33972,2022-09-29,1,A,4,"TV,Family",1,5.0,B,CF,Y,3.7,5,"FB,TW"
+1517,33916,2022-09-29,2,B,7,"TV,Family",1,3.0,B,CF,Y,2.5,2,None
+1518,33908,2022-09-30,3,A,6,"Radio,Social",1,5.0,D,SA,Y,4.7,3,Other
+1519,33908,2022-09-29,4,B,3,Neighbors,0,5.0,D,CF,N,1.7,5,"FB,IG,TW"
+1520,33976,2022-09-30,2,C,5,Family,1,2.0,C,SF,Y,3.1,2,"Facebook,Twitter"
+1521,33924,2022-09-30,3,B,5,Neighbors,1,2.0,D,SA,Y,4.3,4,IG
+1522,339,2022-09-28,2,B,3,Official Warning,1,6.0,B,CA,Y,2.4,5,"FB,IG,TW"
+1523,33916,2022-09-28,4,B,3,TV,0,5.0,B,CF,Y,3.5,5,YouTube
+1524,33920,2022-09-29,3,B,5,"TV,Radio,Social",1,5.0,C,CF,Y,3.8,4,IG
+1525,33908,2022-09-28,3,C,1,"TV,Radio",1,5.0,C,SF,Y,2.3,2,"Facebook,Twitter"
+1526,,2022-09-29,2,C,4,Neighbors,1,4.0,B,SF,Y,3.1,3,"Facebook,Twitter"
+1527,33917,2022-09-30,2,D,2,"TV,Radio",1,4.0,B,SF,Y,3.0,5,Twitter
+1528,33936,2022-09-29,2,C,1,Social Media,0,4.0,D,SF,N,2.6,5,"Instagram,Facebook"
+1529,33971-1307,2022-09-30,1,B,2,Radio,1,1.0,C,OT,Y,5.0,4,None
+1530,33928,2022-09-29,4,C,4,"TV,Radio,Social",1,5.0,B,SA,Y,2.4,4,"Twitter,Instagram"
+1531,33966,2022-09-28,3,B,4,Weather App,1,4.0,C,SA,Y,4.3,4,Other
+1532,33967,2022-09-30,4,B,2,"TV,Social",1,4.0,B,CF,Y,2.8,4,"FB,IG,TW"
+1533,33966,2022-09-28,4,C,9,Social Media,1,4.0,A,SF,Y,2.0,5,Twitter
+1534,UNK,2022-09-28,3,A,4,"TV,Radio",0,4.0,B,OT,Y,3.3,4,Twitter
+1535,33906,2022-09-29,3,D,5,"TV,Radio",1,2.0,B,SF,N,3.9,4,Other
+1536,33907,2022-09-30,4,B,4,"TV,Radio",0,3.0,A,SF,Y,4.2,3,None
+1537,33966,2022-09-30,3,C,3,"Radio,Social",0,2.0,C,CF,Y,4.9,4,None
+1538,33966,2022-09-29,2,C,6,Official Warning,1,2.0,B,CA,Y,5.0,4,"Twitter,Instagram"
+1539,33931,2022-09-28,2,C,5,News Website,1,6.0,C,CA,Y,3.5,3,"Twitter,Instagram"
+1540,33912,2022-09-30,1,C,5,"TV,Family",1,2.0,A,SF,Y,2.5,5,"Facebook,Twitter"
+1541,33914-6724,2022-09-30,4,C,4,Radio,1,3.0,A,CA,Y,3.7,4,"Twitter,Instagram"
+1542,33910,2022-09-28,3,A,4,Weather App,1,4.0,D,SF,Y,2.9,5,"Twitter,Instagram"
+1543,33910,2022-09-28,2,B,3,Social Media,1,4.0,C,SF,Y,4.2,2,"FB,IG,TW"
+1544,33913,2022-09-28,3,A,1,Emergency Alert,1,2.0,D,CA,Y,1.8,4,Other
+1545,33905,2022-09-28,3,C,1,Family,0,5.0,D,CA,N,5.0,3,Facebook
+1546,33976,2022-09-28,2,B,5,"Radio,Social",1,5.0,B,CF,Y,4.1,5,"Instagram,Facebook"
+1547,33972,2022-09-28,1,C,6,News Website,1,2.0,B,CF,Y,1.3,2,Instagram
+1548,33928,2022-09-28,3,A,6,Radio,1,3.0,D,CA,N,2.4,4,"Twitter,Instagram"
+1549,33928,2022-09-29,3,A,3,Neighbors,0,6.0,D,SA,N,4.1,4,"FB,IG,TW"
+1550,33905,2022-09-28,3,C,6,Weather App,0,5.0,C,CA,N,4.5,3,"FB,TW"
+1551,33924,2022-09-29,3,A,5,Neighbors,0,4.0,C,CF,Y,1.8,5,"FB,IG,TW"
+1552,33904,2022-09-30,4,A,6,Neighbors,0,1.0,C,OT,N,4.0,5,Instagram
+1553,33905,2022-09-28,3,A,1,Social Media,1,3.0,B,OT,Y,1.1,3,"FB,TW"
+1554,33972,2022-09-29,3,D,3,Official Warning,0,4.0,C,SF,Y,3.1,1,Facebook
+1555,UNK,2022-09-29,4,C,3,"TV,Radio",0,2.0,C,CA,Y,4.4,3,"Facebook,Twitter"
+1556,33906,2022-09-29,2,B,6,Weather App,0,3.0,C,CF,N,2.6,3,"Facebook,Twitter"
+1557,33965,2022-09-30,1,B,2,"TV,Family",0,4.0,A,SF,Y,1.5,5,Other
+1558,33903,2022-09-29,1,B,9,Emergency Alert,0,3.0,B,CF,Y,3.4,5,"Twitter,Instagram"
+1559,33914,2022-09-30,3,C,4,TV,1,5.0,A,SF,Y,2.5,2,Instagram
+1560,33974,2022-09-28,3,C,3,Social Media,1,5.0,B,CF,Y,3.9,4,YouTube
+1561,33904,2022-09-30,3,A,5,TV,0,3.0,D,CA,N,2.2,4,Twitter
+1562,33931,2022-09-28,2,A,5,"TV,Radio",1,5.0,A,SF,Y,2.4,2,Twitter
+1563,33906,2022-09-28,1,A,2,Official Warning,1,2.0,B,CF,Y,1.0,3,YouTube
+1564,,2022-09-29,1,C,3,Official Warning,0,5.0,B,OT,N,3.4,3,Facebook
+1565,UNK,2022-09-29,2,C,5,"TV,Radio",1,2.0,C,CF,Y,3.0,4,"Facebook,Twitter"
+1566,33957,2022-09-30,3,B,4,"TV,Radio",1,1.0,C,SF,Y,1.9,4,"FB,IG,TW"
+1567,33922,2022-09-29,2,A,3,Weather App,1,4.0,B,CF,N,3.4,4,Instagram
+1568,33931,2022-09-28,2,A,1,"TV,Radio,Social",1,4.0,A,CF,P,4.3,2,"Instagram,Facebook"
+1569,33904,2022-09-29,4,D,4,TV,0,6.0,B,CF,N,3.0,5,Facebook
+1570,33931,2022-09-30,2,B,2,Official Warning,1,3.0,C,CA,Y,3.5,4,"Twitter,Instagram"
+1571,33965-5655,2022-09-30,3,C,8,"TV,Radio",1,3.0,B,CF,Y,3.5,5,YouTube
+1572,33910,2022-09-29,3,C,7,TV,1,4.0,D,CA,Y,1.9,3,Twitter
+1573,33910,2022-09-29,2,B,5,"TV,Radio",0,4.0,B,CF,Y,5.0,5,"Instagram,Facebook"
+1574,33924,2022-09-28,3,A,2,"TV,Social",1,3.0,A,SF,Y,2.7,5,"FB,TW"
+1575,33966,2022-09-29,4,A,4,"TV,Radio",1,4.0,C,SA,Y,3.9,3,"FB,TW"
+1576,33906,2022-09-30,4,C,6,"TV,Radio,Social",1,5.0,B,SA,N,4.0,3,Facebook
+1577,33965,2022-09-30,1,C,3,Emergency Alert,0,5.0,C,CF,Y,3.0,5,"Twitter,Instagram"
+1578,33931,2022-09-28,4,C,2,Official Warning,1,6.0,B,SF,Y,3.9,4,"Facebook,Twitter"
+1579,33906,2022-09-29,2,B,5,Official Warning,1,3.0,C,SF,Y,3.5,5,YouTube
+1580,33971,2022-09-28,2,A,5,Weather App,1,,C,SF,Y,1.6,4,IG
+1581,33902,2022-09-29,2,D,5,TV,1,3.0,D,SF,P,2.8,4,"Facebook,Twitter"
+1582,33913,2022-09-28,4,C,5,News Website,1,4.0,B,SA,Y,2.5,2,"Facebook,Twitter"
+1583,33931,2022-09-28,2,B,6,News Website,1,4.0,B,SF,Y,2.7,3,IG
+1584,33976,2022-09-30,2,D,4,Weather App,1,6.0,B,SA,Y,1.8,5,IG
+1585,33909,2022-09-28,3,C,0,"TV,Family",1,5.0,D,SF,Y,4.4,3,"Instagram,Facebook"
+1586,33922,2022-09-28,2,C,6,"TV,Social",1,6.0,D,SF,Y,5.0,2,IG
+1587,33907,2022-09-30,1,C,5,Radio,0,5.0,A,CF,N,4.3,4,"FB,TW"
+1588,33903,2022-09-28,1,C,6,Social Media,1,6.0,A,SF,Y,4.6,4,"FB,IG,TW"
+1589,33909,2022-09-30,1,C,6,Neighbors,1,5.0,B,CA,Y,2.8,3,YouTube
+1590,33910,2022-09-28,2,A,2,Official Warning,1,4.0,A,SF,Y,2.5,3,Instagram
+1591,33912,2022-09-29,1,B,2,Neighbors,1,3.0,B,CF,N,2.3,4,YouTube
+1592,33903,2022-09-30,3,D,3,"TV,Family",1,,A,CA,N,3.9,1,YouTube
+1593,33919,2022-09-29,2,A,6,Neighbors,1,1.0,C,CF,Y,3.4,4,Other
+1594,33922,2022-09-30,2,B,4,"TV,Radio",0,4.0,D,SF,Y,3.1,3,Facebook
+1595,33972,2022-09-28,4,B,3,Social Media,1,4.0,D,CF,N,4.6,5,None
+1596,33919,2022-09-30,2,B,3,"TV,Family",0,4.0,B,SA,N,3.6,5,"FB,IG,TW"
+1597,33974,2022-09-28,3,C,3,Emergency Alert,0,6.0,C,OT,N,2.3,4,Other
+1598,33914,2022-09-29,2,D,4,Official Warning,1,6.0,D,CA,N,2.5,3,IG
+1599,33972,2022-09-28,2,A,2,"TV,Radio",1,2.0,A,SF,Y,4.0,4,Facebook
+1600,,2022-09-30,1,A,4,Family,1,3.0,C,OT,Y,4.3,3,"Instagram,Facebook"
+1601,33967,2022-09-28,2,A,4,Official Warning,0,3.0,B,SF,N,3.8,3,Instagram
+1602,33914,2022-09-30,2,C,6,"TV,Family",0,3.0,B,SF,P,5.0,5,Facebook
+1603,33909,2022-09-28,2,C,2,Family,1,5.0,B,CA,Y,5.0,4,"Instagram,Facebook"
+1604,33904,2022-09-28,1,B,1,"TV,Radio",1,4.0,A,SF,Y,3.7,5,"Facebook,Twitter"
+1605,33957,2022-09-29,1,C,5,Official Warning,0,4.0,C,SF,P,2.3,2,YouTube
+1606,33907,2022-09-30,2,C,5,Weather App,1,5.0,B,SF,Y,1.8,2,"FB,IG,TW"
+1607,33908,2022-09-29,2,C,6,"TV,Radio,Social",1,5.0,B,CF,N,2.8,5,"Instagram,Facebook"
+1608,,2022-09-30,2,D,6,"TV,Social",1,2.0,A,SA,Y,4.0,4,Facebook
+1609,33910,2022-09-30,3,B,1,"TV,Radio",1,5.0,D,CF,Y,5.0,4,"FB,TW"
+1610,33906,2022-09-30,3,C,3,News Website,0,3.0,B,SF,Y,3.7,4,Other
+1611,33917,2022-09-29,1,B,3,Weather App,1,3.0,C,CF,Y,4.5,3,Facebook
+1612,33936,2022-09-29,3,C,7,"Radio,Social",1,1.0,C,OT,Y,2.9,4,Twitter
+1613,33967,2022-09-29,3,C,6,Neighbors,0,4.0,B,CA,Y,3.9,2,None
+1614,339,2022-09-29,1,C,3,Official Warning,1,3.0,A,SF,N,4.1,4,Other
+1615,33902,2022-09-29,4,C,4,Official Warning,1,3.0,C,OT,P,1.0,4,"Instagram,Facebook"
+1616,33907,2022-09-29,4,A,1,Radio,1,4.0,A,SA,Y,2.7,5,Other
+1617,33931,2022-09-28,1,B,4,Social Media,0,5.0,A,SF,Y,4.2,4,Other
+1618,33909,2022-09-29,2,D,4,Emergency Alert,0,2.0,C,SF,Y,3.5,2,"Twitter,Instagram"
+1619,33909-8685,2022-09-29,3,D,1,Emergency Alert,0,1.0,B,SF,Y,1.9,4,Twitter
+1620,33906,2022-09-30,3,A,2,"TV,Radio",1,5.0,B,SA,Y,1.0,2,Facebook
+1621,UNK,2022-09-30,2,A,6,Radio,1,1.0,B,SF,Y,2.8,3,"Instagram,Facebook"
+1622,33971,2022-09-30,2,A,4,TV,0,6.0,B,CF,Y,3.1,1,Other
+1623,33922,2022-09-29,2,C,2,Social Media,1,4.0,C,SF,Y,2.2,4,None
+1624,33908,2022-09-30,2,C,7,"TV,Radio,Social",1,3.0,C,OT,Y,3.4,2,"Facebook,Twitter"
+1625,339,2022-09-28,3,A,5,"TV,Family",1,2.0,C,SF,N,3.8,4,None
+1626,33976,2022-09-28,2,B,4,"TV,Radio,Social",1,,C,OT,Y,3.9,5,IG
+1627,33902,2022-09-30,2,C,6,Weather App,1,2.0,B,OT,N,1.0,4,YouTube
+1628,33919,2022-09-30,3,C,7,Emergency Alert,1,2.0,B,SF,P,1.8,2,Twitter
+1629,33922,2022-09-29,1,B,3,"TV,Family",1,4.0,B,CF,P,2.9,3,"Twitter,Instagram"
+1630,33936,2022-09-30,2,C,5,"TV,Radio",0,2.0,B,SF,P,3.8,4,"FB,TW"
+1631,33967,2022-09-30,3,B,6,Official Warning,0,4.0,D,OT,Y,3.7,5,"FB,IG,TW"
+1632,33906,2022-09-30,4,B,2,Radio,0,4.0,C,CF,Y,3.7,1,IG
+1633,33957,2022-09-30,3,C,5,"TV,Radio",1,3.0,A,SF,Y,2.8,5,Twitter
+1634,339,2022-09-29,3,C,2,Neighbors,0,1.0,A,SF,N,2.8,4,Instagram
+1635,33957,2022-09-29,1,C,3,Official Warning,0,1.0,A,SF,N,2.4,4,"Facebook,Twitter"
+1636,33902,2022-09-30,2,C,1,Official Warning,1,1.0,B,OT,N,4.0,5,IG
+1637,33905,2022-09-28,3,C,2,TV,0,5.0,A,SA,Y,2.2,4,"FB,TW"
+1638,33907,2022-09-29,2,A,3,Family,0,3.0,C,CA,N,4.1,5,IG
+1639,33931,2022-09-28,2,B,3,"TV,Radio,Social",0,5.0,D,SF,Y,3.4,3,YouTube
+1640,33936,2022-09-29,2,A,6,"TV,Radio,Social",1,3.0,C,SF,Y,3.2,4,Facebook
+1641,33913,2022-09-29,1,A,1,Family,0,4.0,B,OT,N,2.5,4,Facebook
+1642,33973,2022-09-30,2,C,5,Radio,1,4.0,B,SF,Y,1.7,3,"Facebook,Twitter"
+1643,33974,2022-09-29,2,D,6,Radio,1,5.0,C,OT,P,2.5,4,IG
+1644,33909,2022-09-29,2,A,6,Neighbors,1,3.0,C,SF,Y,2.8,3,"Instagram,Facebook"
+1645,339,2022-09-29,1,B,3,Weather App,1,2.0,C,SF,N,1.0,2,"Twitter,Instagram"
+1646,33903-6170,2022-09-30,4,C,4,"TV,Radio",1,4.0,D,SA,Y,3.0,3,"FB,TW"
+1647,33974,2022-09-30,3,A,5,Official Warning,0,3.0,C,OT,N,4.2,4,None
+1648,33914,2022-09-30,3,C,4,"TV,Radio,Social",0,3.0,C,OT,N,3.8,5,YouTube
+1649,33904,2022-09-29,3,C,4,"TV,Family",0,4.0,A,SF,P,2.7,4,Instagram
+1650,33931,2022-09-28,2,C,4,TV,0,4.0,C,SF,Y,3.3,4,Facebook
+1651,33957,2022-09-28,1,A,4,Family,0,4.0,B,CF,P,2.6,2,"Twitter,Instagram"
+1652,33966,2022-09-30,3,B,5,Weather App,0,4.0,B,CF,Y,3.4,5,Other
+1653,33965,2022-09-28,3,C,2,Weather App,1,5.0,C,SA,Y,4.9,4,"Twitter,Instagram"
+1654,33913,2022-09-28,3,C,3,Emergency Alert,1,5.0,B,SF,Y,4.3,4,"Twitter,Instagram"
+1655,33976,2022-09-30,2,A,2,"TV,Radio,Social",0,4.0,A,OT,N,3.8,4,Other
+1656,33921,2022-09-29,1,C,1,Emergency Alert,1,4.0,A,CF,Y,2.7,3,"Instagram,Facebook"
+1657,33971,2022-09-30,2,A,8,"Radio,Social",0,5.0,A,CA,N,4.0,4,"Facebook,Twitter"
+1658,339,2022-09-29,2,C,1,"TV,Family",0,3.0,A,CF,N,1.3,5,IG
+1659,UNK,2022-09-30,3,A,10,TV,1,3.0,A,CF,Y,2.9,2,"Instagram,Facebook"
+1660,33912,2022-09-28,3,D,5,News Website,0,5.0,B,OT,P,3.8,4,Facebook
+1661,33936,2022-09-30,2,B,6,"TV,Radio,Social",0,4.0,B,CF,Y,4.0,5,Other
+1662,33936,2022-09-28,4,B,3,Emergency Alert,1,1.0,D,CA,N,3.9,3,"Instagram,Facebook"
+1663,33971,2022-09-30,3,A,6,Social Media,1,5.0,B,OT,Y,3.5,5,None
+1664,33904,2022-09-29,2,B,4,Family,1,1.0,A,SA,Y,3.0,5,Facebook
+1665,UNK,2022-09-29,1,C,3,Neighbors,0,5.0,C,CF,Y,3.8,4,IG
+1666,33902,2022-09-29,2,D,0,Family,1,5.0,D,SF,Y,2.2,3,"Instagram,Facebook"
+1667,33972,2022-09-29,2,B,5,Family,1,6.0,C,SF,Y,2.3,3,"Facebook,Twitter"
+1668,33919-7001,2022-09-29,2,B,8,Emergency Alert,1,1.0,B,SF,Y,3.3,1,Instagram
+1669,33903,2022-09-29,2,C,2,"Radio,Social",1,4.0,C,SF,Y,3.4,5,"Twitter,Instagram"
+1670,33972,2022-09-30,2,C,3,Official Warning,1,3.0,C,SF,Y,1.2,5,None
+1671,33957,2022-09-28,2,C,6,Family,0,3.0,C,SF,Y,3.7,4,Other
+1672,33905,2022-09-30,4,B,1,News Website,1,1.0,C,SF,N,4.1,3,Instagram
+1673,33957,2022-09-30,1,B,5,Family,1,4.0,D,CF,Y,3.1,2,Twitter
+1674,33921,2022-09-30,3,C,5,"TV,Family",1,4.0,D,SF,N,5.0,4,YouTube
+1675,33908,2022-09-28,2,A,7,News Website,1,2.0,C,SF,Y,2.4,4,None
+1676,33976-9482,2022-09-29,4,C,5,Official Warning,1,4.0,B,SA,Y,2.8,5,IG
+1677,33908,2022-09-30,1,B,1,Radio,1,5.0,C,CF,Y,2.8,4,Other
+1678,33920,2022-09-30,2,C,4,Emergency Alert,1,5.0,C,CF,Y,3.1,5,"FB,IG,TW"
+1679,33916,2022-09-28,4,A,6,"TV,Radio",1,6.0,A,CF,Y,2.8,4,Other
+1680,33922,2022-09-30,4,C,1,"TV,Social",1,3.0,D,CA,Y,1.7,4,Other
+1681,33976,2022-09-30,3,B,1,Neighbors,0,6.0,A,CF,N,2.6,3,"Facebook,Twitter"
+1682,,2022-09-30,2,C,2,Family,0,5.0,B,CF,N,3.1,5,None
+1683,33972,2022-09-29,2,A,6,Social Media,1,3.0,D,OT,Y,4.6,4,"Facebook,Twitter"
+1684,33972,2022-09-30,3,C,4,"TV,Family",1,2.0,B,CA,N,5.0,3,"FB,IG,TW"
+1685,33928,2022-09-29,4,C,5,Radio,1,3.0,B,CF,Y,4.7,2,Instagram
+1686,33905,2022-09-30,3,C,8,"TV,Social",1,3.0,A,CF,Y,2.3,3,None
+1687,33922,2022-09-29,3,C,5,Official Warning,0,4.0,B,SF,Y,2.4,4,"Instagram,Facebook"
+1688,33912,2022-09-28,2,C,6,"TV,Radio,Social",0,4.0,A,CF,N,3.0,3,"FB,IG,TW"
+1689,33913,2022-09-30,3,C,3,Emergency Alert,1,5.0,B,OT,N,5.0,3,"Twitter,Instagram"
+1690,33917,2022-09-30,2,B,3,"TV,Social",0,4.0,B,CF,N,3.0,4,"FB,TW"
+1691,33914,2022-09-28,2,C,4,Social Media,0,2.0,D,OT,Y,1.7,2,IG
+1692,33919,2022-09-29,2,B,4,TV,0,5.0,D,CF,Y,2.6,5,Instagram
+1693,33902,2022-09-28,3,A,5,News Website,0,3.0,A,OT,N,4.0,4,"Facebook,Twitter"
+1694,33957,2022-09-29,2,A,4,News Website,1,6.0,C,CF,Y,4.0,4,Other
+1695,33909,2022-09-28,1,B,5,Family,0,2.0,A,SF,Y,3.0,2,Instagram
+1696,33906,2022-09-30,3,C,3,TV,1,6.0,A,CF,Y,4.0,3,"FB,IG,TW"
+1697,33974-9612,2022-09-29,2,C,1,Official Warning,0,1.0,A,SF,Y,1.0,3,IG
+1698,33905,2022-09-30,3,C,3,"TV,Radio,Social",1,2.0,D,SF,Y,3.3,5,Other
+1699,33928,2022-09-30,2,B,3,Radio,0,1.0,D,CA,Y,4.1,4,"Facebook,Twitter"
+1700,33972,2022-09-28,2,B,3,"TV,Radio,Social",1,5.0,A,SF,Y,2.3,3,Instagram
+1701,33936,2022-09-30,3,A,6,TV,1,5.0,A,SA,Y,2.3,4,"Instagram,Facebook"
+1702,33913,2022-09-29,1,B,7,Emergency Alert,0,3.0,B,SF,Y,1.1,3,YouTube
+1703,33909,2022-09-30,2,B,5,Weather App,1,6.0,C,SF,Y,4.9,5,YouTube
+1704,33904,2022-09-28,1,A,4,Social Media,1,4.0,C,OT,Y,2.4,5,IG
+1705,33910,2022-09-28,1,A,2,News Website,1,4.0,B,SF,Y,3.5,4,Instagram
+1706,33912,2022-09-29,4,C,0,Family,0,5.0,C,CF,Y,3.9,4,None
+1707,33917,2022-09-28,2,C,4,"Radio,Social",1,3.0,B,CF,Y,4.9,5,Instagram
+1708,33922,2022-09-30,3,D,3,Emergency Alert,1,3.0,D,CF,N,3.0,4,Other
+1709,,2022-09-29,2,D,5,"Radio,Social",0,6.0,C,OT,N,2.6,4,"FB,IG,TW"
+1710,33921,2022-09-29,3,C,3,Radio,0,6.0,B,SA,Y,3.4,5,Instagram
+1711,33924,2022-09-29,3,B,4,"TV,Radio",1,6.0,C,CF,Y,4.6,4,"Twitter,Instagram"
+1712,33906,2022-09-29,3,C,6,Emergency Alert,1,6.0,C,CA,N,3.0,4,Twitter
+1713,33912,2022-09-29,2,C,3,Weather App,1,2.0,B,SF,Y,2.1,5,IG
+1714,33910,2022-09-30,2,A,3,Official Warning,1,5.0,B,CF,Y,1.5,4,IG
+1715,33931,2022-09-29,2,B,4,"TV,Social",1,3.0,D,OT,Y,1.9,4,YouTube
+1716,33903,2022-09-29,4,C,5,"TV,Social",0,6.0,A,CF,Y,4.2,3,Twitter
+1717,33902,2022-09-28,3,B,5,"TV,Family",0,4.0,A,CA,Y,2.8,3,Instagram
+1718,UNK,2022-09-29,4,C,4,"TV,Radio,Social",1,4.0,B,SA,P,2.5,2,"Twitter,Instagram"
+1719,33976,2022-09-28,1,C,8,Emergency Alert,1,4.0,C,CA,N,2.4,4,Instagram
+1720,33922,2022-09-30,3,A,6,Official Warning,0,3.0,C,OT,Y,3.3,4,YouTube
+1721,,2022-09-30,4,B,4,"Radio,Social",1,1.0,D,SF,Y,2.9,5,Facebook
+1722,33966,2022-09-30,2,B,3,Official Warning,1,5.0,C,SF,Y,2.9,4,"Twitter,Instagram"
+1723,33905,2022-09-30,1,A,3,"TV,Social",1,5.0,A,CF,Y,4.7,4,None
+1724,33912,2022-09-28,3,A,4,Weather App,1,2.0,C,SA,Y,4.9,3,None
+1725,33974,2022-09-29,3,C,4,Emergency Alert,1,5.0,C,SF,Y,1.4,5,"Instagram,Facebook"
+1726,33931,2022-09-28,3,B,3,Family,0,4.0,A,SF,Y,3.6,4,"FB,TW"
+1727,33928,2022-09-30,1,B,4,Social Media,1,3.0,A,SF,Y,2.3,4,YouTube
+1728,33928,2022-09-28,3,B,3,Emergency Alert,1,3.0,A,OT,Y,2.9,3,Other
+1729,33936,2022-09-30,2,D,5,"TV,Radio,Social",1,5.0,C,SA,P,3.5,4,YouTube
+1730,33909,2022-09-29,2,B,2,Family,1,5.0,D,CF,Y,3.0,4,"Instagram,Facebook"
+1731,33907,2022-09-30,2,B,6,"TV,Radio,Social",1,4.0,C,SF,P,3.5,4,Instagram
+1732,33973,2022-09-29,3,C,5,Neighbors,0,4.0,D,SF,Y,3.9,5,"Facebook,Twitter"
+1733,33972,2022-09-29,3,C,1,"TV,Radio",0,1.0,A,SF,Y,3.5,5,Twitter
+1734,33907,2022-09-28,3,A,5,"Radio,Social",1,4.0,D,SF,Y,2.5,5,Instagram
+1735,339,2022-09-28,2,C,4,"TV,Radio,Social",0,2.0,C,OT,Y,2.5,4,Instagram
+1736,33928,2022-09-28,4,B,0,"TV,Radio,Social",0,2.0,B,OT,Y,1.6,5,Facebook
+1737,33912,2022-09-28,2,B,5,Neighbors,1,,D,SF,P,2.3,5,"FB,IG,TW"
+1738,33973,2022-09-29,3,A,4,"TV,Social",1,6.0,B,SF,P,5.0,3,"FB,IG,TW"
+1739,33924,2022-09-29,2,A,6,"TV,Social",0,3.0,D,SF,Y,2.3,3,"Instagram,Facebook"
+1740,33906,2022-09-30,2,C,1,Official Warning,1,2.0,D,CF,Y,1.9,3,"FB,IG,TW"
+1741,33973,2022-09-29,2,B,2,"Radio,Social",1,4.0,C,SF,Y,3.6,1,"FB,IG,TW"
+1742,33916,2022-09-28,2,B,2,Family,1,5.0,C,SF,Y,3.1,2,"FB,IG,TW"
+1743,33904,2022-09-29,3,C,3,News Website,1,5.0,A,SF,Y,3.0,1,"Facebook,Twitter"
+1744,UNK,2022-09-30,3,C,3,Emergency Alert,1,5.0,C,SA,Y,4.7,4,"FB,IG,TW"
+1745,33971-3194,2022-09-28,2,A,1,News Website,0,4.0,B,SA,Y,3.8,3,"Facebook,Twitter"
+1746,33966,2022-09-28,4,C,3,"TV,Radio",0,5.0,C,CF,Y,2.6,3,"Facebook,Twitter"
+1747,33966,2022-09-29,2,A,3,"TV,Family",1,2.0,C,SF,Y,2.7,4,Other
+1748,339,2022-09-29,3,C,3,"TV,Family",1,3.0,D,OT,Y,2.6,5,Facebook
+1749,33972,2022-09-30,4,C,2,Weather App,1,3.0,A,OT,Y,4.2,5,"Twitter,Instagram"
+1750,33921,2022-09-28,3,D,3,Radio,1,4.0,C,SF,P,2.9,4,Twitter
+1751,33908,2022-09-29,1,A,6,News Website,1,6.0,D,SF,Y,1.2,4,YouTube
+1752,33907,2022-09-30,4,A,2,Social Media,1,5.0,C,CF,N,3.1,3,"FB,TW"
+1753,33931,2022-09-28,3,B,4,Neighbors,0,,A,SF,N,1.5,3,Instagram
+1754,,2022-09-28,2,B,4,Family,0,2.0,A,CF,P,5.0,3,IG
+1755,33914,2022-09-29,1,A,3,News Website,1,3.0,A,CF,N,2.1,3,"FB,IG,TW"
+1756,33966,2022-09-29,3,D,4,"TV,Radio",0,3.0,C,CF,Y,3.0,5,"FB,TW"
+1757,,2022-09-28,3,A,3,Radio,0,4.0,C,SF,N,3.5,1,YouTube
+1758,33974-9508,2022-09-28,3,B,3,Social Media,1,6.0,D,CF,Y,2.9,2,Other
+1759,33909,2022-09-30,4,C,6,"TV,Radio,Social",1,6.0,B,OT,Y,2.9,2,"Twitter,Instagram"
+1760,33928,2022-09-28,3,B,7,Emergency Alert,1,4.0,B,SF,P,3.7,4,Instagram
+1761,33924,2022-09-29,2,C,6,Family,0,5.0,C,SA,N,4.9,3,None
+1762,33976,2022-09-28,2,A,2,"Radio,Social",0,4.0,C,SF,P,4.0,4,"FB,TW"
+1763,33924,2022-09-28,2,B,1,Family,0,2.0,D,SF,N,4.8,2,"FB,TW"
+1764,33902,2022-09-30,3,A,5,"TV,Radio,Social",1,4.0,C,CF,N,2.0,3,Instagram
+1765,33908,2022-09-29,1,A,2,Official Warning,0,4.0,B,SF,N,3.5,2,Instagram
+1766,33924,2022-09-30,3,D,5,News Website,1,5.0,C,SF,N,3.4,4,"Facebook,Twitter"
+1767,33902,2022-09-29,3,A,3,Weather App,1,2.0,D,SF,Y,3.6,2,"Facebook,Twitter"
+1768,33920,2022-09-29,4,B,5,News Website,1,3.0,B,CF,P,4.7,4,Facebook
+1769,33917,2022-09-29,2,B,5,TV,0,3.0,B,SA,N,3.0,4,None
+1770,33974,2022-09-29,3,B,5,"TV,Radio",1,6.0,A,SF,N,2.8,4,Facebook
+1771,33965,2022-09-29,1,C,6,Emergency Alert,1,3.0,A,SA,Y,3.8,3,"Instagram,Facebook"
+1772,33919,2022-09-28,3,A,6,Weather App,1,5.0,C,SF,Y,1.2,3,None
+1773,33914-1310,2022-09-28,1,C,5,TV,1,5.0,A,CF,Y,2.9,2,"Facebook,Twitter"
+1774,33910,2022-09-30,2,D,5,Family,0,3.0,B,CF,P,3.1,4,YouTube
+1775,33916,2022-09-28,3,C,2,Radio,1,4.0,B,SA,Y,2.2,4,Other
+1776,33974,2022-09-30,1,D,4,"TV,Family",0,5.0,C,OT,Y,4.4,4,"Facebook,Twitter"
+1777,33904,2022-09-29,2,A,4,"TV,Radio",0,4.0,B,OT,Y,2.0,4,"Facebook,Twitter"
+1778,33916,2022-09-28,3,B,2,Neighbors,0,6.0,C,SF,N,3.1,5,Twitter
+1779,33974,2022-09-29,3,B,3,Official Warning,1,2.0,A,CA,N,3.5,4,Instagram
+1780,33928,2022-09-30,3,C,3,Emergency Alert,1,1.0,A,SF,N,4.7,2,"FB,TW"
+1781,33973,2022-09-28,3,D,4,Radio,0,5.0,B,OT,Y,3.2,4,"FB,IG,TW"
+1782,33931,2022-09-28,3,B,4,Radio,1,5.0,B,SF,Y,4.2,2,"FB,TW"
+1783,33920,2022-09-30,2,C,2,"TV,Social",0,6.0,B,SF,Y,4.0,4,YouTube
+1784,33914,2022-09-28,2,A,6,Social Media,1,4.0,A,SF,Y,3.3,3,"Twitter,Instagram"
+1785,33921,2022-09-30,2,C,4,"Radio,Social",0,6.0,D,SF,N,2.0,2,"FB,TW"
+1786,33917,2022-09-30,4,B,4,Radio,0,5.0,C,SA,Y,1.6,5,"Facebook,Twitter"
+1787,33924,2022-09-28,3,D,4,Official Warning,1,5.0,A,OT,Y,3.3,4,None
+1788,33916,2022-09-28,2,C,6,TV,0,,A,CF,Y,2.6,3,None
+1789,33976,2022-09-30,2,B,5,News Website,1,3.0,D,SA,Y,4.2,1,Facebook
+1790,33936,2022-09-29,4,A,3,Emergency Alert,0,6.0,C,SA,P,4.0,4,"FB,IG,TW"
+1791,33921,2022-09-29,2,A,5,Emergency Alert,1,3.0,B,SF,Y,3.0,5,YouTube
+1792,33965,2022-09-28,3,A,5,Official Warning,0,4.0,C,SF,N,1.9,4,None
+1793,33966,2022-09-28,3,B,5,Weather App,1,3.0,C,SF,Y,3.8,5,YouTube
+1794,33910,2022-09-29,3,C,4,"TV,Radio,Social",1,4.0,C,SF,Y,2.1,2,"Twitter,Instagram"
+1795,33922,2022-09-30,1,C,6,"TV,Social",0,4.0,B,SF,Y,2.4,4,None
+1796,33906,2022-09-30,4,B,2,News Website,1,1.0,B,SF,Y,2.1,4,"FB,IG,TW"
+1797,33972,2022-09-29,4,A,9,Official Warning,0,5.0,A,SF,N,3.0,4,YouTube
+1798,33974,2022-09-28,3,C,2,TV,1,3.0,D,SF,Y,4.5,2,"FB,IG,TW"
+1799,33921,2022-09-28,3,C,2,Family,0,4.0,C,OT,Y,3.2,4,"FB,IG,TW"
+1800,33921,2022-09-28,4,A,2,"TV,Family",1,2.0,B,SF,Y,2.7,4,IG
+1801,33919,2022-09-29,3,C,3,"TV,Radio",1,1.0,D,CF,Y,1.5,4,IG
+1802,33917,2022-09-29,2,B,6,Weather App,1,2.0,D,CF,N,3.8,4,Other
+1803,33904,2022-09-29,3,A,2,Neighbors,1,5.0,D,CF,Y,2.3,4,YouTube
+1804,33931,2022-09-30,3,B,4,Neighbors,1,1.0,D,SF,Y,3.3,4,Facebook
+1805,33907,2022-09-30,2,B,3,TV,1,6.0,D,SF,N,2.8,3,IG
+1806,33909,2022-09-30,3,A,9,Social Media,1,2.0,B,SF,Y,4.1,3,Twitter
+1807,33967-8793,2022-09-30,4,D,4,"TV,Family",1,2.0,C,SF,Y,3.0,4,"FB,TW"
+1808,33922,2022-09-29,4,C,0,Weather App,0,2.0,C,SF,Y,3.1,5,"FB,TW"
+1809,33904,2022-09-29,2,C,4,Family,1,1.0,B,CF,Y,3.7,2,Facebook
+1810,33906,2022-09-30,1,B,4,"TV,Radio,Social",1,5.0,A,SA,N,5.0,4,"Facebook,Twitter"
+1811,33917,2022-09-28,4,B,3,"TV,Social",1,5.0,D,CF,Y,4.2,3,IG
+1812,33903,2022-09-29,3,C,3,Social Media,1,4.0,B,CF,P,3.1,3,IG
+1813,33913,2022-09-29,1,B,1,TV,0,2.0,D,SF,Y,3.2,4,None
+1814,33913,2022-09-29,4,A,6,Family,1,3.0,A,CA,P,2.6,4,YouTube
+1815,33903,2022-09-28,4,B,8,Official Warning,0,4.0,A,SF,Y,2.2,1,Facebook
+1816,33966,2022-09-28,3,C,3,"TV,Radio,Social",0,6.0,B,SA,Y,2.6,4,IG
+1817,33913,2022-09-29,3,B,2,"TV,Radio,Social",0,2.0,B,SA,Y,2.4,5,None
+1818,33922,2022-09-28,2,A,6,News Website,1,5.0,C,CF,Y,3.9,5,IG
+1819,33901,2022-09-28,1,C,2,Social Media,0,3.0,C,SF,N,2.0,2,Other
+1820,33907,2022-09-28,2,A,6,Official Warning,0,3.0,A,CF,N,4.7,4,Facebook
+1821,33931,2022-09-30,3,B,3,"TV,Radio",1,4.0,A,SF,Y,4.0,3,"Facebook,Twitter"
+1822,33976,2022-09-28,1,A,3,Weather App,0,1.0,B,SF,Y,3.2,3,"Instagram,Facebook"
+1823,33909,2022-09-28,2,B,1,TV,0,5.0,A,SF,Y,3.2,4,"FB,TW"
+1824,33973,2022-09-30,2,C,3,"Radio,Social",0,2.0,C,SF,P,2.6,4,None
+1825,33908,2022-09-28,3,B,4,Social Media,0,5.0,B,CF,N,3.5,1,"Instagram,Facebook"
+1826,33973,2022-09-30,4,A,4,Weather App,1,1.0,A,CA,Y,4.4,5,"Instagram,Facebook"
+1827,33913,2022-09-30,2,C,3,TV,0,6.0,B,SF,N,2.4,5,"FB,TW"
+1828,339,2022-09-28,2,C,2,"TV,Radio",1,2.0,A,OT,P,1.5,4,Instagram
+1829,33966,2022-09-28,3,C,8,Radio,1,5.0,A,OT,Y,4.0,4,None
+1830,33928,2022-09-29,2,A,3,"TV,Social",0,5.0,B,OT,N,3.6,3,"Instagram,Facebook"
+1831,33913-3303,2022-09-30,2,B,4,Family,0,6.0,D,CA,Y,2.0,4,"FB,IG,TW"
+1832,33919,2022-09-30,2,D,4,Emergency Alert,1,4.0,D,SF,Y,2.4,3,Facebook
+1833,33919-8319,2022-09-28,1,C,7,"Radio,Social",1,5.0,C,SF,Y,2.3,5,YouTube
+1834,33924,2022-09-29,2,A,4,Weather App,0,3.0,B,CF,Y,2.4,2,IG
+1835,33901,2022-09-30,2,A,2,Emergency Alert,0,2.0,B,CF,Y,2.8,3,Instagram
+1836,33957,2022-09-29,2,B,2,Emergency Alert,1,3.0,C,CA,Y,2.9,4,"FB,TW"
+1837,33904,2022-09-30,4,D,3,Official Warning,0,2.0,C,OT,N,2.5,3,Other
+1838,33973,2022-09-30,2,B,4,Social Media,0,6.0,D,CF,Y,2.4,3,"FB,TW"
+1839,33966,2022-09-28,3,B,5,"TV,Radio,Social",1,1.0,A,SF,Y,2.9,4,Twitter
+1840,33924,2022-09-30,3,A,6,TV,1,4.0,A,SF,N,3.4,5,YouTube
+1841,33922,2022-09-28,1,C,6,News Website,0,4.0,C,SF,Y,2.9,4,IG
+1842,33917,2022-09-30,3,C,6,News Website,1,4.0,C,CF,Y,4.5,3,Twitter
+1843,33909,2022-09-28,2,B,2,Radio,0,4.0,C,CF,P,3.8,3,Instagram
+1844,33973,2022-09-30,4,C,2,Radio,1,2.0,C,CA,N,1.5,3,"FB,IG,TW"
+1845,33957,2022-09-28,1,D,5,"TV,Radio,Social",1,4.0,D,CF,Y,3.8,4,YouTube
+1846,33974,2022-09-28,2,A,4,"TV,Social",1,3.0,C,OT,Y,3.9,4,IG
+1847,33916,2022-09-30,1,B,3,News Website,1,6.0,D,CF,P,2.7,2,Instagram
+1848,33906,2022-09-28,4,B,3,"TV,Family",1,5.0,D,CA,Y,1.6,3,None
+1849,33957,2022-09-29,3,C,5,"TV,Radio,Social",1,6.0,C,SF,Y,3.2,3,None
+1850,UNK,2022-09-29,3,C,1,Official Warning,1,1.0,B,CA,Y,3.2,3,"Twitter,Instagram"
+1851,33910,2022-09-29,1,C,3,"Radio,Social",0,3.0,A,SA,Y,2.0,3,"FB,TW"
+1852,,2022-09-28,3,C,7,"Radio,Social",1,2.0,C,SF,N,1.6,4,Facebook
+1853,33916,2022-09-30,2,B,5,"TV,Family",1,1.0,B,SF,N,3.1,3,Instagram
+1854,33976,2022-09-29,4,D,6,"TV,Social",1,2.0,D,OT,P,2.9,4,"FB,TW"
+1855,339,2022-09-29,2,B,5,Social Media,0,4.0,A,SF,N,2.7,4,"FB,IG,TW"
+1856,33973,2022-09-30,2,A,4,Official Warning,1,2.0,B,CF,Y,3.1,3,YouTube
+1857,33973,2022-09-28,1,C,4,Social Media,1,4.0,C,SF,Y,2.0,4,"Facebook,Twitter"
+1858,33924,2022-09-28,2,C,4,Neighbors,1,,A,SA,P,2.7,4,"FB,TW"
+1859,33966,2022-09-30,3,B,5,Emergency Alert,1,4.0,B,CA,Y,3.8,3,Twitter
+1860,33901,2022-09-30,1,C,3,Official Warning,0,3.0,B,SF,Y,2.8,5,"Instagram,Facebook"
+1861,33905,2022-09-30,3,D,5,TV,0,3.0,C,CF,P,1.4,3,"Twitter,Instagram"
+1862,339,2022-09-28,2,B,5,"TV,Social",0,4.0,A,OT,Y,2.7,5,YouTube
+1863,33905,2022-09-29,3,D,0,"TV,Radio",0,2.0,D,SA,Y,2.0,4,Other
+1864,33974,2022-09-29,2,A,5,Emergency Alert,1,4.0,B,CA,N,3.5,4,YouTube
+1865,UNK,2022-09-30,2,A,2,"TV,Radio,Social",1,3.0,D,CF,P,3.6,5,Instagram
+1866,33967,2022-09-28,3,A,6,Radio,1,5.0,B,SF,Y,1.4,5,YouTube
+1867,33965,2022-09-30,2,C,4,"TV,Radio,Social",1,5.0,B,CF,N,4.0,4,YouTube
+1868,33965,2022-09-30,2,C,3,Radio,0,4.0,A,SA,Y,2.0,4,Twitter
+1869,33909,2022-09-29,4,A,5,"TV,Radio,Social",0,3.0,A,SF,Y,4.9,3,Twitter
+1870,33936,2022-09-30,4,B,7,"TV,Social",0,2.0,C,SF,P,3.1,4,Twitter
+1871,33966,2022-09-30,2,C,4,"Radio,Social",0,5.0,A,SF,P,1.8,2,YouTube
+1872,33917,2022-09-30,2,A,2,Radio,1,4.0,B,CF,Y,1.9,2,"FB,TW"
+1873,33902,2022-09-28,3,C,5,Family,0,2.0,C,CA,Y,3.6,5,Other
+1874,33973,2022-09-29,2,C,3,"TV,Radio,Social",0,2.0,B,SF,Y,2.8,2,"Twitter,Instagram"
+1875,33971,2022-09-28,1,B,0,"TV,Social",0,2.0,A,SA,Y,3.1,2,Twitter
+1876,33917,2022-09-30,2,D,3,"TV,Radio,Social",1,5.0,C,OT,Y,5.0,4,IG
+1877,33936,2022-09-30,3,B,9,"TV,Family",1,2.0,D,SF,Y,2.4,1,YouTube
+1878,33914,2022-09-30,3,D,4,Family,1,4.0,A,SA,Y,3.3,3,None
+1879,33908,2022-09-28,1,C,5,Official Warning,1,4.0,A,OT,Y,4.8,4,YouTube
+1880,339,2022-09-29,2,C,4,"TV,Social",1,4.0,D,OT,Y,3.5,4,IG
+1881,339,2022-09-28,2,A,2,News Website,0,5.0,A,SF,N,1.4,4,"FB,IG,TW"
+1882,33966,2022-09-28,3,C,3,Neighbors,1,,D,SF,Y,3.8,4,Instagram
+1883,33916,2022-09-29,1,B,4,Emergency Alert,1,4.0,A,SF,Y,1.9,4,None
+1884,33904,2022-09-28,1,A,5,Official Warning,1,1.0,D,SA,N,4.7,4,IG
+1885,33922,2022-09-30,3,A,4,Neighbors,1,3.0,B,SA,N,2.3,4,None
+1886,33928,2022-09-28,2,C,5,Family,0,4.0,D,SA,Y,5.0,4,Facebook
+1887,33928,2022-09-29,3,B,4,Social Media,1,4.0,B,SF,Y,4.8,5,Instagram
+1888,33910,2022-09-30,2,C,4,Family,0,4.0,C,SF,N,2.3,3,"Twitter,Instagram"
+1889,33917,2022-09-28,1,C,5,"Radio,Social",1,2.0,A,CF,Y,3.2,3,"FB,IG,TW"
+1890,33921,2022-09-29,2,A,5,Family,0,4.0,B,CF,N,4.0,1,Other
+1891,339,2022-09-30,3,C,3,Neighbors,0,2.0,C,SA,Y,4.1,4,Instagram
+1892,33965,2022-09-29,4,A,3,Weather App,1,5.0,C,CF,Y,3.7,1,Instagram
+1893,33928,2022-09-29,3,C,2,Neighbors,1,3.0,D,SF,Y,4.6,4,Instagram
+1894,33967,2022-09-28,2,C,1,Official Warning,0,5.0,B,SF,N,3.1,5,Instagram
+1895,33965,2022-09-28,3,B,6,"TV,Family",1,1.0,D,SF,P,2.8,4,YouTube
+1896,33974,2022-09-30,2,C,3,TV,1,3.0,B,SF,Y,2.8,3,Facebook
+1897,33917,2022-09-29,2,B,3,Neighbors,0,5.0,D,SF,Y,4.1,4,None
+1898,33910,2022-09-28,4,B,3,Radio,1,2.0,D,SF,Y,3.6,3,"Instagram,Facebook"
+1899,33904,2022-09-30,1,C,5,"TV,Social",1,5.0,B,SF,Y,3.5,4,"Instagram,Facebook"
+1900,33967,2022-09-29,1,B,4,Radio,1,4.0,D,SF,N,4.1,4,YouTube
+1901,33909,2022-09-29,2,B,6,Emergency Alert,0,4.0,C,SA,Y,1.0,2,"FB,TW"
+1902,33920,2022-09-28,1,B,3,Weather App,0,3.0,B,SF,P,3.5,5,"Instagram,Facebook"
+1903,33906,2022-09-28,2,C,1,Family,1,4.0,C,SA,Y,3.4,3,Other
+1904,33957,2022-09-28,3,B,3,Social Media,1,4.0,A,SA,P,5.0,5,Instagram
+1905,33904-5398,2022-09-30,2,A,7,Weather App,1,4.0,C,CF,N,1.5,1,Twitter
+1906,33903,2022-09-28,4,C,5,News Website,0,4.0,A,OT,Y,4.9,3,Instagram
+1907,33914,2022-09-28,3,C,4,Social Media,1,3.0,A,SF,Y,3.3,2,"Facebook,Twitter"
+1908,33916,2022-09-30,2,A,6,Family,1,2.0,B,SA,Y,3.7,1,Facebook
+1909,33931,2022-09-30,2,A,6,"Radio,Social",0,2.0,C,OT,Y,5.0,4,"FB,IG,TW"
+1910,33901,2022-09-29,2,A,2,Emergency Alert,1,1.0,D,CA,Y,3.8,4,"Instagram,Facebook"
+1911,33914,2022-09-28,3,B,3,"Radio,Social",1,3.0,D,SF,Y,3.6,4,Facebook
+1912,33908,2022-09-28,2,B,6,"TV,Radio,Social",0,5.0,B,SF,P,3.5,3,"FB,TW"
+1913,33974,2022-09-30,3,C,4,"TV,Radio,Social",1,5.0,A,SF,Y,2.7,3,"FB,TW"
+1914,33916,2022-09-28,2,C,1,TV,0,2.0,C,CF,N,3.2,4,"FB,TW"
+1915,33919,2022-09-30,3,C,2,News Website,1,6.0,C,SA,P,2.4,3,IG
+1916,33922,2022-09-30,2,B,5,"TV,Family",1,4.0,B,SF,N,3.2,4,Facebook
+1917,33936,2022-09-28,2,C,3,"TV,Social",1,6.0,B,CF,Y,1.0,4,"FB,IG,TW"
+1918,33957,2022-09-29,4,B,5,Social Media,1,5.0,C,SA,Y,3.7,2,"FB,TW"
+1919,,2022-09-30,3,D,4,"TV,Social",1,5.0,B,CF,Y,3.1,4,"Facebook,Twitter"
+1920,33974,2022-09-28,1,C,5,Radio,0,1.0,C,CA,Y,2.8,4,"Facebook,Twitter"
+1921,33928,2022-09-29,4,A,5,Emergency Alert,1,2.0,C,SA,Y,3.4,4,"FB,IG,TW"
+1922,33957,2022-09-29,2,C,3,Weather App,0,1.0,D,SF,N,1.6,2,Other
+1923,33903,2022-09-29,4,B,6,News Website,0,,C,CF,Y,5.0,3,"FB,TW"
+1924,33917,2022-09-29,3,C,6,"TV,Family",0,3.0,B,SF,Y,3.1,3,"FB,TW"
+1925,33902,2022-09-28,2,A,4,"Radio,Social",1,5.0,D,CF,P,3.0,3,None
+1926,33967,2022-09-28,1,A,2,Radio,0,3.0,C,OT,Y,2.1,3,"FB,TW"
+1927,33914,2022-09-28,2,C,3,"TV,Radio,Social",0,5.0,B,CA,Y,3.2,5,Twitter
+1928,33965,2022-09-28,3,A,5,"TV,Radio",0,2.0,C,CF,N,4.7,4,"FB,IG,TW"
+1929,33919,2022-09-29,3,C,5,Neighbors,0,2.0,B,SF,Y,4.3,4,"FB,IG,TW"
+1930,33931,2022-09-29,2,B,3,"Radio,Social",1,3.0,C,SF,Y,4.1,3,Facebook
+1931,33976,2022-09-30,1,C,3,"Radio,Social",1,,B,CF,Y,3.8,5,"Facebook,Twitter"
+1932,33976,2022-09-29,3,C,3,Social Media,0,3.0,C,SF,N,2.8,2,IG
+1933,33936,2022-09-29,4,B,2,Official Warning,1,5.0,A,CF,Y,1.6,4,"Instagram,Facebook"
+1934,33976,2022-09-30,3,B,4,"TV,Social",1,1.0,B,SF,Y,3.0,5,"FB,IG,TW"
+1935,33904,2022-09-28,2,A,1,"TV,Radio",1,3.0,D,SF,Y,2.9,4,Other
+1936,33905,2022-09-28,2,A,6,News Website,1,5.0,C,SF,Y,4.4,5,IG
+1937,33904,2022-09-28,1,B,5,Weather App,1,1.0,A,OT,Y,3.5,4,"Facebook,Twitter"
+1938,33967,2022-09-28,4,C,4,Social Media,0,6.0,B,SA,Y,5.0,3,Facebook
+1939,33917,2022-09-28,1,D,2,Neighbors,1,6.0,B,SF,Y,4.5,3,Instagram
+1940,UNK,2022-09-30,3,C,4,News Website,1,1.0,C,SF,Y,2.7,3,Instagram
+1941,33904,2022-09-30,2,C,5,Social Media,1,3.0,C,CF,Y,1.2,1,Facebook
+1942,33974,2022-09-28,3,C,5,Social Media,1,3.0,C,SF,Y,4.7,4,Other
+1943,33902,2022-09-29,3,C,5,News Website,0,5.0,C,CF,Y,4.7,3,"Twitter,Instagram"
+1944,UNK,2022-09-29,3,B,6,Social Media,1,4.0,C,CA,Y,1.7,5,Facebook
+1945,33922,2022-09-29,2,D,6,"TV,Family",1,4.0,B,CF,Y,4.9,3,Instagram
+1946,339,2022-09-30,1,C,4,"TV,Social",0,5.0,A,CF,N,3.6,4,Facebook
+1947,33919,2022-09-29,1,C,4,Social Media,0,2.0,C,CF,N,3.4,5,Other
+1948,33920,2022-09-30,4,A,5,Social Media,1,5.0,D,OT,Y,5.0,3,"FB,IG,TW"
+1949,33921,2022-09-28,4,B,6,Social Media,1,5.0,C,OT,Y,4.7,4,"FB,IG,TW"
+1950,33906,2022-09-29,3,B,4,"TV,Family",1,4.0,C,CF,Y,3.9,4,"Instagram,Facebook"
+1951,33966,2022-09-29,3,C,6,Social Media,1,5.0,C,SF,Y,3.7,3,"Twitter,Instagram"
+1952,33919,2022-09-28,3,B,2,"TV,Family",1,5.0,D,CF,Y,3.9,4,Twitter
+1953,33917,2022-09-28,2,B,3,Official Warning,0,2.0,B,SF,Y,2.8,3,Facebook
+1954,33906,2022-09-29,4,D,4,"Radio,Social",0,3.0,B,CF,N,3.1,4,Twitter
+1955,33903,2022-09-29,2,A,5,"TV,Radio",0,4.0,D,CF,Y,2.2,4,None
+1956,339,2022-09-29,2,B,4,Family,0,1.0,D,SF,Y,2.8,4,Instagram
+1957,33912,2022-09-29,3,A,6,Radio,0,6.0,B,SF,N,2.8,4,Instagram
+1958,UNK,2022-09-29,1,C,2,Radio,1,2.0,B,CF,Y,2.5,3,Other
+1959,33917,2022-09-30,2,D,7,Radio,1,4.0,B,CA,Y,3.4,4,"Instagram,Facebook"
+1960,33974,2022-09-29,3,B,2,Weather App,0,4.0,A,CF,P,2.8,5,"FB,IG,TW"
+1961,33905,2022-09-29,1,C,3,Weather App,0,1.0,D,SA,N,3.8,5,Other
+1962,33921,2022-09-30,3,B,7,Neighbors,0,6.0,B,SF,N,1.4,4,YouTube
+1963,33903,2022-09-28,2,D,2,Official Warning,1,5.0,D,CF,Y,3.1,3,YouTube
+1964,33928,2022-09-28,2,C,3,TV,0,4.0,A,CF,Y,3.3,5,"FB,IG,TW"
+1965,339,2022-09-28,2,C,2,Family,0,2.0,C,SA,P,2.9,3,"FB,IG,TW"
+1966,33919,2022-09-30,2,A,5,"TV,Family",1,,A,SF,Y,3.0,4,IG
+1967,33965,2022-09-30,3,D,1,"TV,Radio,Social",1,3.0,C,CF,N,1.5,2,Instagram
+1968,33931,2022-09-28,2,C,4,TV,0,3.0,C,SF,Y,3.6,5,"FB,TW"
+1969,33909,2022-09-28,3,B,2,"TV,Family",1,4.0,C,SF,Y,3.9,4,YouTube
+1970,33906,2022-09-28,2,C,4,Neighbors,0,6.0,A,OT,P,3.7,4,"FB,IG,TW"
+1971,33936,2022-09-29,3,B,4,"Radio,Social",1,4.0,B,SF,Y,4.3,2,"Twitter,Instagram"
+1972,33917-2245,2022-09-30,4,C,3,Official Warning,1,5.0,A,SF,Y,3.4,4,Facebook
+1973,33966,2022-09-29,3,A,3,"Radio,Social",0,4.0,B,CF,Y,3.7,4,Twitter
+1974,33928,2022-09-30,2,C,3,Neighbors,1,4.0,C,CA,Y,3.4,4,"Instagram,Facebook"
+1975,339,2022-09-30,1,B,4,Official Warning,0,5.0,C,CF,Y,4.0,3,"Twitter,Instagram"
+1976,33965,2022-09-29,2,A,4,"TV,Family",0,4.0,C,SA,Y,1.5,4,"Twitter,Instagram"
+1977,33965,2022-09-28,3,A,3,"TV,Social",0,5.0,C,CA,Y,2.2,2,None
+1978,339,2022-09-30,1,A,5,Neighbors,1,3.0,B,SF,N,4.9,4,Twitter
+1979,33965,2022-09-29,2,B,3,"TV,Radio",0,2.0,B,SF,Y,1.0,3,None
+1980,33910,2022-09-29,3,B,5,Family,0,5.0,A,SF,P,3.0,3,IG
+1981,33928,2022-09-30,2,C,1,"TV,Radio,Social",0,4.0,C,CA,Y,4.5,2,Twitter
+1982,33906,2022-09-28,3,B,6,"TV,Social",0,5.0,C,SF,Y,3.1,3,"Instagram,Facebook"
+1983,33972-6896,2022-09-30,1,B,6,Emergency Alert,1,6.0,A,SF,Y,2.8,2,"FB,TW"
+1984,33906,2022-09-30,1,C,2,Social Media,0,1.0,A,SA,N,3.3,5,Instagram
+1985,33972,2022-09-28,3,A,6,Family,0,4.0,D,CF,P,2.8,4,Twitter
+1986,33967,2022-09-29,2,D,6,Official Warning,1,3.0,C,CF,N,3.2,3,YouTube
+1987,33906,2022-09-29,3,C,4,"TV,Radio",1,4.0,C,CF,Y,2.4,4,"Instagram,Facebook"
+1988,33906,2022-09-28,2,C,2,TV,1,5.0,B,SF,Y,4.4,4,"Twitter,Instagram"
+1989,33928,2022-09-29,2,C,3,"TV,Radio,Social",1,3.0,B,CF,N,4.8,5,IG
+1990,33901,2022-09-29,3,C,5,Family,0,4.0,D,CF,P,3.1,2,None
+1991,33965,2022-09-28,3,A,3,Emergency Alert,1,5.0,C,OT,P,1.7,3,IG
+1992,33919,2022-09-28,3,A,1,Neighbors,1,2.0,B,SF,Y,2.6,5,"Facebook,Twitter"
+1993,33912,2022-09-29,2,A,3,"TV,Radio,Social",0,5.0,C,CA,P,3.0,3,YouTube
+1994,33912,2022-09-30,3,C,4,TV,1,4.0,C,CF,Y,3.8,1,"Facebook,Twitter"
+1995,33924,2022-09-29,2,A,4,"TV,Radio,Social",0,6.0,B,SF,Y,2.1,2,"FB,IG,TW"
+1996,33910,2022-09-28,1,C,5,"Radio,Social",1,3.0,B,SA,Y,2.4,1,Facebook
+1997,33921-7899,2022-09-30,4,D,4,Emergency Alert,1,2.0,A,SF,Y,3.8,5,Twitter
+1998,33905,2022-09-30,1,C,1,"TV,Family",1,4.0,A,OT,N,4.2,3,"FB,IG,TW"
+1999,33919,2022-09-30,4,B,4,Weather App,1,1.0,C,CA,N,2.5,5,YouTube
+2000,33976,2022-09-30,2,A,2,Family,1,6.0,B,SF,N,1.7,5,Other
+2001,33914,2022-09-30,2,C,4,"TV,Radio",0,1.0,C,SF,Y,5.0,4,IG
+2002,33909,2022-09-30,3,C,2,Neighbors,1,5.0,D,SF,Y,4.1,1,Twitter
+2003,33966,2022-09-30,4,A,3,Radio,0,4.0,A,SF,N,2.9,2,"FB,TW"
+2004,33965,2022-09-28,3,A,2,News Website,0,3.0,B,SF,Y,4.2,4,YouTube
+2005,33931,2022-09-30,3,D,4,"TV,Radio,Social",1,1.0,C,SF,N,3.1,3,YouTube
+2006,33971,2022-09-29,3,C,3,Neighbors,0,4.0,C,CF,Y,4.2,4,"FB,IG,TW"
+2007,33909,2022-09-30,3,C,6,"Radio,Social",0,4.0,C,SF,Y,3.4,3,YouTube
+2008,33914,2022-09-30,3,C,3,News Website,1,3.0,B,CA,Y,3.3,5,"Instagram,Facebook"
+2009,33913,2022-09-30,2,C,6,TV,1,6.0,B,CA,N,3.1,4,None
+2010,33928,2022-09-30,2,B,2,TV,0,3.0,C,CF,Y,1.6,4,"FB,IG,TW"
+2011,33976,2022-09-30,2,B,5,Weather App,0,3.0,D,CA,Y,5.0,5,"Twitter,Instagram"
+2012,33919,2022-09-28,4,B,4,Social Media,0,4.0,B,SF,N,2.2,2,"Instagram,Facebook"
+2013,33921,2022-09-29,4,B,7,Emergency Alert,1,2.0,D,SF,Y,1.7,3,IG
+2014,33966,2022-09-30,1,C,4,Official Warning,0,6.0,B,CF,N,3.0,2,"FB,IG,TW"
+2015,33914,2022-09-30,3,C,2,Radio,1,3.0,D,CF,Y,2.1,2,"FB,IG,TW"
+2016,33913,2022-09-28,4,C,4,"Radio,Social",0,1.0,C,CF,Y,3.1,4,"Twitter,Instagram"
+2017,33902,2022-09-29,2,B,8,"Radio,Social",0,3.0,B,CA,N,4.0,3,Instagram
+2018,33973,2022-09-29,3,C,3,Official Warning,1,4.0,C,OT,Y,4.3,3,"FB,IG,TW"
+2019,33916,2022-09-30,4,C,2,"TV,Family",0,4.0,B,CF,Y,4.1,5,"FB,IG,TW"
+2020,33922,2022-09-30,1,C,5,"TV,Social",1,4.0,B,SA,Y,2.9,2,"FB,TW"
+2021,33905,2022-09-30,3,C,4,"TV,Radio",0,1.0,A,SF,Y,3.3,4,IG
+2022,33967,2022-09-29,2,A,2,"TV,Radio,Social",1,3.0,A,SF,Y,3.6,2,YouTube
+2023,33909,2022-09-28,4,B,6,"TV,Social",1,5.0,B,SA,Y,1.3,3,Other
+2024,33919,2022-09-30,4,A,3,Social Media,0,1.0,C,CF,N,3.8,4,"FB,TW"
+2025,33910,2022-09-30,4,B,2,"TV,Social",0,5.0,C,CF,N,1.6,5,"FB,TW"
+2026,,2022-09-28,2,B,8,Neighbors,0,1.0,A,SF,Y,5.0,3,Instagram
+2027,UNK,2022-09-28,4,C,5,Official Warning,1,5.0,D,CF,Y,2.8,2,"FB,IG,TW"
+2028,33967,2022-09-30,3,D,4,"Radio,Social",1,3.0,C,SF,Y,3.0,3,"Facebook,Twitter"
+2029,33957,2022-09-28,2,C,2,"Radio,Social",1,4.0,D,CF,Y,2.4,2,YouTube
+2030,33906,2022-09-30,3,C,3,"TV,Radio",1,2.0,C,SF,Y,2.5,3,"Instagram,Facebook"
+2031,33919,2022-09-29,1,B,6,Neighbors,0,1.0,A,SF,Y,5.0,4,"Facebook,Twitter"
+2032,33936,2022-09-29,3,C,0,Emergency Alert,0,2.0,B,SF,Y,4.2,2,Facebook
+2033,33903,2022-09-28,2,A,3,Social Media,0,2.0,C,SF,Y,1.5,4,Twitter
+2034,33966,2022-09-28,1,B,3,Emergency Alert,0,3.0,A,CA,Y,4.9,4,Facebook
+2035,33931,2022-09-29,1,B,5,News Website,0,4.0,A,SF,N,4.5,3,"FB,TW"
+2036,33971,2022-09-29,3,B,0,Family,1,4.0,A,SF,N,2.9,1,Other
+2037,33907,2022-09-28,2,A,5,"Radio,Social",1,5.0,B,CF,Y,3.5,5,Twitter
+2038,33917,2022-09-29,3,A,4,"Radio,Social",1,4.0,B,CF,N,3.2,3,YouTube
+2039,,2022-09-29,1,B,2,"TV,Family",0,4.0,B,SF,Y,5.0,4,"Facebook,Twitter"
+2040,33910,2022-09-28,2,D,4,Emergency Alert,1,3.0,A,SF,N,2.3,3,"FB,IG,TW"
+2041,33902,2022-09-30,3,B,6,"TV,Social",1,4.0,C,OT,Y,3.4,4,None
+2042,33922,2022-09-28,3,B,8,Neighbors,1,3.0,C,SA,N,2.7,3,None
+2043,33906,2022-09-30,2,A,3,"TV,Radio",0,5.0,B,SF,Y,1.6,3,Facebook
+2044,33910,2022-09-30,3,C,2,Official Warning,0,2.0,A,CF,Y,5.0,1,"Twitter,Instagram"
+2045,33931,2022-09-29,4,B,3,"TV,Radio",0,1.0,A,SF,Y,1.9,3,"Twitter,Instagram"
+2046,,2022-09-29,3,A,3,Official Warning,0,4.0,B,SF,Y,3.4,5,IG
+2047,33936,2022-09-28,2,B,2,Weather App,1,2.0,A,CF,Y,1.3,4,Other
+2048,,2022-09-28,1,A,1,Social Media,0,5.0,B,CA,Y,2.8,2,"Facebook,Twitter"
+2049,33972,2022-09-29,4,A,7,"TV,Family",0,5.0,C,SF,N,3.7,4,Facebook
+2050,33924,2022-09-29,1,A,5,Radio,1,1.0,C,CA,Y,2.3,5,Other
+2051,UNK,2022-09-30,4,A,8,News Website,1,2.0,B,SF,Y,3.8,4,"Facebook,Twitter"
+2052,33912,2022-09-29,3,A,3,"TV,Social",1,4.0,B,SF,Y,2.9,2,YouTube
+2053,33919,2022-09-28,4,B,4,Family,1,4.0,C,SF,P,4.5,5,"Instagram,Facebook"
+2054,33912,2022-09-29,3,C,5,Social Media,0,3.0,D,SF,N,4.7,3,"Instagram,Facebook"
+2055,33971,2022-09-29,4,C,7,"TV,Radio,Social",0,5.0,C,OT,N,2.6,4,Twitter
+2056,33917,2022-09-29,2,B,5,Emergency Alert,0,4.0,C,CF,Y,3.3,4,"Instagram,Facebook"
+2057,33913,2022-09-28,3,B,1,"TV,Family",1,3.0,B,SF,Y,3.4,5,"Instagram,Facebook"
+2058,33971,2022-09-29,2,D,3,Emergency Alert,1,1.0,B,OT,Y,3.9,5,IG
+2059,33914,2022-09-30,2,B,3,Social Media,0,5.0,D,CA,Y,3.2,5,IG
+2060,33971,2022-09-30,3,A,7,"TV,Radio",1,2.0,A,SA,Y,3.4,1,"Twitter,Instagram"
+2061,33916,2022-09-28,4,C,3,Family,0,5.0,D,OT,Y,2.9,5,Facebook
+2062,33905,2022-09-28,4,A,4,News Website,1,3.0,C,SF,Y,3.3,2,Twitter
+2063,33913,2022-09-29,3,B,0,"TV,Radio",0,4.0,C,CA,Y,4.6,3,Other
+2064,33914,2022-09-29,2,B,4,Neighbors,0,5.0,A,SA,Y,3.9,4,"Twitter,Instagram"
+2065,33920,2022-09-28,2,C,3,Family,1,5.0,C,CA,N,4.0,4,"Twitter,Instagram"
+2066,,2022-09-30,3,B,4,TV,1,3.0,B,SA,Y,4.0,4,None
+2067,33928,2022-09-30,2,C,4,"TV,Radio",1,2.0,A,SF,N,3.0,4,YouTube
+2068,,2022-09-28,1,D,2,Emergency Alert,0,5.0,B,SA,Y,3.6,5,"FB,IG,TW"
+2069,33936,2022-09-28,2,A,6,Neighbors,0,3.0,D,SF,Y,2.0,3,"FB,IG,TW"
+2070,33973,2022-09-30,2,B,5,"TV,Radio",0,2.0,C,SF,Y,4.6,3,Facebook
+2071,33924,2022-09-30,2,B,4,"TV,Family",1,6.0,B,SF,N,1.0,5,Instagram
+2072,33906,2022-09-30,2,B,2,Weather App,1,2.0,A,OT,Y,3.1,2,"Facebook,Twitter"
+2073,33928,2022-09-29,1,B,5,"TV,Radio,Social",1,1.0,C,SF,N,4.5,4,"Twitter,Instagram"
+2074,33924,2022-09-30,1,D,1,"TV,Radio,Social",0,1.0,C,CF,Y,1.7,4,"Twitter,Instagram"
+2075,33957,2022-09-30,4,C,4,News Website,1,4.0,C,SF,Y,3.6,4,Other
+2076,33965,2022-09-28,2,C,5,"Radio,Social",1,4.0,C,OT,N,2.5,4,"FB,TW"
+2077,33909,2022-09-30,2,B,0,Family,1,3.0,B,SF,Y,2.8,2,"FB,TW"
+2078,33971,2022-09-30,3,C,3,Neighbors,0,3.0,C,SA,N,4.2,5,Facebook
+2079,33913,2022-09-29,2,D,1,"TV,Social",1,3.0,B,CA,Y,3.4,2,Other
+2080,33976,2022-09-29,4,C,3,"TV,Social",1,4.0,D,CF,Y,1.0,3,Instagram
+2081,33913,2022-09-29,3,A,3,"TV,Radio,Social",1,1.0,C,SF,N,2.1,2,"FB,TW"
+2082,,2022-09-28,1,C,1,"TV,Family",1,6.0,B,SA,P,4.3,4,Instagram
+2083,33936,2022-09-28,2,A,2,Official Warning,0,2.0,B,OT,Y,3.7,4,Other
+2084,33976,2022-09-29,4,B,6,TV,1,6.0,C,SA,N,5.0,5,"FB,TW"
+2085,33965,2022-09-29,4,A,7,Emergency Alert,1,2.0,A,SF,Y,5.0,4,IG
+2086,33976,2022-09-30,2,C,2,Radio,0,5.0,B,CA,N,2.8,4,"Twitter,Instagram"
+2087,33976,2022-09-30,3,C,5,News Website,0,2.0,C,SF,Y,5.0,5,"FB,TW"
+2088,33972,2022-09-30,2,A,3,"TV,Radio",0,1.0,B,CF,Y,3.2,4,None
+2089,33906,2022-09-29,4,B,5,TV,1,5.0,C,CA,Y,2.1,4,YouTube
+2090,33917,2022-09-30,2,B,0,Social Media,0,5.0,A,SF,Y,2.5,4,Facebook
+2091,33921,2022-09-30,4,B,5,"TV,Family",1,3.0,C,SA,Y,1.0,3,IG
+2092,33922,2022-09-29,3,A,2,"TV,Social",0,5.0,A,CF,Y,5.0,5,"Instagram,Facebook"
+2093,33973,2022-09-30,3,B,1,Neighbors,1,4.0,A,CA,Y,5.0,2,"FB,IG,TW"
+2094,33976,2022-09-29,3,C,1,"TV,Family",0,5.0,D,SF,P,2.1,4,YouTube
+2095,33908,2022-09-28,2,A,4,Weather App,0,3.0,C,CF,Y,2.9,4,Other
+2096,33921,2022-09-28,2,A,1,Radio,1,4.0,B,CA,Y,3.3,5,"Twitter,Instagram"
+2097,33957,2022-09-30,2,B,4,Neighbors,1,4.0,B,SF,Y,2.1,5,IG
+2098,33903,2022-09-28,2,D,4,News Website,0,3.0,C,SF,P,1.3,4,IG
+2099,33972,2022-09-28,3,C,2,"Radio,Social",0,5.0,C,OT,Y,3.0,4,Facebook
+2100,33971,2022-09-29,2,C,3,"TV,Social",0,2.0,D,SF,Y,2.8,3,"Facebook,Twitter"
+2101,33919,2022-09-29,1,B,3,"Radio,Social",1,2.0,D,OT,Y,2.8,4,"FB,IG,TW"
+2102,33903,2022-09-30,4,C,7,"Radio,Social",1,4.0,C,SF,Y,3.4,5,Other
+2103,33936,2022-09-29,4,A,5,"TV,Radio,Social",1,4.0,B,SF,Y,4.8,5,"Twitter,Instagram"
+2104,33906,2022-09-30,4,C,5,"TV,Radio,Social",1,2.0,B,SA,Y,2.9,5,"Twitter,Instagram"
+2105,33908,2022-09-30,4,D,2,Family,1,3.0,C,SA,Y,3.4,2,Twitter
+2106,33919,2022-09-29,2,C,0,"TV,Social",0,6.0,A,CF,Y,4.0,5,Instagram
+2107,33936,2022-09-30,2,C,3,"Radio,Social",1,2.0,B,CF,Y,3.8,5,"Instagram,Facebook"
+2108,33971,2022-09-28,3,C,4,TV,1,4.0,A,CA,Y,2.5,3,Facebook
+2109,33909,2022-09-28,3,A,7,Emergency Alert,0,5.0,A,SF,Y,3.3,4,"Twitter,Instagram"
+2110,33916,2022-09-28,2,D,3,Radio,0,3.0,A,CF,P,3.8,4,None
+2111,33936,2022-09-29,3,A,5,"Radio,Social",0,6.0,B,SF,N,2.0,4,Other
+2112,33912,2022-09-28,2,B,3,"TV,Family",0,5.0,C,CF,Y,4.6,5,IG
+2113,33922,2022-09-30,2,A,5,Weather App,1,4.0,B,SF,Y,4.8,4,Instagram
+2114,33921,2022-09-30,3,A,3,Official Warning,1,4.0,B,SF,Y,2.4,4,"FB,IG,TW"
+2115,33907,2022-09-30,3,B,3,Social Media,1,4.0,A,CF,Y,3.4,4,"FB,IG,TW"
+2116,33967,2022-09-29,3,B,3,Official Warning,1,4.0,C,SF,Y,3.9,4,None
+2117,33921,2022-09-28,1,B,2,Official Warning,1,5.0,B,SF,Y,2.6,5,Instagram
+2118,33909,2022-09-29,4,C,1,Weather App,1,3.0,C,SA,P,3.7,4,"FB,IG,TW"
+2119,33909,2022-09-30,2,A,6,Weather App,0,3.0,D,CF,N,3.4,3,Twitter
+2120,33928,2022-09-28,1,A,5,"TV,Radio,Social",0,2.0,A,CA,Y,1.6,2,"Instagram,Facebook"
+2121,33966,2022-09-28,4,C,6,"TV,Radio",1,1.0,B,SA,Y,3.7,3,YouTube
+2122,33921,2022-09-28,4,B,4,Family,0,1.0,B,SF,P,2.0,4,"Twitter,Instagram"
+2123,33965,2022-09-29,4,C,2,"TV,Social",0,5.0,D,CF,P,4.2,5,YouTube
+2124,33906,2022-09-28,3,C,5,"Radio,Social",1,4.0,C,SF,P,2.5,3,Facebook
+2125,33921,2022-09-29,3,C,6,"Radio,Social",1,4.0,D,SA,Y,3.0,3,"Instagram,Facebook"
+2126,33957,2022-09-28,3,C,6,Weather App,0,4.0,B,OT,Y,4.7,2,None
+2127,33976,2022-09-30,1,B,7,"TV,Radio,Social",1,5.0,D,CF,Y,3.7,4,Twitter
+2128,33901,2022-09-29,2,C,5,Neighbors,1,4.0,A,SA,Y,2.0,5,"FB,TW"
+2129,33906,2022-09-28,2,B,2,Family,0,5.0,A,SF,Y,2.1,4,"Facebook,Twitter"
+2130,33973,2022-09-29,2,B,3,News Website,0,3.0,D,CF,Y,2.5,4,"Twitter,Instagram"
+2131,33936,2022-09-28,3,C,4,Neighbors,1,6.0,D,CA,N,3.6,4,"FB,TW"
+2132,33966,2022-09-30,2,B,4,Radio,0,4.0,A,SF,N,3.6,2,"Instagram,Facebook"
+2133,33971,2022-09-30,1,C,2,Emergency Alert,0,3.0,A,SF,Y,2.3,4,"Facebook,Twitter"
+2134,33976,2022-09-30,2,C,5,Official Warning,1,4.0,A,CF,N,1.9,4,IG
+2135,33922,2022-09-28,3,C,4,"TV,Social",1,4.0,A,SA,Y,3.5,4,"Instagram,Facebook"
+2136,33909,2022-09-29,1,D,3,Neighbors,0,2.0,B,SF,N,3.0,5,Instagram
+2137,33976,2022-09-29,4,B,4,Weather App,0,4.0,D,OT,Y,5.0,4,Twitter
+2138,33904,2022-09-30,2,B,6,"TV,Radio",0,3.0,C,SF,Y,3.2,4,"Twitter,Instagram"
+2139,339,2022-09-30,2,C,3,"TV,Family",1,1.0,C,SF,Y,5.0,5,Facebook
+2140,33901,2022-09-30,3,B,2,"TV,Radio",0,6.0,C,SA,Y,1.9,5,"Facebook,Twitter"
+2141,33971,2022-09-28,3,C,5,Weather App,1,4.0,C,SF,Y,1.5,4,Twitter
+2142,33909,2022-09-29,2,C,5,Family,1,5.0,C,SA,Y,2.0,2,"FB,TW"
+2143,33924,2022-09-28,3,C,5,"Radio,Social",0,4.0,C,SF,P,4.5,4,IG
+2144,33921,2022-09-30,3,B,3,Emergency Alert,1,3.0,B,SF,Y,5.0,4,Facebook
+2145,33920-2350,2022-09-30,2,A,7,Weather App,1,4.0,C,SF,Y,2.3,1,"FB,TW"
+2146,33912,2022-09-28,4,B,3,Official Warning,1,4.0,C,OT,Y,2.7,2,IG
+2147,UNK,2022-09-30,3,A,3,Official Warning,0,6.0,C,CF,Y,1.9,2,Instagram
+2148,33901-4496,2022-09-29,3,C,2,Emergency Alert,1,3.0,D,SA,Y,1.2,4,"Facebook,Twitter"
+2149,339,2022-09-30,4,B,5,"TV,Family",1,5.0,B,SF,N,4.0,4,"Twitter,Instagram"
+2150,33908,2022-09-29,4,A,3,Radio,1,6.0,C,CF,Y,3.4,3,"FB,TW"
+2151,33971,2022-09-30,3,A,4,Radio,0,4.0,A,CF,Y,3.2,2,YouTube
+2152,33974,2022-09-28,3,C,4,"TV,Radio",1,6.0,C,OT,N,1.7,4,IG
+2153,339,2022-09-30,3,C,4,"Radio,Social",0,3.0,B,SA,Y,5.0,3,"Instagram,Facebook"
+2154,33924,2022-09-30,3,B,4,Social Media,0,6.0,A,SA,Y,2.6,3,"Twitter,Instagram"
+2155,33909,2022-09-28,3,A,5,"Radio,Social",1,5.0,B,SF,N,3.8,4,Instagram
+2156,33910,2022-09-30,3,B,4,"Radio,Social",1,1.0,C,CF,Y,1.6,4,Twitter
+2157,33912-8210,2022-09-28,2,B,6,Weather App,1,6.0,A,CF,Y,3.0,3,IG
+2158,,2022-09-28,4,C,4,"TV,Social",1,4.0,D,OT,P,3.5,4,Other
+2159,33972,2022-09-29,4,C,1,News Website,1,4.0,A,SF,Y,3.6,3,Instagram
+2160,33906,2022-09-30,1,B,1,"TV,Social",0,4.0,D,SF,Y,3.4,4,"Facebook,Twitter"
+2161,33909,2022-09-30,3,A,3,Official Warning,1,2.0,C,CF,P,3.7,3,YouTube
+2162,33965,2022-09-30,1,D,6,Weather App,0,4.0,B,SF,Y,2.0,2,Facebook
+2163,33971,2022-09-29,2,B,4,Emergency Alert,0,5.0,B,SF,Y,3.4,4,"FB,TW"
+2164,33909,2022-09-30,3,C,1,"TV,Social",1,1.0,C,CA,N,3.3,4,None
+2165,33906,2022-09-29,2,A,5,Neighbors,1,3.0,C,CF,N,3.5,2,YouTube
+2166,33922,2022-09-29,3,B,1,Family,1,1.0,C,CA,Y,3.3,2,IG
+2167,33902,2022-09-30,3,A,3,"TV,Family",1,3.0,B,CA,Y,1.8,5,Twitter
+2168,33924,2022-09-30,3,B,5,"Radio,Social",0,5.0,B,SF,N,1.8,4,Facebook
+2169,33914,2022-09-28,1,D,3,News Website,0,5.0,D,CF,N,1.0,3,"Instagram,Facebook"
+2170,33922,2022-09-29,2,B,4,Official Warning,1,6.0,B,SF,Y,4.1,4,Facebook
+2171,33919,2022-09-29,3,A,5,"TV,Radio,Social",0,4.0,B,OT,Y,4.1,2,Other
+2172,33908,2022-09-29,4,A,5,Neighbors,0,3.0,B,CF,Y,4.1,4,"FB,IG,TW"
+2173,33905,2022-09-29,3,B,2,Emergency Alert,1,6.0,C,SF,N,3.5,1,Twitter
+2174,33901,2022-09-29,2,A,4,"TV,Radio",0,5.0,C,SF,N,1.0,3,"Twitter,Instagram"
+2175,33928,2022-09-28,3,A,4,"TV,Radio",0,4.0,B,CF,P,2.1,2,"FB,TW"
+2176,33967,2022-09-28,3,C,7,"TV,Family",1,4.0,A,SF,N,3.4,4,Facebook
+2177,33913,2022-09-29,3,B,2,TV,1,6.0,A,SF,Y,3.3,3,Twitter
+2178,33905,2022-09-30,1,B,1,"TV,Radio",1,5.0,B,SA,Y,3.0,3,IG
+2179,339,2022-09-30,3,D,5,News Website,1,3.0,B,CA,N,3.6,1,Other
+2180,33966-9300,2022-09-30,3,A,3,Social Media,1,5.0,D,SF,N,3.2,3,YouTube
+2181,33967,2022-09-30,4,D,3,Weather App,1,1.0,B,CF,Y,3.3,4,"Instagram,Facebook"
+2182,33966,2022-09-29,2,B,7,"TV,Social",1,3.0,B,CA,Y,2.5,3,Facebook
+2183,33921-2369,2022-09-30,3,C,4,News Website,0,3.0,D,SF,P,4.3,4,"FB,IG,TW"
+2184,33910-9788,2022-09-30,4,C,5,News Website,0,2.0,B,CA,Y,2.7,3,"Instagram,Facebook"
+2185,33905,2022-09-29,1,C,5,News Website,1,1.0,C,SF,Y,1.7,3,Other
+2186,33971,2022-09-30,4,D,2,Radio,1,2.0,A,SA,Y,2.4,4,"Facebook,Twitter"
+2187,33919,2022-09-30,3,B,4,Social Media,1,4.0,B,CF,Y,2.8,5,"Twitter,Instagram"
+2188,33971-2900,2022-09-30,1,D,7,"TV,Radio",1,5.0,D,CF,Y,4.3,2,"Facebook,Twitter"
+2189,33904,2022-09-30,2,B,3,Emergency Alert,1,6.0,C,CA,N,3.2,1,"Facebook,Twitter"
+2190,33913,2022-09-28,3,B,6,Radio,1,3.0,B,SF,Y,3.0,4,"Instagram,Facebook"
+2191,33909,2022-09-28,1,B,8,Radio,1,4.0,C,SF,Y,1.8,5,"Instagram,Facebook"
+2192,,2022-09-28,3,B,6,Radio,0,6.0,D,CF,Y,4.1,5,IG
+2193,33936,2022-09-30,2,A,3,Neighbors,1,2.0,B,CA,N,2.5,4,"Twitter,Instagram"
+2194,33920,2022-09-30,3,C,4,"TV,Radio,Social",0,5.0,C,SF,P,3.1,4,"FB,TW"
+2195,33909,2022-09-29,1,B,2,TV,1,5.0,D,CA,N,4.8,4,Other
+2196,33921,2022-09-30,4,C,3,TV,1,1.0,A,SF,P,3.8,4,Twitter
+2197,33908,2022-09-29,4,C,5,Family,1,5.0,C,SF,Y,1.4,4,"Instagram,Facebook"
+2198,33902,2022-09-30,4,B,4,Emergency Alert,1,5.0,C,SA,Y,1.3,5,Instagram
+2199,33971,2022-09-28,3,B,2,"TV,Radio,Social",1,1.0,C,SF,Y,3.1,4,Instagram
+2200,33905,2022-09-30,1,B,4,Family,0,1.0,B,CF,Y,1.9,4,"Instagram,Facebook"
+2201,33905,2022-09-30,3,A,6,Radio,0,1.0,B,SF,N,3.9,4,Twitter
+2202,,2022-09-28,1,A,6,Radio,1,3.0,C,SF,Y,3.2,4,Facebook
+2203,33957-3577,2022-09-30,1,B,8,"TV,Social",1,4.0,B,CF,P,3.4,4,"FB,IG,TW"
+2204,33908,2022-09-30,2,B,0,Official Warning,1,4.0,B,CF,Y,2.4,4,IG
+2205,33901,2022-09-30,2,D,5,"TV,Radio",0,3.0,A,CF,Y,5.0,1,IG
+2206,33919-1753,2022-09-30,3,C,2,Radio,1,6.0,A,CF,Y,5.0,2,Twitter
+2207,33910,2022-09-29,3,B,5,Weather App,1,3.0,D,SF,Y,2.9,4,"Facebook,Twitter"
+2208,33903,2022-09-30,2,C,1,Emergency Alert,1,1.0,B,CF,Y,3.6,5,IG
+2209,33967,2022-09-28,2,A,2,"TV,Social",1,3.0,D,OT,Y,3.3,3,"Twitter,Instagram"
+2210,33919,2022-09-29,4,B,3,Social Media,1,4.0,A,CA,Y,2.9,4,IG
+2211,33928,2022-09-30,2,C,4,Social Media,1,3.0,C,SF,Y,2.3,3,"Twitter,Instagram"
+2212,33905,2022-09-29,2,B,1,News Website,1,3.0,B,SF,Y,2.0,2,"Instagram,Facebook"
+2213,33908,2022-09-30,2,B,3,"TV,Social",1,2.0,C,OT,Y,2.0,5,Instagram
+2214,33904,2022-09-30,3,D,5,Neighbors,0,5.0,C,CF,Y,3.6,5,YouTube
+2215,33903,2022-09-30,3,C,3,Weather App,1,6.0,A,CF,Y,2.6,2,"Instagram,Facebook"
+2216,33905,2022-09-30,2,C,5,"TV,Radio",0,3.0,D,SA,Y,1.0,4,"FB,IG,TW"
+2217,33922,2022-09-29,1,C,7,"TV,Radio",0,3.0,A,SF,Y,3.7,3,"Facebook,Twitter"
+2218,33924,2022-09-30,3,C,3,"TV,Radio,Social",1,4.0,C,CF,Y,3.2,5,Instagram
+2219,33973,2022-09-30,3,A,3,"TV,Family",0,5.0,D,OT,Y,4.7,3,Twitter
+2220,UNK,2022-09-30,2,B,6,"TV,Radio",1,3.0,D,SA,Y,3.6,3,"Instagram,Facebook"
+2221,33973,2022-09-29,4,A,5,TV,1,6.0,D,SF,Y,1.6,4,"FB,IG,TW"
+2222,33976,2022-09-29,2,B,3,TV,1,4.0,B,SF,Y,1.0,5,"Twitter,Instagram"
+2223,33914,2022-09-28,2,B,3,Weather App,1,4.0,A,SF,N,2.4,2,IG
+2224,33919,2022-09-30,4,A,5,"Radio,Social",0,4.0,A,SA,Y,2.5,4,"FB,TW"
+2225,33967,2022-09-28,2,D,3,"TV,Family",1,6.0,C,SF,Y,4.2,2,Facebook
+2226,,2022-09-28,3,D,1,"Radio,Social",0,5.0,C,SF,N,3.2,5,Instagram
+2227,33965,2022-09-29,2,C,5,"TV,Family",1,1.0,A,OT,Y,4.4,2,Facebook
+2228,33924,2022-09-28,2,B,7,Neighbors,1,3.0,C,SF,N,1.7,5,"FB,TW"
+2229,33919,2022-09-28,4,C,3,Neighbors,0,4.0,B,SF,Y,4.3,4,Other
+2230,33904,2022-09-30,2,A,1,"TV,Family",1,3.0,B,SF,Y,4.0,3,Facebook
+2231,33910,2022-09-28,4,C,4,"TV,Radio,Social",1,5.0,C,SF,N,1.0,5,Twitter
+2232,33906,2022-09-28,2,A,4,"TV,Social",1,5.0,B,CF,Y,4.7,5,None
+2233,33967-7102,2022-09-29,2,C,8,"TV,Radio,Social",1,5.0,C,OT,Y,3.3,4,Facebook
+2234,33906,2022-09-28,1,B,3,Neighbors,0,6.0,A,CA,Y,3.6,2,Twitter
+2235,33909,2022-09-29,3,C,4,"TV,Radio",1,3.0,C,CF,Y,2.2,4,None
+2236,33966,2022-09-30,2,D,4,News Website,1,5.0,A,CF,Y,4.6,4,None
+2237,339,2022-09-29,4,A,8,"TV,Radio,Social",1,5.0,A,CF,Y,1.9,4,Instagram
+2238,33928,2022-09-28,2,B,3,"TV,Radio",0,3.0,C,SF,N,4.1,4,YouTube
+2239,33966,2022-09-28,4,D,2,Official Warning,1,5.0,D,SF,N,4.1,1,"FB,IG,TW"
+2240,33928,2022-09-30,2,B,3,Official Warning,0,2.0,B,OT,Y,2.1,4,"FB,IG,TW"
+2241,33921,2022-09-29,4,C,5,Neighbors,0,5.0,B,SF,P,5.0,4,Other
+2242,33914,2022-09-28,3,C,5,Weather App,1,4.0,C,SF,Y,3.5,2,YouTube
+2243,33907,2022-09-30,3,B,6,News Website,1,3.0,B,CF,Y,3.9,4,YouTube
+2244,33912,2022-09-28,3,B,5,Weather App,1,4.0,C,CF,N,1.5,4,"FB,TW"
+2245,,2022-09-29,3,A,5,Official Warning,1,4.0,C,SF,N,5.0,4,"FB,IG,TW"
+2246,33936,2022-09-29,3,C,6,Emergency Alert,1,2.0,A,SF,N,1.9,2,"Twitter,Instagram"
+2247,33916,2022-09-28,1,B,0,"TV,Radio,Social",0,1.0,B,SF,Y,4.3,4,"Instagram,Facebook"
