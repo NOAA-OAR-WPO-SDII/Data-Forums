@@ -21,7 +21,6 @@ parts:
       - file: tutorials/forum1-overview
         title: Forum 1
       - file: notebooks/Forum1                    # ← notebook (Forum 1)
-      - title: Forum 1 Notebook (Downloadable)
       - file: tutorials/forum2-overview
         title: Forum 2
       - file: notebooks/Forum2                    # ← notebook (Forum 2)
