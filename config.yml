@@ -6,7 +6,7 @@ logo: "_static/Lockup-Horizontal.png"
 
 # Build & execution
 execute:
-  execute_notebooks: auto   # auto | force | cache | off
+  execute_notebooks: off   # auto | force | cache | off
   timeout: 120
 
 # Repository metadata (enables Binder/Edit buttons)
