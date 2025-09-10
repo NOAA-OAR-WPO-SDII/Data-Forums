@@ -26,5 +26,3 @@ parts:
         title: Forum 2
       - file: notebooks/Forum2
         title: Forum 2 Notebook (Downloadable)
-      - file: notebooks/Forum1-Colab
-        title: Forum 1 Colab Version
