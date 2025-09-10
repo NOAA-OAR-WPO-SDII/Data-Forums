@@ -6,8 +6,7 @@ parts:
     chapters:
       - file: details/ssp-overview
       - file: details/organizing-team
-      - file: details/contact                     # optional
-
+      
   - caption: Preparation & Technical Details
     chapters:
       - file: prep/who-should-attend
