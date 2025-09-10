@@ -2,8 +2,6 @@
 
 # SSP Data Forums: Building a Connected, Data-Capable SBES Community
 
----
-
 ## 📢 About the Forums
 
 Welcome to the **first annual SSP Data Forums**, an effort of the Social Science Program at **NOAA's Weather Program Office (WPO)**!  
