@@ -6,7 +6,8 @@ parts:
     chapters:
       - file: details/ssp-overview
       - file: details/organizing-team
-      
+      # - file: details/contact   # removed for now since the file doesn't exist
+
   - caption: Preparation & Technical Details
     chapters:
       - file: prep/who-should-attend
@@ -19,8 +20,11 @@ parts:
     chapters:
       - file: tutorials/forum1-overview
         title: Forum 1
-      - file: notebooks/Forum1                    # ← notebook (Forum 1)
+      - file: notebooks/Forum1
+        title: Forum 1 Notebook (Downloadable)
       - file: tutorials/forum2-overview
         title: Forum 2
-      - file: notebooks/Forum2                    # ← notebook (Forum 2)
+      - file: notebooks/Forum2
         title: Forum 2 Notebook (Downloadable)
+      - file: notebooks/Forum1-Colab
+        title: Forum 1 Colab Version
