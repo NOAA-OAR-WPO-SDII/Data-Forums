@@ -14,3 +14,9 @@ These kinds of resources offer pathways to move beyond simply “learning about 
 Go ahead and launch the notebook by clicking on the Binder button below.  Binder can take a while to load, so be patient.  If after 10 minutes it has not loaded, try the alternate links below.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/Forum1.ipynb)
+
+## Google Colab (if all else fails)
+
+<a href="https://colab.research.google.com/github/jmote-noaa/Data-Forums/blob/main/notebooks/Forum1-Colab.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
