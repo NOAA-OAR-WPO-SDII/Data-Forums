@@ -10,7 +10,7 @@ Welcome to the **first annual SSP Data Forums**, an effort of the Social Science
 These virtual sessions are the starting point for building a more connected, collaborative, and data-capable **Social, Behavioral, and Economic Sciences (SBES)** community within NOAA and across our partners.  
 
 🗓 **When:** September 24 & 25, 2025 (1-3 PM ET)  
-💻 **Where:** Virtual (Vimeo)  
+💻 **Where:** Virtual (Vimeo - registration below)  
 🎯 **Focus:** Metadata standards, data integration tools, and fostering sustained community engagement.
 
 <hr>
@@ -25,8 +25,7 @@ These virtual sessions are the starting point for building a more connected, col
 
 ## 📝 Registration
 
-The Data Forums will be hosted on **Vimeo**.  
-Please register here: 
+The Data Forums will be hosted on **Vimeo**. Please register here: 
 
 [**Register for Forum 1**](https://vimeo.com/event/5322939/register) 
 
