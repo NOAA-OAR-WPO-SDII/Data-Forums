@@ -29,9 +29,8 @@ The Data Forums will be hosted on **Vimeo**.
 Please register here: 
 
 [**Register for Forum 1**](https://vimeo.com/event/5322939/register) 
+
 [**Register for Forum 2**](https://vimeo.com/event/5324981/register) 
-
-
 
 <hr>
 
