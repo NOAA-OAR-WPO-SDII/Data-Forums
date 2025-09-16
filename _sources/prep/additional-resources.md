@@ -24,12 +24,3 @@ If you are interested in exploring further, the following resources may be usefu
 - [DataONE](https://www.dataone.org/education-modules) – Educational modules and tools on data management, curation, and open science practices.  
 - [Natural Hazards Center](https://hazards.colorado.edu/) – Research and community hub focused on the human dimensions of hazards and disasters.
 
----
-
-## Why Use Repositories? A Note on Open Science
-
-Using trusted repositories is a key pillar of **open science**—it ensures that your data are **discoverable, preserved, and citable**. For example:
-- Trusted repositories, like the **generalist repositories**, assign persistent identifiers (such as DOIs) and support reuse by applying open licensing and standardized metadata.  
-- Tools like **DataONE** help you manage data workflows and align with FAIR (Findable, Accessible, Interoperable, Reusable) principles.  
-
-Altogether, these resources will help you extend beyond the Data Forums—moving from “learning about data” to **sharing and integrating** data in ways that benefit your community.
