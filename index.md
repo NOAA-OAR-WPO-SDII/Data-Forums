@@ -26,7 +26,12 @@ These virtual sessions are the starting point for building a more connected, col
 ## 📝 Registration
 
 The Data Forums will be hosted on **Vimeo**.  
-Please register here: [**Link Forthcoming**](https://library.noaa.gov/seminars) to receive event access details.
+Please register here: 
+
+[**Register for Forum 1**](https://vimeo.com/event/5322939/register) 
+[**Register for Forum 2**](https://vimeo.com/event/5324981/register) 
+
+
 
 <hr>
 
