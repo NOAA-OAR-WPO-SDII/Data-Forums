@@ -51,7 +51,7 @@ A key part of the Data Forums is the use of **[Jupyter Notebooks](https://jupyte
 - Mathematical notation  
 - Images & videos  
 
-Jupyter is a **powerful open-source tool** for scientific computing, reproducible research, and teaching data science.
+Jupyter is a **powerful open-source tool** for scientific computing, reproducible research, and teaching data science.  It is compatible with a wide variety of programming languages, including **Python, R, SQL, STATA, and many others**, making it a flexible platform for diverse workflows.
 
 Come join others in the **weather and hazard social science community** to explore these tools and apply them to your own work.
 
