@@ -1,6 +1,6 @@
 # Forum 1 - All About Metadata
 
-Forum 1: All About Metadata focused on building a shared understanding of how metadata underpins effective data use. The session introduced draft metadata standards and highlighted the ways metadata enhances discovery, interoperability, and responsible reuse of data across projects and disciplines. A quick demo in a Jupyter notebook illustrated how these standards can be put into practice. Finally, the forum provided a space for participants to share feedback that will guide the refinement of these standards for broader adoption. 
+**Forum 1: All About Metadata** focuses on building a shared understanding of how metadata underpins effective data use. The session introduces draft metadata standards and highlights the ways metadata enhances discovery, interoperability, and responsible reuse of data across projects and disciplines. A quick demo in a Jupyter notebook illustrates how these standards can be put into practice. Finally, the forum provides a space for participants to share feedback that will guide the refinement of these standards for broader adoption. 
 
 ## Launch the Notebook
 
