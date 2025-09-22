@@ -18,14 +18,9 @@
 
 ## Launch the Notebook
 
-Go ahead and launch the notebook by clicking on the Binder button below.  Binder can take a while to load, so be patient.  If after 10 minutes it has not loaded, try the alternate links below.
+Go ahead and launch the notebook by clicking on the Binder button below.  Binder can take a while to load, so be patient.  If after 10 minutes it has not loaded, try the link to Google Colab below.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/Forum2.ipynb)
-
-## Alternate Binder Links (in case the one above is not working)
-
-1. [![Binder](https://mybinder.org/badge_logo.svg)](https://ovh.mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/Forum2.ipynb)
-2. [![Binder](https://mybinder.org/badge_logo.svg)](https://gke.mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/Forum2.ipynb)
 
 ## Google Colab (if all else fails)
 
