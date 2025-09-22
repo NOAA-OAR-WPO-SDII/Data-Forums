@@ -19,14 +19,15 @@ This page provides the **logistics and technical setup** you need to participate
 ---
 
 ## 🖥 System Requirements
+
+For the Forums, you do not need to install anything.  We will be using **Binder** or **Google Colab** and links are provided for cloud-based notebook execution.
 - A **modern web browser** (Chrome, Firefox, or Edge preferred)
 - Stable internet connection (minimum 5 Mbps recommended for smooth streaming)
+
 - Optional: If you want to run Jupyter notebooks locally, install:
   - [Anaconda](https://www.anaconda.com/download) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
   - Python 3.10 or later
   - Required Python packages (listed in `environment.yml` in the GitHub repo)
-
-💡 **Tip:** You do not need to install anything locally if you prefer to use the provided **Binder** link for cloud-based notebook execution.
 
 ---
 
