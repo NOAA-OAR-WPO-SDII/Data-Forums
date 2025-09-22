@@ -20,7 +20,7 @@
 
 Go ahead and launch the notebook by clicking on the Binder button below.  Binder can take a while to load, so be patient.  If after 10 minutes it has not loaded, try the link to Google Colab below.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/Forum2.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NOAA-OAR-WPO-SDII/Data-Forums/main?filepath=notebooks/Forum2.ipynb)
 
 ## Google Colab 
 
