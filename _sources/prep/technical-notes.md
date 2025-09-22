@@ -20,7 +20,7 @@ This page provides the **logistics and technical setup** you need to participate
 
 ## 🖥 System Requirements
 
-For the Forums, you do not need to install anything.  We will be using **Binder** or **Google Colab** and links are provided for cloud-based notebook execution.
+For the Forums, you do not need to install anything.  We will be using **Binder** and **Google Colab** and links are provided for cloud-based notebook execution.
 - A **modern web browser** (Chrome, Firefox, or Edge preferred)
 - Stable internet connection (minimum 5 Mbps recommended for smooth streaming)
 
