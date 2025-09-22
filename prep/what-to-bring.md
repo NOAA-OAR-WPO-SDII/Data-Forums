@@ -5,7 +5,7 @@ As you participate in the Data Forums, keep your own **Data Story** and perspect
 ---
 
 ### 📖 Your Data Story  
-Think of this as a brief mental sketch of your work with data. You do **not** need to prepare slides or a formal write-up — just consider these questions as you listen and engage:  
+Think of this as a brief mental sketch of your work with data and consider these questions as you listen and engage:  
 
 1. **The Data You Work With**  
    - What kinds of **social, behavioral, economic, hazard, or climate-related data** are part of your work?  
@@ -26,7 +26,7 @@ Think of this as a brief mental sketch of your work with data. You do **not** ne
 ---
 
 ### 🔭 Looking Ahead  
-After the Data Forums, we encourage you to begin thinking about a **dataset and a question** that could spark deeper exploration. This isn’t something to prepare in advance, but a way to carry the conversation forward:  
+After the Data Forums, we encourage you to begin thinking about a **dataset and a question** that could spark deeper exploration and carry the conversation forward:  
 
 - **The Dataset**: What data (real or hypothetical) could you draw on in future collaborations? What’s in it, and who maintains it?  
 - **The Question**: What new insights might come from linking your dataset with other sources? What kinds of data would help answer that question?  
