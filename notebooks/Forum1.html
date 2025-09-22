@@ -1,0 +1,1487 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Forum 1 - Mystery Dataset ↔ Metadata Power &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=35598371" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Forum1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Forum 2 - From Metadata to Insights" href="../tutorials/forum2-overview.html" />
+    <link rel="prev" title="Forum 1 - All About Metadata" href="../tutorials/forum1-overview.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    SSP Data Forums: Building a Connected, Data-Capable SBES Community
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../details/ssp-overview.html">🌐 SSP Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../details/organizing-team.html">Organizing Team</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Preparation &amp; Technical Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../prep/who-should-attend.html">🎓 Who Should Attend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep/what-to-expect.html">📅 What to Expect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep/what-to-bring.html">🧩 What to Keep in Mind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep/technical-notes.html">⚙️ Technical Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep/additional-resources.html">📚 Additional Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Forum Resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/forum1-overview.html">Forum 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Forum 1 - Mystery Dataset ↔ Metadata Power</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/forum2-overview.html">Forum 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Forum2.html">Forum 2 Notebook (Downloadable)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/Forum1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Forum 1 - Mystery Dataset ↔ Metadata Power</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Forum 1 - Mystery Dataset ↔ Metadata Power</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-of-the-notebook">Goals of the notebook:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-steps-we-will-follow">The Steps We Will Follow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-we-get-started-packages-and-libraries">Before We Get Started – Packages and Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-describe-your-dataset">Exercise 1: Describe Your Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-what-you-just-wrote-is-metadata">Reflection: What You Just Wrote is Metadata</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#think-of-this-step-as-capturing-the-story-of-your-dataset">Think of this step as capturing the story of your dataset.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-your-dataset-to-the-mystery-dataset">From Your Dataset to the Mystery Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-integration-feasibility-assessment">Exercise 2: Integration Feasibility Assessment</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-open-the-mystery-dataset">Step 1: Open the Mystery Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-prompt-first-impressions">💬 Chat Prompt: First Impressions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-a-quick-response-in-the-chat-we-just-want-to-surface-what-people-notice">Type a quick response in the chat! We just want to surface what people notice.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-geographic-integration">Step 2: Geographic Integration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-prompt-geography">💬 Chat Prompt: Geography</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-temporal-integration">Step 3: Temporal Integration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-prompt-time">💬 Chat Prompt: Time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-before-moving-on">Reflection Before Moving On</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-way-forward-metadata">A Way Forward: Metadata</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-json">Why JSON?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-this-metadata-change">📝 What Does This Metadata Change?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-engagement-integration-assessment">💬 Chat Engagement  – Integration Assessment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-engagement-whats-still-missing">💬 Chat Engagement – What’s Still Missing?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-gaps-comprehensive-metadata">From Gaps → Comprehensive Metadata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-what-did-we-gain">Reflection – What Did We Gain?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-prompt">💬 <strong>Chat Prompt:</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Reflection – What Did We Gain?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up-what-did-we-learn">Wrapping Up: What Did We Learn?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaway">Key Takeaway</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-break-back-to-the-forum">Next: Break  &amp; Back to the Forum</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="forum-1-mystery-dataset-metadata-power">
+<h1>Forum 1 - Mystery Dataset ↔ Metadata Power<a class="headerlink" href="#forum-1-mystery-dataset-metadata-power" title="Link to this heading">#</a></h1>
+<p>Author: Kyle Metta, PhD – Weather Program Office, September 2025</p>
+<p>This tutorial is designed for social scientists to experience firsthand why metadata matters. We’ll start by working with a “mystery dataset” and see how far we can get without metadata, and then demonstrate how better metadata unlocks integration potential.</p>
+<section id="goals-of-the-notebook">
+<h2>Goals of the notebook:<a class="headerlink" href="#goals-of-the-notebook" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Understand the limitations of working with data that lacks metadata.</p></li>
+<li><p>Explore how basic metadata helps answer critical questions.</p></li>
+<li><p>See how a structured metadata schema (InSPIRE-aligned) provides the foundation for confident integration.</p></li>
+<li><p>Practice thinking about your own data in terms of context and metadata.</p></li>
+<li><p>Build awareness of community-driven approaches to data sharing and reuse.</p></li>
+</ul>
+<p><strong>Note:</strong> The datasets in this notebook are <strong>synthetic</strong> — created for exploration and demonstration purposes only. No real respondent data is used here.</p>
+<hr class="docutils" />
+</section>
+<section id="the-steps-we-will-follow">
+<h2>The Steps We Will Follow<a class="headerlink" href="#the-steps-we-will-follow" title="Link to this heading">#</a></h2>
+<p><strong>Step 1:</strong> Describe your own dataset in plain language<br />
+<strong>Step 2:</strong> Open and assess the “mystery dataset”<br />
+<strong>Step 3:</strong> Explore feasibility of integration (geographic, temporal, variables, methods)<br />
+<strong>Step 4:</strong> Introduce metadata and see how it changes the assessment<br />
+<strong>Step 5:</strong> Compare basic vs. comprehensive metadata using the InSPIRE schema<br />
+<strong>Step 6:</strong> Reflect on what metadata enables and why it matters</p>
+</section>
+<section id="before-we-get-started-packages-and-libraries">
+<h2>Before We Get Started – Packages and Libraries<a class="headerlink" href="#before-we-get-started-packages-and-libraries" title="Link to this heading">#</a></h2>
+<p>In Jupyter notebooks, we often use “packages” (also called libraries).<br />
+These are pre-written collections of code that give us tools for data loading, cleaning, and display — so we don’t have to reinvent the wheel.</p>
+<p>For this notebook, the key ones are:</p>
+<ul class="simple">
+<li><p><strong>pandas</strong>: For loading and working with tabular data (like spreadsheets).</p></li>
+<li><p><strong>json</strong>: For reading and working with metadata stored in JSON files.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-1-describe-your-dataset">
+<h2>Exercise 1: Describe Your Dataset<a class="headerlink" href="#exercise-1-describe-your-dataset" title="Link to this heading">#</a></h2>
+<p>Think of a dataset you’ve collected (recent or past).<br />
+Imagine someone emails you asking: <em>“What’s in this dataset?”</em><br />
+They are smart, but they don’t know your work.</p>
+<p><strong>Your task (3–5 minutes):</strong></p>
+<ul class="simple">
+<li><p>Write what you would tell them.</p></li>
+<li><p>Focus on context: geography, time, methods, sample size, variables.</p></li>
+<li><p>Keep it simple — imagine it’s a README for a future collaborator.</p></li>
+</ul>
+<p>💬 We’ll share a few responses in chat.</p>
+<hr class="docutils" />
+<section id="reflection-what-you-just-wrote-is-metadata">
+<h3>Reflection: What You Just Wrote is Metadata<a class="headerlink" href="#reflection-what-you-just-wrote-is-metadata" title="Link to this heading">#</a></h3>
+<p>When you described your dataset in plain words, you were already creating <strong>metadata</strong> or context about your data.</p>
+<ul class="simple">
+<li><p>Right now, it’s <strong>unstructured metadata</strong>: free text, useful for humans but hard for machines to parse.</p></li>
+<li><p>Later in this session, we’ll see how to make this same information <strong>structured</strong> by using a <strong>schema</strong>.</p></li>
+<li><p>A <strong>metadata schema</strong> is simply a <em>standardized set of fields</em> (like title, creator, date, location) that ensures everyone describes data in a consistent way.</p></li>
+<li><p>Structured metadata is both <strong>human-readable</strong> and <strong>machine-readable</strong>, which makes it possible to share, integrate, and reuse data consistently.</p></li>
+</ul>
+<section id="think-of-this-step-as-capturing-the-story-of-your-dataset">
+<h4>Think of this step as capturing the story of your dataset.<a class="headerlink" href="#think-of-this-step-as-capturing-the-story-of-your-dataset" title="Link to this heading">#</a></h4>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="from-your-dataset-to-the-mystery-dataset">
+<h2>From Your Dataset to the Mystery Dataset<a class="headerlink" href="#from-your-dataset-to-the-mystery-dataset" title="Link to this heading">#</a></h2>
+<p>In Exercise 1, you described <em>your own dataset</em> in plain language.<br />
+Now we flip perspectives:</p>
+<ul class="simple">
+<li><p>Imagine someone else shares <em>their dataset</em> with you; no context, just a file.</p></li>
+<li><p>Can you tell if it’s usable?</p></li>
+</ul>
+<p>We’ll use a <strong>mystery evacuation dataset</strong> to walk through this scenario.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exercise-2-integration-feasibility-assessment">
+<h1>Exercise 2: Integration Feasibility Assessment<a class="headerlink" href="#exercise-2-integration-feasibility-assessment" title="Link to this heading">#</a></h1>
+<p><strong>Your Research Context</strong></p>
+<ul class="simple">
+<li><p><strong>Current Study:</strong> Hurricane Idalia evacuation survey — Sarasota County, August 2023 (n = 892)</p></li>
+<li><p><strong>Integration Goal:</strong> Combine datasets for more statistical power (need n &gt; 2,000)</p></li>
+<li><p><strong>Research Question:</strong> Can we compare evacuation timing across counties and storm events?</p></li>
+</ul>
+<p><strong>Scenario</strong><br />
+You get an email from a colleague.<br />
+Attached is a CSV file.
+The note says: <em>“This might work with your evacuation research.”</em></p>
+<p><strong>What you need to figure out:</strong></p>
+<ul class="simple">
+<li><p>Do the <strong>variables</strong> line up? (evacuation timing, demographics)</p></li>
+<li><p>Can you establish <strong>geographic linkage</strong>? (Florida coastal counties)</p></li>
+<li><p>Was it collected with a <strong>similar methodology</strong>? (household survey data)</p></li>
+<li><p>Is there <strong>temporal alignment</strong>? (comparable hurricane events)</p></li>
+</ul>
+<section id="step-1-open-the-mystery-dataset">
+<h2>Step 1: Open the Mystery Dataset<a class="headerlink" href="#step-1-open-the-mystery-dataset" title="Link to this heading">#</a></h2>
+<p>Before we can assess integration, let’s actually look at the file.</p>
+<p><strong>What to do:</strong></p>
+<ol class="arabic simple">
+<li><p>Run the next cell to open the dataset.</p></li>
+<li><p>Look at the basic overview it prints:</p>
+<ul class="simple">
+<li><p>How many rows (potential new observations)?</p></li>
+<li><p>How many variables?</p></li>
+<li><p>What are the variable names?</p></li>
+<li><p>What do the first few rows look like?</p></li>
+</ul>
+</li>
+<li><p>Ask yourself: <strong>Does this look usable with your Sarasota/Idalia study? What’s still unclear?</strong></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/jmote-noaa/Data-Forums/main/data/mystery_evacuation_dataset.csv&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== DATASET OVERVIEW ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Potential additional observations: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1">## prints how many rows there are</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Combined sample size would be: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">892</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># what is our combined sample?</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Variables available: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># how many variables are there? columns </span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Variable names:&quot;</span><span class="p">)</span> <span class="c1"># list the column names </span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== FIRST 8 OBSERVATIONS ===&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== DATASET OVERVIEW ===
+Potential additional observations: 1247
+Combined sample size would be: 2139
+Variables available: 15
+
+Variable names:
+ 1. resp_id
+ 2. zip_code
+ 3. survey_date
+ 4. evac_timing
+ 5. dest_type
+ 6. network_size
+ 7. info_source
+ 8. prev_hurricane
+ 9. income_level
+10. age_group
+11. household_comp
+12. evac_decision
+13. prep_score
+14. risk_perception
+15. social_media_use
+
+=== FIRST 8 OBSERVATIONS ===
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>resp_id</th>
+      <th>zip_code</th>
+      <th>survey_date</th>
+      <th>evac_timing</th>
+      <th>dest_type</th>
+      <th>network_size</th>
+      <th>info_source</th>
+      <th>prev_hurricane</th>
+      <th>income_level</th>
+      <th>age_group</th>
+      <th>household_comp</th>
+      <th>evac_decision</th>
+      <th>prep_score</th>
+      <th>risk_perception</th>
+      <th>social_media_use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1001</td>
+      <td>33902</td>
+      <td>2022-09-29</td>
+      <td>2</td>
+      <td>A</td>
+      <td>8</td>
+      <td>Official Warning</td>
+      <td>0</td>
+      <td>3.0</td>
+      <td>B</td>
+      <td>SA</td>
+      <td>Y</td>
+      <td>4.4</td>
+      <td>5</td>
+      <td>Other</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1002</td>
+      <td>33919</td>
+      <td>2022-09-29</td>
+      <td>4</td>
+      <td>D</td>
+      <td>3</td>
+      <td>TV,Family</td>
+      <td>1</td>
+      <td>2.0</td>
+      <td>C</td>
+      <td>SF</td>
+      <td>Y</td>
+      <td>3.1</td>
+      <td>3</td>
+      <td>Other</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1003</td>
+      <td>33907</td>
+      <td>2022-09-29</td>
+      <td>3</td>
+      <td>C</td>
+      <td>5</td>
+      <td>Weather App</td>
+      <td>0</td>
+      <td>6.0</td>
+      <td>D</td>
+      <td>CF</td>
+      <td>Y</td>
+      <td>5.0</td>
+      <td>3</td>
+      <td>IG</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1004</td>
+      <td>33906</td>
+      <td>2022-09-29</td>
+      <td>3</td>
+      <td>C</td>
+      <td>3</td>
+      <td>News Website</td>
+      <td>1</td>
+      <td>2.0</td>
+      <td>D</td>
+      <td>SF</td>
+      <td>Y</td>
+      <td>3.2</td>
+      <td>4</td>
+      <td>Instagram,Facebook</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1005</td>
+      <td>33903</td>
+      <td>2022-09-28</td>
+      <td>2</td>
+      <td>B</td>
+      <td>5</td>
+      <td>TV,Radio,Social</td>
+      <td>1</td>
+      <td>3.0</td>
+      <td>C</td>
+      <td>CF</td>
+      <td>N</td>
+      <td>4.5</td>
+      <td>4</td>
+      <td>Twitter,Instagram</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1006</td>
+      <td>UNK</td>
+      <td>2022-09-28</td>
+      <td>2</td>
+      <td>A</td>
+      <td>3</td>
+      <td>TV,Family</td>
+      <td>0</td>
+      <td>4.0</td>
+      <td>C</td>
+      <td>SF</td>
+      <td>Y</td>
+      <td>3.5</td>
+      <td>4</td>
+      <td>FB,TW</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1007</td>
+      <td>33967-4611</td>
+      <td>2022-09-28</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>Social Media</td>
+      <td>1</td>
+      <td>3.0</td>
+      <td>B</td>
+      <td>CA</td>
+      <td>Y</td>
+      <td>3.8</td>
+      <td>4</td>
+      <td>IG</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1008</td>
+      <td>33901</td>
+      <td>2022-09-30</td>
+      <td>4</td>
+      <td>C</td>
+      <td>4</td>
+      <td>News Website</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>C</td>
+      <td>SF</td>
+      <td>Y</td>
+      <td>1.4</td>
+      <td>3</td>
+      <td>Facebook,Twitter</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<hr class="docutils" />
+<section id="chat-prompt-first-impressions">
+<h3>💬 Chat Prompt: First Impressions<a class="headerlink" href="#chat-prompt-first-impressions" title="Link to this heading">#</a></h3>
+<p>Now that you’ve opened the <strong>mystery dataset</strong> and seen the variables and first few rows:</p>
+<ul class="simple">
+<li><p>Does anything look familiar or usable for your Sarasota/Idalia study?</p></li>
+<li><p>What’s still unclear or confusing?</p></li>
+<li><p>If someone handed you just this file, what would you need to know before deciding to integrate it?</p></li>
+</ul>
+<section id="type-a-quick-response-in-the-chat-we-just-want-to-surface-what-people-notice">
+<h4>Type a quick response in the chat! We just want to surface what people notice.<a class="headerlink" href="#type-a-quick-response-in-the-chat-we-just-want-to-surface-what-people-notice" title="Link to this heading">#</a></h4>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="step-2-geographic-integration">
+<h2>Step 2: Geographic Integration<a class="headerlink" href="#step-2-geographic-integration" title="Link to this heading">#</a></h2>
+<p>One of the first questions when deciding if datasets can be combined is:<br />
+<strong>“Were they collected in the same places?”</strong></p>
+<p>For evacuation research, <strong>geographic coverage is critical</strong>:</p>
+<ul class="simple">
+<li><p>If the survey locations overlap with Sarasota County, integration might be possible.</p></li>
+<li><p>If not, the datasets may not be directly comparable.</p></li>
+</ul>
+<p><strong>What to do:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Run the code cell below</strong> to see the zip codes and most common locations.</p></li>
+<li><p><strong>Look closely at the results</strong> — do these zip codes line up with Sarasota, or do they point somewhere else?</p></li>
+<li><p><strong>Share in the chat:</strong></p>
+<ul class="simple">
+<li><p>What geographic area do you think this dataset represents?</p></li>
+<li><p>Would it integrate with your Sarasota study?</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== GEOGRAPHIC INTEGRATION ASSESSMENT ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can this integrate with your Sarasota County study?&quot;</span><span class="p">)</span>
+
+<span class="c1"># Examine zip codes</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Zip code analysis:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- Unique zip codes: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;zip_code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- Zip code format issues: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;zip_code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Most common locations:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;zip_code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sample zip codes: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;zip_code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== GEOGRAPHIC INTEGRATION ASSESSMENT ===
+Can this integrate with your Sarasota County study?
+
+Zip code analysis:
+- Unique zip codes: 78
+- Zip code format issues: {5: 1082, 3: 121, 10: 44}
+
+Most common locations:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zip_code
+33919    44
+33906    42
+33976    42
+33909    42
+339      41
+33921    40
+33904    39
+33931    39
+Name: count, dtype: int64
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sample zip codes: [&#39;33902&#39; &#39;33919&#39; &#39;33907&#39; &#39;33906&#39; &#39;33903&#39; &#39;UNK&#39; &#39;33967-4611&#39; &#39;33901&#39;
+ &#39;33912&#39; &#39;33931&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="chat-prompt-geography">
+<h3>💬 Chat Prompt: Geography<a class="headerlink" href="#chat-prompt-geography" title="Link to this heading">#</a></h3>
+<p>Looking at the zip codes:</p>
+<ul class="simple">
+<li><p>Where do you think this dataset was collected?</p></li>
+<li><p>Do these locations overlap with Sarasota County, or somewhere else?</p></li>
+<li><p>Would you feel confident integrating based on this info alone? Why or why not?</p></li>
+</ul>
+</section>
+</section>
+<section id="step-3-temporal-integration">
+<h2>Step 3: Temporal Integration<a class="headerlink" href="#step-3-temporal-integration" title="Link to this heading">#</a></h2>
+<p>The next big question when evaluating datasets is:<br />
+<strong>“Were they collected during the same time period?”</strong></p>
+<p>Why this matters:</p>
+<ul class="simple">
+<li><p>If two surveys measure evacuation behavior during the <em>same storm</em> or season, they’re more directly comparable.</p></li>
+<li><p>If they are from <em>different storms or years</em>, integration may introduce new complexities.</p></li>
+</ul>
+<p><strong>What to do:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Run the code cell below</strong> to see when the mystery dataset was collected.</p></li>
+<li><p>Compare the results to your Sarasota study (Hurricane Idalia, August 2023).</p></li>
+<li><p><strong>Share in the chat:</strong></p>
+<ul class="simple">
+<li><p>What storm or event do you think this dataset captures?</p></li>
+<li><p>Could it still be combined with your Idalia study, or is the time gap too large?</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== TEMPORAL INTEGRATION ASSESSMENT ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Does this align temporally with your Hurricane Idalia study (Aug 2023)?&quot;</span><span class="p">)</span>
+
+<span class="c1"># Look at survey dates</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Survey date range:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- Earliest: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;survey_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- Latest: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;survey_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- Collection span: </span><span class="si">{</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;survey_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;survey_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()))</span><span class="o">.</span><span class="n">days</span><span class="si">}</span><span class="s2"> days&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Survey timing distribution:&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;survey_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;survey_date&#39;</span><span class="p">])</span>
+<span class="n">date_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;survey_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">date_counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== TEMPORAL INTEGRATION ASSESSMENT ===
+Does this align temporally with your Hurricane Idalia study (Aug 2023)?
+Survey date range:
+- Earliest: 2022-09-28
+- Latest: 2022-09-30
+- Collection span: 2 days
+
+Survey timing distribution:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>survey_date
+2022-09-30    423
+2022-09-28    414
+2022-09-29    410
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section id="chat-prompt-time">
+<h3>💬 Chat Prompt: Time<a class="headerlink" href="#chat-prompt-time" title="Link to this heading">#</a></h3>
+<p>Now that you’ve seen the survey dates:</p>
+<ul class="simple">
+<li><p>What storm or event do you think this dataset captures?</p></li>
+<li><p>How does that compare to your Hurricane Idalia study (Aug 2023)?</p></li>
+<li><p>Could you still justify integrating, or would the timing be a blocker?</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="reflection-before-moving-on">
+<h3>Reflection Before Moving On<a class="headerlink" href="#reflection-before-moving-on" title="Link to this heading">#</a></h3>
+<p>We’ve now looked at the dataset from three angles:</p>
+<ul class="simple">
+<li><p>The variables and rows,</p></li>
+<li><p>The geographic coverage,</p></li>
+<li><p>The survey dates.</p></li>
+</ul>
+<p><strong>Takeaway:</strong> Even after running some analysis, we’re left guessing.<br />
+This is the core problem: <strong>without metadata, we can’t answer the basic questions needed to decide if integration is feasible.</strong></p>
+<p>Each step gave us a little more information, but notice what’s missing:</p>
+<ul class="simple">
+<li><p>We still don’t know <strong>which storm</strong> this really represents.</p></li>
+<li><p>We don’t know the <strong>methods</strong> or <strong>who collected it</strong>.</p></li>
+<li><p>We don’t know if it’s safe to compare with Sarasota/Idalia.</p></li>
+</ul>
+<p>It shows the limits of working with <em>just a file</em> and no structured context.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="a-way-forward-metadata">
+<h2>A Way Forward: Metadata<a class="headerlink" href="#a-way-forward-metadata" title="Link to this heading">#</a></h2>
+<p>We just saw how far we could get <strong>without metadata</strong>:</p>
+<ul class="simple">
+<li><p>20+ minutes exploring</p></li>
+<li><p>Still no clear decision about feasibility</p></li>
+</ul>
+<p>This is where <strong>metadata makes the difference</strong>.<br />
+Let’s look at a small set of essential fields and see if it helps us move forward.</p>
+<p><strong>Scenario:</strong><br />
+You notice in your colleague’s email that alongside the dataset, they’ve also attached a small file with a <strong><code class="docutils literal notranslate"><span class="pre">.json</span></code> extension</strong>.</p>
+<section id="why-json">
+<h3>Why JSON?<a class="headerlink" href="#why-json" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>What it is:</strong> JSON stands for <em>JavaScript Object Notation</em>. It’s a simple text format for storing structured information as “key–value” pairs.</p></li>
+<li><p><strong>Why use it:</strong></p>
+<ul>
+<li><p>It’s human-readable — you can open it and understand it at a glance.</p></li>
+<li><p>It’s machine-readable — Python, R, and most software can parse JSON directly.</p></li>
+<li><p>It’s the standard way metadata is stored and shared across platforms.</p></li>
+</ul>
+</li>
+<li><p><strong>In practice:</strong> This is how metadata standards (like DataCite, <a class="reference external" href="http://schema.org">schema.org</a>) are usually published.</p></li>
+</ul>
+<p>Let’s open that JSON file and see what it tells us about the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basic_metadata</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Hurricane Ian evacuation behavior survey&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;creator&quot;</span><span class="p">:</span> <span class="s2">&quot;Florida Emergency Management Example Research Consortium&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;subject_category&quot;</span><span class="p">:</span> <span class="s2">&quot;Emergency Management&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;geographic_coverage_specific&quot;</span><span class="p">:</span> <span class="s2">&quot;Lee County, Florida&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;temporal_coverage_start&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-09-28&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;temporal_coverage_end&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-10-02&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;data_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Survey Data&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;abstract&quot;</span><span class="p">:</span> <span class="s2">&quot;Household survey on evacuation decisions during Hurricane Ian&quot;</span>
+<span class="p">}</span>
+
+
+<span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;### Basic Metadata</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">basic_metadata</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">pretty_key</span> <span class="o">=</span> <span class="n">k</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;**</span><span class="si">{</span><span class="n">pretty_key</span><span class="si">}</span><span class="s2">:** </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">  &quot;</span><span class="p">)</span>  <span class="c1"># two spaces = line break in Markdown</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<h3 class="rubric" id="basic-metadata">Basic Metadata</h3>
+<p><strong>Title:</strong> Hurricane Ian evacuation behavior survey<br />
+<strong>Creator:</strong> Florida Emergency Management Example Research Consortium<br />
+<strong>Subject Category:</strong> Emergency Management<br />
+<strong>Geographic Coverage Specific:</strong> Lee County, Florida<br />
+<strong>Temporal Coverage Start:</strong> 2022-09-28<br />
+<strong>Temporal Coverage End:</strong> 2022-10-02<br />
+<strong>Data Type:</strong> Survey Data<br />
+<strong>Abstract:</strong> Household survey on evacuation decisions during Hurricane Ian</p>
+</div>
+</div>
+</section>
+</section>
+<section id="what-does-this-metadata-change">
+<h2>📝 What Does This Metadata Change?<a class="headerlink" href="#what-does-this-metadata-change" title="Link to this heading">#</a></h2>
+<p>With just these few fields, we’ve gained critical context:</p>
+<ul class="simple">
+<li><p>We now know the <strong>storm</strong> → Hurricane Ian (Sept 2022)</p></li>
+<li><p>We know the <strong>location</strong> → Lee County (adjacent to Sarasota)</p></li>
+<li><p>We know the <strong>data type &amp; timeframe</strong> → Household survey, Sept 28 – Oct 2, 2022</p></li>
+</ul>
+<p>This gets us much closer to deciding if integration is possible.</p>
+<hr class="docutils" />
+<section id="chat-engagement-integration-assessment">
+<h3>💬 Chat Engagement  – Integration Assessment<a class="headerlink" href="#chat-engagement-integration-assessment" title="Link to this heading">#</a></h3>
+<p>Now that we have this context, how do you feel about integration potential?<br />
+<strong>High • Medium • Low</strong></p>
+</section>
+<hr class="docutils" />
+<section id="chat-engagement-whats-still-missing">
+<h3>💬 Chat Engagement – What’s Still Missing?<a class="headerlink" href="#chat-engagement-whats-still-missing" title="Link to this heading">#</a></h3>
+<p>In the chat, share:</p>
+<ul class="simple">
+<li><p>What information do you <em>still</em> wish you had to make a confident decision?</p></li>
+</ul>
+</section>
+</section>
+<section id="from-gaps-comprehensive-metadata">
+<h2>From Gaps → Comprehensive Metadata<a class="headerlink" href="#from-gaps-comprehensive-metadata" title="Link to this heading">#</a></h2>
+<p>In the last step, we saw that <strong>basic metadata</strong> gave us some answers (storm, county, dates)…<br />
+…but you told us there are still critical pieces missing:</p>
+<ul class="simple">
+<li><p>Who collected it?</p></li>
+<li><p>What methodology was used?</p></li>
+<li><p>How do we technically integrate it?</p></li>
+<li><p>Who do we contact?</p></li>
+</ul>
+<p>This is where <strong>comprehensive metadata</strong> comes in.<br />
+Instead of a few fields, let’s look at a structured schema that captures all the details needed for confident integration.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Comprehensive metadata schema documentation (illustrative slice)</span>
+
+<span class="c1">### Note this is again synthetic data created for this example only</span>
+<span class="n">comprehensive_metadata</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;identification_overview&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Hurricane Ian Evacuation Decision-Making Survey: Lee County, Florida&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;abstract&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a synthetic dataset of a household survey examining evacuation timing, transportation choices, and destination decisions during Hurricane Ian. Not for real use.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;purpose&quot;</span><span class="p">:</span> <span class="s2">&quot;Quantify drivers of evacuation to inform emergency management.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;creator&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dr. Jennifer A. Example&quot;</span><span class="p">,</span> <span class="s2">&quot;affiliation&quot;</span><span class="p">:</span> <span class="s2">&quot;Florida Example University&quot;</span><span class="p">}],</span>
+    <span class="s2">&quot;unique_identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0000/INSP/IAN2022-EX&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;geographic_temporal&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;geographic_coverage_specific&quot;</span><span class="p">:</span> <span class="s2">&quot;Lee County, Florida — FEMA Evacuation Zones A–E&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;coordinate_system&quot;</span><span class="p">:</span> <span class="s2">&quot;NAD83 / Florida West (EPSG:3086)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;spatial_resolution&quot;</span><span class="p">:</span> <span class="s2">&quot;Census tract level (anonymized)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;temporal_coverage_start&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-09-28&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;temporal_coverage_end&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-10-02&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;temporal_resolution&quot;</span><span class="p">:</span> <span class="s2">&quot;Event-based: 72-hour window&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;data_characteristics_methods&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;collection_methodology&quot;</span><span class="p">:</span> <span class="s2">&quot;Stratified random sample by evacuation zone; CATI + door-to-door follow-up&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sampling_weights&quot;</span><span class="p">:</span> <span class="s2">&quot;Design-based weights provided&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;processing&quot;</span><span class="p">:</span> <span class="s2">&quot;Cleaning and recodes documented&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;uncertainty&quot;</span><span class="p">:</span> <span class="s2">&quot;Standard errors and response rates reported&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;decision_support_attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;use_cases&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Evacuation Planning&quot;</span><span class="p">,</span> <span class="s2">&quot;Infrastructure Risk Assessment&quot;</span><span class="p">,</span> <span class="s2">&quot;Public Risk Communication&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;integration_with_other_data&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;NOAA storm surge models via FEMA zones&quot;</span><span class="p">,</span> <span class="s2">&quot;US Census via FIPS&quot;</span><span class="p">]</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;technical_details_access&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;data_access_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dataverse.example.org/dataset/IAN2022&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;access_restrictions&quot;</span><span class="p">:</span> <span class="s2">&quot;Open access (post-embargo), Not a real dataset&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contact&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dr. Jennifer A Example&quot;</span><span class="p">,</span> <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;jennifer.example@example.edu&quot;</span><span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Some code to print the metadata a little cleaner</span>
+
+<span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;### Comprehensive Metadata</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">section</span><span class="p">,</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">comprehensive_metadata</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="c1"># Section header</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">**</span><span class="si">{</span><span class="n">section</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">**</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Fields in each section</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">content</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;creator&quot;</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">creators</span> <span class="o">=</span> <span class="s2">&quot;; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> — </span><span class="si">{</span><span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;affiliation&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">v</span><span class="p">)</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- **Creator(s):** </span><span class="si">{</span><span class="n">creators</span><span class="si">}</span><span class="s2">  &quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">v</span><span class="p">)</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- **</span><span class="si">{</span><span class="n">k</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">:** </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">  &quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subk</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">subv</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">subk</span><span class="p">,</span> <span class="n">subv</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- **</span><span class="si">{</span><span class="n">k</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">:** </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">  &quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- **</span><span class="si">{</span><span class="n">k</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">:** </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">  &quot;</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<h3 class="rubric" id="comprehensive-metadata">Comprehensive Metadata</h3>
+<p><strong>Identification Overview</strong></p>
+<ul class="simple">
+<li><p><strong>Title:</strong> Hurricane Ian Evacuation Decision-Making Survey: Lee County, Florida</p></li>
+<li><p><strong>Abstract:</strong> This is a synthetic dataset of a household survey examining evacuation timing, transportation choices, and destination decisions during Hurricane Ian. Not for real use.</p></li>
+<li><p><strong>Purpose:</strong> Quantify drivers of evacuation to inform emergency management.</p></li>
+<li><p><strong>Creator(s):</strong> Dr. Jennifer A. Example — Florida Example University</p></li>
+<li><p><strong>Unique Identifier:</strong> 10.0000/INSP/IAN2022-EX</p></li>
+</ul>
+<p><strong>Geographic Temporal</strong></p>
+<ul class="simple">
+<li><p><strong>Geographic Coverage Specific:</strong> Lee County, Florida — FEMA Evacuation Zones A–E</p></li>
+<li><p><strong>Coordinate System:</strong> NAD83 / Florida West (EPSG:3086)</p></li>
+<li><p><strong>Spatial Resolution:</strong> Census tract level (anonymized)</p></li>
+<li><p><strong>Temporal Coverage Start:</strong> 2022-09-28</p></li>
+<li><p><strong>Temporal Coverage End:</strong> 2022-10-02</p></li>
+<li><p><strong>Temporal Resolution:</strong> Event-based: 72-hour window</p></li>
+</ul>
+<p><strong>Data Characteristics Methods</strong></p>
+<ul class="simple">
+<li><p><strong>Collection Methodology:</strong> Stratified random sample by evacuation zone; CATI + door-to-door follow-up</p></li>
+<li><p><strong>Sampling Weights:</strong> Design-based weights provided</p></li>
+<li><p><strong>Processing:</strong> Cleaning and recodes documented</p></li>
+<li><p><strong>Uncertainty:</strong> Standard errors and response rates reported</p></li>
+</ul>
+<p><strong>Decision Support Attributes</strong></p>
+<ul class="simple">
+<li><p><strong>Use Cases:</strong> Evacuation Planning, Infrastructure Risk Assessment, Public Risk Communication</p></li>
+<li><p><strong>Integration With Other Data:</strong> NOAA storm surge models via FEMA zones, US Census via FIPS</p></li>
+</ul>
+<p><strong>Technical Details Access</strong></p>
+<ul class="simple">
+<li><p><strong>Data Access Url:</strong> https://dataverse.example.org/dataset/IAN2022</p></li>
+<li><p><strong>Access Restrictions:</strong> Open access (post-embargo), Not a real dataset</p></li>
+<li><p><strong>Contact:</strong> Name: Dr. Jennifer A Example, Email: jennifer.example&#64;example.edu</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="reflection-what-did-we-gain">
+<h2>Reflection – What Did We Gain?<a class="headerlink" href="#reflection-what-did-we-gain" title="Link to this heading">#</a></h2>
+<p>With the <strong>comprehensive metadata</strong> now revealed, we can see fields that answer critical questions:</p>
+<ul class="simple">
+<li><p>Identification (title, PI, contributors, funding)</p></li>
+<li><p>Geographic &amp; temporal coverage (county, FEMA zones, dates, resolution)</p></li>
+<li><p>Methodology (collection design, weights, uncertainty)</p></li>
+<li><p>Integration guidance (links to FEMA, Census, NOAA)</p></li>
+<li><p>Access &amp; contact information</p></li>
+</ul>
+</section>
+<section id="chat-prompt">
+<h2>💬 <strong>Chat Prompt:</strong><a class="headerlink" href="#chat-prompt" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Which of these fields feel <em>most valuable</em> for your research?</p></li>
+<li><p>Which ones would you want from colleagues if you were trying to reuse their dataset?</p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>Reflection – What Did We Gain?<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Now that we’ve revealed the <strong>comprehensive metadata</strong>, notice how it fills the gaps:</p>
+<ul class="simple">
+<li><p><strong>Identification</strong> → title, PI, contributors, funding</p></li>
+<li><p><strong>Geographic &amp; Temporal Coverage</strong> → county, FEMA zones, dates, resolution</p></li>
+<li><p><strong>Methodology</strong> → collection design, weights, uncertainty</p></li>
+<li><p><strong>Integration Guidance</strong> → links to FEMA, Census, NOAA</p></li>
+<li><p><strong>Access &amp; Contact</strong> → URL, restrictions, who to reach out to</p></li>
+</ul>
+<p>Instead of guessing, we now have a structured description that directly answers the critical integration questions.</p>
+<hr class="docutils" />
+<p>Up next: we’ll bring it all together in a side-by-side <strong>integration matrix</strong> to see how your Sarasota study and this dataset line up.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create comprehensive integration assessment</span>
+<span class="n">idalia_n</span> <span class="o">=</span> <span class="mi">892</span>
+<span class="n">mystery_n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">total_n</span> <span class="o">=</span> <span class="n">idalia_n</span> <span class="o">+</span> <span class="n">mystery_n</span>
+
+<span class="n">matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+    <span class="p">[</span><span class="s2">&quot;Geography&quot;</span><span class="p">,</span> <span class="s2">&quot;Sarasota County, FL&quot;</span><span class="p">,</span> <span class="s2">&quot;Lee County, FL&quot;</span><span class="p">,</span> <span class="s2">&quot;Adjacent counties ✔&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Storm Event&quot;</span><span class="p">,</span> <span class="s2">&quot;Hurricane Idalia (Aug 2023)&quot;</span><span class="p">,</span> <span class="s2">&quot;Hurricane Ian (Sept 2022)&quot;</span><span class="p">,</span> <span class="s2">&quot;Comparable major hurricanes ✔&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span> <span class="s2">&quot;Aug 2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Sept–Oct 2022&quot;</span><span class="p">,</span> <span class="s2">&quot;Different years but comparable ✔&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Methodology&quot;</span><span class="p">,</span> <span class="s2">&quot;Household survey (n=892)&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Stratified household survey (n≈</span><span class="si">{</span><span class="n">mystery_n</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="s2">&quot;Design &amp; content broadly aligned ✔&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Sample Size&quot;</span><span class="p">,</span> <span class="s2">&quot;892&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mystery_n</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Combined n ≈ </span><span class="si">{</span><span class="n">total_n</span><span class="si">}</span><span class="s2"> (meets &gt;2,000 threshold ✔)&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Technical Linkages&quot;</span><span class="p">,</span> <span class="s2">&quot;FIPS, county&quot;</span><span class="p">,</span> <span class="s2">&quot;FEMA zones, FIPS&quot;</span><span class="p">,</span> <span class="s2">&quot;Join via county/FIPS; compare zones ✔&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Access &amp; Contact&quot;</span><span class="p">,</span> <span class="s2">&quot;You own this dataset&quot;</span><span class="p">,</span> <span class="s2">&quot;Dataverse link + PI contact&quot;</span><span class="p">,</span> <span class="s2">&quot;Collaboration pathway enabled ✔&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Integration Potential&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;High confidence ✔&quot;</span><span class="p">]</span>
+<span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Dimension&quot;</span><span class="p">,</span> <span class="s2">&quot;Idalia Study&quot;</span><span class="p">,</span> <span class="s2">&quot;Mystery Dataset&quot;</span><span class="p">,</span> <span class="s2">&quot;Assessment&quot;</span><span class="p">])</span>
+
+<span class="n">matrix</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dimension</th>
+      <th>Idalia Study</th>
+      <th>Mystery Dataset</th>
+      <th>Assessment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Geography</td>
+      <td>Sarasota County, FL</td>
+      <td>Lee County, FL</td>
+      <td>Adjacent counties ✔</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Storm Event</td>
+      <td>Hurricane Idalia (Aug 2023)</td>
+      <td>Hurricane Ian (Sept 2022)</td>
+      <td>Comparable major hurricanes ✔</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Time</td>
+      <td>Aug 2023</td>
+      <td>Sept–Oct 2022</td>
+      <td>Different years but comparable ✔</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Methodology</td>
+      <td>Household survey (n=892)</td>
+      <td>Stratified household survey (n≈1247)</td>
+      <td>Design &amp; content broadly aligned ✔</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sample Size</td>
+      <td>892</td>
+      <td>1247</td>
+      <td>Combined n ≈ 2139 (meets &gt;2,000 threshold ✔)</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Technical Linkages</td>
+      <td>FIPS, county</td>
+      <td>FEMA zones, FIPS</td>
+      <td>Join via county/FIPS; compare zones ✔</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Access &amp; Contact</td>
+      <td>You own this dataset</td>
+      <td>Dataverse link + PI contact</td>
+      <td>Collaboration pathway enabled ✔</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Integration Potential</td>
+      <td></td>
+      <td></td>
+      <td>High confidence ✔</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="wrapping-up-what-did-we-learn">
+<h1>Wrapping Up: What Did We Learn?<a class="headerlink" href="#wrapping-up-what-did-we-learn" title="Link to this heading">#</a></h1>
+<p>Without metadata ❌</p>
+<ul class="simple">
+<li><p>20+ minutes exploring, still uncertain about geography, time, and methods.</p></li>
+</ul>
+<p>With <strong>basic metadata</strong> ⚠️</p>
+<ul class="simple">
+<li><p>We could identify the storm (Hurricane Ian) and location (Lee County).</p></li>
+<li><p>Helpful, but still missing key details.</p></li>
+</ul>
+<p>With <strong>comprehensive metadata</strong> ✅</p>
+<ul class="simple">
+<li><p>We could confidently assess feasibility.</p></li>
+<li><p>Geography, time, methods, access, and contact info all in place.</p></li>
+<li><p>Integration matrix showed compatibility and enough statistical power (n &gt; 2,000).</p></li>
+</ul>
+<hr class="docutils" />
+<section id="key-takeaway">
+<h2>Key Takeaway<a class="headerlink" href="#key-takeaway" title="Link to this heading">#</a></h2>
+<p><strong>Metadata is not overhead — it’s the bridge between datasets.</strong><br />
+It turns raw files into reusable research resources.</p>
+</section>
+<hr class="docutils" />
+<section id="next-break-back-to-the-forum">
+<h2>Next: Break  &amp; Back to the Forum<a class="headerlink" href="#next-break-back-to-the-forum" title="Link to this heading">#</a></h2>
+<p>In the slides, we’ll:</p>
+<ul class="simple">
+<li><p>Walk through the InSPIRE metadata schema design.</p></li>
+<li><p>Show how these fields map directly to the problems we just experienced.</p></li>
+<li><p>Discuss how we, as a community, can refine and use these practices.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../tutorials/forum1-overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Forum 1 - All About Metadata</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../tutorials/forum2-overview.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Forum 2 - From Metadata to Insights</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Forum 1 - Mystery Dataset ↔ Metadata Power</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-of-the-notebook">Goals of the notebook:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-steps-we-will-follow">The Steps We Will Follow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-we-get-started-packages-and-libraries">Before We Get Started – Packages and Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-describe-your-dataset">Exercise 1: Describe Your Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-what-you-just-wrote-is-metadata">Reflection: What You Just Wrote is Metadata</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#think-of-this-step-as-capturing-the-story-of-your-dataset">Think of this step as capturing the story of your dataset.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-your-dataset-to-the-mystery-dataset">From Your Dataset to the Mystery Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-integration-feasibility-assessment">Exercise 2: Integration Feasibility Assessment</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-open-the-mystery-dataset">Step 1: Open the Mystery Dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-prompt-first-impressions">💬 Chat Prompt: First Impressions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-a-quick-response-in-the-chat-we-just-want-to-surface-what-people-notice">Type a quick response in the chat! We just want to surface what people notice.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-geographic-integration">Step 2: Geographic Integration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-prompt-geography">💬 Chat Prompt: Geography</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-temporal-integration">Step 3: Temporal Integration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-prompt-time">💬 Chat Prompt: Time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-before-moving-on">Reflection Before Moving On</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-way-forward-metadata">A Way Forward: Metadata</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-json">Why JSON?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-this-metadata-change">📝 What Does This Metadata Change?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-engagement-integration-assessment">💬 Chat Engagement  – Integration Assessment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-engagement-whats-still-missing">💬 Chat Engagement – What’s Still Missing?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-gaps-comprehensive-metadata">From Gaps → Comprehensive Metadata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-what-did-we-gain">Reflection – What Did We Gain?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chat-prompt">💬 <strong>Chat Prompt:</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Reflection – What Did We Gain?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#wrapping-up-what-did-we-learn">Wrapping Up: What Did We Learn?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaway">Key Takeaway</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-break-back-to-the-forum">Next: Break  &amp; Back to the Forum</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
