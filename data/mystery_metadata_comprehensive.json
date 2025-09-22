@@ -5,11 +5,11 @@
     "purpose": "Quantify drivers of evacuation to inform emergency management.",
     "creator": [
       {
-        "name": "Dr. Maria Rodriguez",
-        "affiliation": "Florida International University"
+        "name": "Dr. Jennifer A. Example",
+        "affiliation": "Florida Example University"
       }
     ],
-    "unique_identifier": "10.7910/DVN/IAN2022"
+    "unique_identifier": "10.0000/DVN/IAN2022"
   },
   "geographic_temporal": {
     "geographic_coverage_specific": "Lee County, Florida \u2014 FEMA Evacuation Zones A\u2013E",
@@ -40,8 +40,8 @@
     "data_access_url": "https://dataverse.example.org/dataset/IAN2022",
     "access_restrictions": "Open access (post-embargo)",
     "contact": {
-      "name": "Dr. Maria Rodriguez",
-      "email": "maria.rodriguez@example.edu"
+      "name": "Dr. Jennifer A. Example",
+      "email": "Jennifer.A@example.edu"
     }
   }
 }
