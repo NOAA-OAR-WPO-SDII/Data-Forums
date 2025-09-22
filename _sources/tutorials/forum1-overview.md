@@ -21,7 +21,7 @@ Go ahead and launch the notebook by clicking on the Binder button below.  Binder
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jmote-noaa/Data-Forums/main?filepath=notebooks/Forum1.ipynb)
 
-## Google Colab (if all else fails)
+## Google Colab 
 
 <a href="https://colab.research.google.com/github/jmote-noaa/Data-Forums/blob/main/notebooks/Forum1.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
