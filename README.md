@@ -15,3 +15,5 @@ This repository hosts content for the **Data Forums** — a Jupyter-based commun
 - `.github/workflows/` – GitHub Actions workflows powering automated builds and updates.
 - `code_of_conduct.md` – Community standards for respectful engagement.
 - `LICENSE` – MIT license covering repository content.
+
+[![Hits](https://hits.sh/noaa-oar-wpo-sdii.github.io/Data-Forums/index.html.svg)](https://hits.sh/noaa-oar-wpo-sdii.github.io/Data-Forums/index.html/)
