@@ -55,6 +55,8 @@ Come join others in the **weather and hazard social science community** to explo
 
 <hr>
 
+[![Hits](https://hits.sh/noaa-oar-wpo-sdii.github.io/Data-Forums/index.html.svg)](https://hits.sh/noaa-oar-wpo-sdii.github.io/Data-Forums/index.html/)
+
 ## 📂 Site Navigation
 
 Use the **Table of Contents** on the left to explore resources and materials.
